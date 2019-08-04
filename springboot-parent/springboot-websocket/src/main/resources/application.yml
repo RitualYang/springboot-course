@@ -1,0 +1,7 @@
+# 配置服务端口号
+server:
+  port: 8082
+# 服务名
+spring:
+  application:
+    name: springboot-websocket
