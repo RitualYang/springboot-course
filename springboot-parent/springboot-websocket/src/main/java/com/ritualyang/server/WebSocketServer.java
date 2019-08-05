@@ -26,7 +26,8 @@ public class WebSocketServer {
     //接收sid
     private String sid="";
     /**
-     * 连接建立成功调用的方法*/
+     * 连接建立成功调用的方法
+     */
     @OnOpen
     public void onOpen(Session session,@PathParam("sid") String sid) {
         this.session = session;
@@ -53,8 +54,8 @@ public class WebSocketServer {
 
     /**
      * 收到客户端消息后调用的方法
-     *
-     * @param message 客户端发送过来的消息*/
+     * @param message 客户端发送过来的消息
+     */
     @OnMessage
     public void onMessage(String message, Session session) {
         log.info("收到来自窗口"+sid+"的信息:"+message);
@@ -69,7 +70,7 @@ public class WebSocketServer {
     }
 
     /**
-     *
+     * 连接异常调用的方法
      * @param session
      * @param error
      */
@@ -88,7 +89,7 @@ public class WebSocketServer {
 
     /**
      * 群发自定义消息
-     * */
+     */
     public static void sendInfo(String message,@PathParam("sid") String sid) throws IOException {
         log.info("推送消息到窗口"+sid+"，推送内容:"+message);
         for (WebSocketServer item : webSocketSet) {

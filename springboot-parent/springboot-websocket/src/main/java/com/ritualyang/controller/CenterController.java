@@ -12,8 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import java.io.IOException;
 @Controller
-@RequestMapping("/checkcenter")
-public class CheckCenterController {
+public class CenterController {
     //页面请求
     @GetMapping("/socket/{cid}")
     public ModelAndView socket(@PathVariable String cid) {
