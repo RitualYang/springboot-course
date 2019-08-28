@@ -10,6 +10,7 @@
     <modules>
         <module>springboot-helloworld</module>
         <module>springboot-websocket</module>
+        <module>../springboot-druid</module>
     </modules>
     <packaging>pom</packaging>
     <!--核心依赖，管理大部分常用jar包的版本,分支测试-->
