@@ -13,9 +13,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 @SpringBootApplication
 //@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
-public class application {
+public class HelloApplication {
     //项目入口
     public static void main(String[] args) {
-        SpringApplication.run(application.class);
+        SpringApplication.run(HelloApplication.class);
     }
 }

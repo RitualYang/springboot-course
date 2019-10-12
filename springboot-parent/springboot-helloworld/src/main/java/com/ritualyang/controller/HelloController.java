@@ -1,11 +1,11 @@
-package com.ritualyang.web;
+package com.ritualyang.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author RitualYang
- * @create 2019-05-12 17:55我改！！！！！！！！！！！！！！
+ * @create 2019-05-12 17:55
  */
 @RestController
 public class HelloController {
