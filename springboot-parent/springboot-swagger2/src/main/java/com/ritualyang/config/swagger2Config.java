@@ -29,22 +29,22 @@ public class swagger2Config {
                 .apiInfo(apiInfo())
                 .select()
                 //此处添加需要扫描接口的包路径
-                .apis(basePackage("com.wty.admin.controller" + splitor + "com.wty.common.domain"))
+                .apis(basePackage("com.ritualyang.controller" + splitor + "com.ritualyang.model"))
                 .paths(PathSelectors.any())
                 .build();
     }
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("MoneyPass Api文档")
-                .description("加密货币交易会所")
-                .version("1.0")
+                .title("Api文档")//标题
+                .description("说明")//说明
+                .version("1.0")//版本号
                 .build();
     }
 
     /**
      * 重写basePackage方法，使能够实现多包访问
-     * @author  jinhaoxun
+     * @author  RitualYang
      * @date 2019/1/26
      * @param
      */

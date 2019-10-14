@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * 整个springboot服务启动工程入口
  * 注解解析：
  * @SpringBootApplication  :  Springboot项目的核心注解，主要目的开启自动配置.
- *   @EnableAutoConfiguration   :让Springboot项目根据默认配置路径为当前项目加载自动配置,配置默认名格式为application.yml(推荐)
+ * @EnableAutoConfiguration   :  让Springboot项目根据默认配置路径为当前项目加载自动配置,配置默认名格式为application.yml(推荐)
  */
 @SpringBootApplication
 //@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
