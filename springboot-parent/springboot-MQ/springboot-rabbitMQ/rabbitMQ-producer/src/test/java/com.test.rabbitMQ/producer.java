@@ -1,4 +1,4 @@
-package com.ritualyang.rabbitMQ;
+package com.test.rabbitMQ;
 
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;

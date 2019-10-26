@@ -1,4 +1,4 @@
-package com.ritualyang.config;
+package com.ritualyang.rabbitMQ.config;
 
 
 import org.springframework.context.annotation.Bean;

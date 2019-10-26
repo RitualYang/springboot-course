@@ -1,4 +1,4 @@
-package com.ritualyang.config;
+package com.ritualyang.rabbitMQ.config;
 
 import com.google.common.base.Function;
 import com.google.common.base.Optional;
