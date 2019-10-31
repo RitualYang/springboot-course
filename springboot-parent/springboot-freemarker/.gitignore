@@ -7,4 +7,5 @@
 *.iml
 out
 gen
-/.idea/
+/src/test/
+/target/
