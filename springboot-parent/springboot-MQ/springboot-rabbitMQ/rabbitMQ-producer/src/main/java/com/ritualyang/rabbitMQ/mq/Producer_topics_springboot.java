@@ -1,26 +1,20 @@
-package com.test.rabbitMQ;
+package com.ritualyang.rabbitMQ.mq;
 
 import com.alibaba.fastjson.JSON;
 import com.ritualyang.rabbitMQ.config.RabbitmqConfig;
-import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
+
 
 import java.util.HashMap;
 import java.util.Map;
 
-@SpringBootTest
-@RunWith(SpringRunner.class)
 public class Producer_topics_springboot {
     @Autowired
     RabbitTemplate rabbitTemplate;
 
     //使用rabbitTemplate发送消息
-    @Test
-    public void testSendEmail(){
+    public void sendEmail(){
 
         String message = "send email message to user";
         /**
@@ -34,8 +28,7 @@ public class Producer_topics_springboot {
     }
 
     //使用rabbitTemplate发送消息
-    @Test
-    public void testSendPostPage(){
+    public void sendPostPage(){
         Map message = new HashMap<>();
         message.put("pageId","5a795ac7dd573c04508f3a56");
         //将消息对象转成json串
