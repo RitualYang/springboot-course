@@ -25,7 +25,7 @@ import java.time.Duration;
 @EnableCaching
 public class RedisConfig extends CachingConfigurerSupport {
     private static final StringRedisSerializer STRING_SERIALIZER = new StringRedisSerializer();
-private static final GenericJackson2JsonRedisSerializer JACKSON__SERIALIZER = new GenericJackson2JsonRedisSerializer();
+    private static final GenericJackson2JsonRedisSerializer JACKSON__SERIALIZER = new GenericJackson2JsonRedisSerializer();
 
     @Bean
     public CacheManager cacheManager(RedisConnectionFactory redisConnectionFactory) {
