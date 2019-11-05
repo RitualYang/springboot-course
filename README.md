@@ -13,10 +13,9 @@
 * springboot-swagger2
 >`springboot`集成`swagger2`：api接口生成文档
 * springboot-mybatis
->`springboot`入门经典案例
+>`springboot`集成`mybatis`：持久层框架
 * springboot-MQ
->`springboot`入门经典案例
-* springboot-helloworld
->`springboot`入门经典案例
+>`springboot`集成消息队列：ribbitMQ
+
 
 
