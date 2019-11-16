@@ -8,5 +8,4 @@
 out
 gen
 /.idea/
-*/target
-*/*/target
+**/target
