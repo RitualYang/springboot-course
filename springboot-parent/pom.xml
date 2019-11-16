@@ -8,16 +8,16 @@
     <artifactId>springboot-parent</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <modules>
-        <module>springboot-helloworld</module>
-        <module>springboot-websocket</module>
-        <module>springboot-swagger2</module>
-        <module>springboot-freemarker</module>
-        <module>springboot-MQ/springboot-rabbitMQ/rabbitMQ-consumer</module>
-        <module>springboot-MQ/springboot-rabbitMQ/rabbitMQ-producer</module>
-        <module>springboot-mybatis/mybatis-xml</module>
-        <module>springboot-mybatis/mybatis-annotation</module>
-        <module>springboot-redis</module>
-        <module>springboot-zookeeper</module>
+        <module>../springboot-helloworld</module>
+        <module>../springboot-websocket</module>
+        <module>../springboot-swagger2</module>
+        <module>../springboot-freemarker</module>
+        <module>../springboot-MQ/springboot-rabbitMQ/rabbitMQ-consumer</module>
+        <module>../springboot-MQ/springboot-rabbitMQ/rabbitMQ-producer</module>
+        <module>../springboot-mybatis/mybatis-xml</module>
+        <module>../springboot-mybatis/mybatis-annotation</module>
+        <module>../springboot-redis</module>
+        <module>../springboot-zookeeper</module>
     </modules>
     <packaging>pom</packaging>
     <!--核心依赖，管理大部分常用jar包的版本,分支测试-->
