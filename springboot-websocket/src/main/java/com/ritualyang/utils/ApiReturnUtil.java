@@ -1,6 +1,6 @@
 package com.ritualyang.utils;
 
-import com.ritualyang.pojo.ApiReturnObject;
+import com.ritualyang.model.ApiReturnObject;
 
 public class ApiReturnUtil {
     public static ApiReturnObject error(String msg) {

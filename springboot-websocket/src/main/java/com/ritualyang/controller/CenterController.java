@@ -1,6 +1,6 @@
 package com.ritualyang.controller;
 
-import com.ritualyang.pojo.ApiReturnObject;
+import com.ritualyang.model.ApiReturnObject;
 import com.ritualyang.server.WebSocketServer;
 import com.ritualyang.utils.ApiReturnUtil;
 import org.springframework.stereotype.Controller;

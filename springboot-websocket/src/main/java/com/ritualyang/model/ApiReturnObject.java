@@ -1,4 +1,4 @@
-package com.ritualyang.pojo;
+package com.ritualyang.model;
 
 public class ApiReturnObject {
     private int code;

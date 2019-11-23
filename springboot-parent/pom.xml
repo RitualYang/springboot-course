@@ -18,6 +18,7 @@
         <module>../springboot-mybatis/mybatis-annotation</module>
         <module>../springboot-redis</module>
         <module>../springboot-zookeeper</module>
+        <module>../springboot-springSecurity</module>
     </modules>
     <packaging>pom</packaging>
     <!--核心依赖，管理大部分常用jar包的版本,分支测试-->
@@ -143,12 +144,12 @@
             <dependency>
                 <groupId>org.apache.curator</groupId>
                 <artifactId>curator-recipes</artifactId>
-                <version>2.12.0</version>
+                <version>${curator.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.curator</groupId>
                 <artifactId>curator-client</artifactId>
-                <version>2.12.0</version>
+                <version>${curator.version}</version>
             </dependency>
             <!-- spring security依赖 -->
             <dependency>
