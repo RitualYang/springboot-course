@@ -29,7 +29,7 @@ public class swagger2Config {
                 .apiInfo(apiInfo())
                 .select()
                 //此处添加需要扫描接口的包路径
-                .apis(basePackage("com.ritualyang.controller" + splitor + "com.ritualyang.model"))
+                .apis(basePackage("com.ritualyang.com.ritualyang.controller" + splitor + "com.ritualyang.model"))
                 .paths(PathSelectors.any())
                 .build();
     }
