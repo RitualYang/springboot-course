@@ -19,6 +19,8 @@
         <module>../springboot-redis</module>
         <module>../springboot-zookeeper</module>
         <module>../springboot-springSecurity</module>
+        <module>../springboot-shiro</module>
+        <module>../springboot-thymeleaf</module>
     </modules>
     <packaging>pom</packaging>
     <!--核心依赖，管理大部分常用jar包的版本,分支测试-->
@@ -162,6 +164,7 @@
                 <artifactId>kaptcha</artifactId>
                 <version>0.0.9</version>
             </dependency>
+            <!--添加shiro依赖-->
         </dependencies>
     </dependencyManagement>
     <build>
