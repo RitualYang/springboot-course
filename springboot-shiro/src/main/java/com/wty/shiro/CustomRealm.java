@@ -14,6 +14,11 @@ import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.springframework.beans.factory.annotation.Autowired;
 
+/**
+ * 用于进行权限信息的验证
+ * @author RitualYang
+ * @create 2019-11-01 21:03
+ */
 
 public class CustomRealm extends AuthorizingRealm {
 
