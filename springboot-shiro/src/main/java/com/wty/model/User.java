@@ -6,6 +6,9 @@ import lombok.Data;
 
 import java.util.Set;
 
+/**
+ * 用户实体
+ */
 @Data
 @AllArgsConstructor(access = AccessLevel.PUBLIC)
 public class User {

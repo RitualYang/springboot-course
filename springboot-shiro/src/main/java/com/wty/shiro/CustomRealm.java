@@ -25,6 +25,11 @@ public class CustomRealm extends AuthorizingRealm {
     @Autowired
     private LoginService loginService;
 
+    /**
+     * 授权，即角色或者权限验证
+     * @param principalCollection
+     * @return
+     */
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
         //获取登录用户名
@@ -44,6 +49,12 @@ public class CustomRealm extends AuthorizingRealm {
         return simpleAuthorizationInfo;
     }
 
+    /**
+     * 身份认证/登录(账号密码验证)。
+     * @param authenticationToken
+     * @return
+     * @throws AuthenticationException
+     */
     @Override
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authenticationToken) throws AuthenticationException {
         //加这一步的目的是在Post请求的时候会先进认证，然后在到请求
@@ -54,12 +65,12 @@ public class CustomRealm extends AuthorizingRealm {
         String name = authenticationToken.getPrincipal().toString();
         User user = loginService.getUserByName(name);
         if (user == null) {
-            //这里返回后会报出对应异常
             return null;
         } else {
             //这里验证authenticationToken和simpleAuthenticationInfo的信息
-            SimpleAuthenticationInfo simpleAuthenticationInfo = new SimpleAuthenticationInfo(name, user.getPassword().toString(), getName());
+            SimpleAuthenticationInfo simpleAuthenticationInfo = new SimpleAuthenticationInfo(name, user.getPassword(), getName());
             return simpleAuthenticationInfo;
         }
     }
+
 }

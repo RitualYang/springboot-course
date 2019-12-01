@@ -7,6 +7,9 @@ import lombok.Data;
 
 import java.util.Set;
 
+/**
+ * 角色
+ */
 @Data
 @AllArgsConstructor(access = AccessLevel.PUBLIC)
 public class Role {
