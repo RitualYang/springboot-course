@@ -15,9 +15,9 @@ import java.util.Set;
 public class LoginServiceImpl implements LoginService {
 
     @Override
-    public User getUserByName(String getMapByName) {
+    public User getUserByName(String username) {
         //模拟数据库查询，正常情况此处是从数据库或者缓存查询。
-        return getMapByName(getMapByName);
+        return getMapByName(username);
     }
 
     /**

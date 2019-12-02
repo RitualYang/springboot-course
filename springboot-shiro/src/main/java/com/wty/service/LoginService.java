@@ -7,5 +7,5 @@ import com.wty.model.User;
  * @create 2019-12-01 16:54
  */
 public interface LoginService {
-    User getUserByName(String getMapByName);
+    User getUserByName(String username);
 }

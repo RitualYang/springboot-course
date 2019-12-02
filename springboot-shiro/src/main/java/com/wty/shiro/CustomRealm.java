@@ -32,12 +32,12 @@ public class CustomRealm extends AuthorizingRealm {
      */
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
-        //获取登录用户名
-        String name = (String) principalCollection.getPrimaryPrincipal();
-        //根据用户名去数据库查询用户信息
-        User user = loginService.getUserByName(name);
         //添加角色和权限
         SimpleAuthorizationInfo simpleAuthorizationInfo = new SimpleAuthorizationInfo();
+        //获取登录用户名
+        String username = (String) principalCollection.getPrimaryPrincipal();
+        //根据用户名去数据库查询用户信息
+        User user = loginService.getUserByName(username);
         for (Role role : user.getRoles()) {
             //添加角色
             simpleAuthorizationInfo.addRole(role.getRoleName());
@@ -62,13 +62,13 @@ public class CustomRealm extends AuthorizingRealm {
             return null;
         }
         //获取用户信息
-        String name = authenticationToken.getPrincipal().toString();
-        User user = loginService.getUserByName(name);
+        String username = authenticationToken.getPrincipal().toString();
+        User user = loginService.getUserByName(username);
         if (user == null) {
             return null;
         } else {
             //这里验证authenticationToken和simpleAuthenticationInfo的信息
-            SimpleAuthenticationInfo simpleAuthenticationInfo = new SimpleAuthenticationInfo(name, user.getPassword(), getName());
+            SimpleAuthenticationInfo simpleAuthenticationInfo = new SimpleAuthenticationInfo(username, user.getPassword(), getName());
             return simpleAuthenticationInfo;
         }
     }

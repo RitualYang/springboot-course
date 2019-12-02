@@ -25,8 +25,6 @@ public class LoginController {
         try {
             //进行验证，这里可以捕获异常，然后返回对应信息
             subject.login(usernamePasswordToken);
-//            subject.checkRole("admin");
-//            subject.checkPermissions("query", "add");
         } catch (AuthenticationException e) {
             e.printStackTrace();
             return "账号或密码错误！";
@@ -42,5 +40,11 @@ public class LoginController {
     @RequestMapping("/index")
     public String index() {
         return "index!";
+    }
+
+    @RequestMapping("/error")
+    public String unauthorizedRole(){
+        System.out.println("------没有权限,请先登录-------");
+        return "error";
     }
 }
