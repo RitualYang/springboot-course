@@ -1,8 +1,9 @@
-package com.wty.utils.redis;
+package com.wty.utils;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import redis.clients.jedis.BinaryClient;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
@@ -15,12 +16,14 @@ import java.io.ObjectOutputStream;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-
 /**
- * redis工具类
+ * Jedis工具类
+ * @author RitualYang
+ * @create 2019-12-03 21:03
  */
-public class RedisUtil{
-	Logger log = LoggerFactory.getLogger(RedisUtil.class);
+@Component
+public class JedisUtil{
+	private Logger log = LoggerFactory.getLogger(JedisUtil.class);
  
 	@Autowired
 	private JedisPool jedisPool;
