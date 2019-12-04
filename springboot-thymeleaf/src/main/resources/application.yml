@@ -12,3 +12,5 @@ spring:
     # 内容类别 可不用配置
     servlet:
       content-type: text/html
+  mvc:
+    static-path-pattern: /static/**

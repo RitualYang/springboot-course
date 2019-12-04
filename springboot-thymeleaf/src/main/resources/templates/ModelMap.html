@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<!-- 导入thymeleaf的名词空间 -->
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>ModelMap</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <link rel="stylesheet" th:href="@{static/css/ModelMap.css}" />
+</head>
+<body>
+<h1>日期转换</h1>
+<p th:text="${#dates.format(date, 'yyyy-MM-dd HH:mm:ss')}" />
+<h1>便利</h1>
+<div th:each="user,index :${list}">
+    <p th:text="'第' + ${index.count} + '个用户'">
+    <p>ID:<span th:text="${user.id}"></span></p>
+    <p>名字:<span th:text="${user.name}"></span></p>
+</div>
+<h1>switch</h1>
+<div th:switch="${userName}">
+    <p th:case="'RitualYang'">userName是RitualYang</p>
+    <p th:case="'wty'">userName是wty</p>
+    <p th:case="*">userName没有匹配的case</p>
+</div>
+<h1>if</h1>
+<span th:if="${userName} == 'RitualYang'" th:text="${userName}">  </span><br />
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<!-- 导入thymeleaf的名词空间 -->
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Model</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <link rel="stylesheet" th:href="@{static/css/Model.css}" />
+</head>
+<body>
+<p th:text="'用户ID：' + ${uid}"/>
+<p th:text="'用户名称：' + ${name}"/>
+<span th:text="${'将所有<b>特殊字符</b>转成字符  '}"></span><br/>
+<span th:utext="${'不会将<b>特殊字符</b>进行字符转义'}"></span>
+</body>
+</html>
