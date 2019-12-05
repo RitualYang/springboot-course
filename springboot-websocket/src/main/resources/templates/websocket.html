@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>websocket</title>
+</head>
+<body>
+
+<h1>hello world!</h1>
+<script>
+    var socket;
+    if(typeof(WebSocket) == "undefined") {
+        console.log("您的浏览器不支持WebSocket");
+    }else{
+        console.log("您的浏览器支持WebSocket");
+        //实现化WebSocket对象，指定要连接的服务器地址与端口  建立连接
+        socket = new WebSocket("ws://localhost:8082/websocket/1");
+        //打开事件
+        socket.onopen = function() {
+            console.log("Socket 已打开");
+        };
+        //获得消息事件
+        socket.onmessage = function(msg) {
+            console.log(msg.data);
+        };
+        //关闭事件
+        socket.onclose = function() {
+            console.log("Socket已关闭");
+        };
+        //发生了错误事件
+        socket.onerror = function() {
+            alert("Socket发生了错误");
+        }
+    }
+</script>
+</body>
+</html>
