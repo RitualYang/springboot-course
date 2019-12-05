@@ -64,6 +64,10 @@ public class shiroConfig {
         //登出过滤器（Shiro已经替我们实现了）
         filterChainDefinitionMap.put("/logout", "logout");
         //authc:所有url都必须认证通过才可以访问; anon:所有url都都可以匿名访问
+        filterChainDefinitionMap.put("/static/**","anon");
+        // 登录 URL 放行
+        filterChainDefinitionMap.put("/login", "anon");
+        //必须放在最后，否则全部拦截
         filterChainDefinitionMap.put("/**", "authc");
         //登录页面，如果不设置默认会自动寻找Web工程根目录下的"/login.jsp"页面
         shiroFilterFactoryBean.setLoginUrl("/login");

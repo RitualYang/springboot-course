@@ -48,16 +48,6 @@ public class LoginController {
     @RequiresPermissions("add")
     @RequestMapping("/index")
     public String index() {
-        return "index";
+        return "index！";
     }
-
-//    /**
-//     * error跳转
-//     * @return
-//     */
-//    @RequestMapping("/error")
-//    public String unauthorizedRole(){
-//        System.out.println("------没有权限,请先登录-------");
-//        return "error";
-//    }
 }

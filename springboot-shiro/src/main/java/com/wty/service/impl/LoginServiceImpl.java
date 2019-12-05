@@ -26,8 +26,6 @@ public class LoginServiceImpl implements LoginService {
      * @return
      */
     private User getMapByName(String userName){
-        //共添加两个用户，两个用户都是admin一个角色，
-        //wsl有query和add权限，zhangsan只有一个query权限
         Permissions permissions1 = new Permissions("1","query");
         Permissions permissions2 = new Permissions("2","add");
         Set<Permissions> permissionsSet = new HashSet<>();
@@ -36,7 +34,7 @@ public class LoginServiceImpl implements LoginService {
         Role role = new Role("1","admin",permissionsSet);
         Set<Role> roleSet = new HashSet<>();
         roleSet.add(role);
-        User user = new User("1","wsl","123456",roleSet);
+        User user = new User("1","RitualYang","123456",roleSet);
         Map<String ,User> map = new HashMap<>();
         map.put(user.getUserName(), user);
 
@@ -46,7 +44,7 @@ public class LoginServiceImpl implements LoginService {
         Role role1 = new Role("2","user",permissionsSet1);
         Set<Role> roleSet1 = new HashSet<>();
         roleSet1.add(role1);
-        User user1 = new User("2","zhangsan","123456",roleSet1);
+        User user1 = new User("2","WTY","123456",roleSet1);
         map.put(user1.getUserName(), user1);
         return map.get(userName);
     }
