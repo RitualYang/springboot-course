@@ -19,5 +19,4 @@ public class User {
      * 用户对应的角色集合
      */
     private Set<Role> roles;
-    //省略set、get方法等.....
 }

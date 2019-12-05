@@ -5,11 +5,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * @author RitualYang
- * @create 2019-12-01 17:17
+ * @create 2019-11-01 21:03
  */
 @SpringBootApplication
-public class shiroApplication {
+public class RedisApplication {
     public static void main(String[] args) {
-        SpringApplication.run(shiroApplication.class,args);
+        SpringApplication.run(RedisApplication.class,args);
     }
 }

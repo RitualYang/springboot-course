@@ -51,13 +51,13 @@ public class LoginController {
         return "index";
     }
 
-    /**
-     * error跳转
-     * @return
-     */
-    @RequestMapping("/error")
-    public String unauthorizedRole(){
-        System.out.println("------没有权限,请先登录-------");
-        return "error";
-    }
+//    /**
+//     * error跳转
+//     * @return
+//     */
+//    @RequestMapping("/error")
+//    public String unauthorizedRole(){
+//        System.out.println("------没有权限,请先登录-------");
+//        return "error";
+//    }
 }
