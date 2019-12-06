@@ -21,6 +21,7 @@
         <module>../springboot-springSecurity</module>
         <module>../springboot-shiro</module>
         <module>../springboot-thymeleaf</module>
+        <module>../springboot-fastdfs</module>
     </modules>
     <packaging>pom</packaging>
     <!--核心依赖，管理大部分常用jar包的版本,分支测试-->
@@ -45,6 +46,7 @@
         <jedis.version>2.9.1</jedis.version>
         <zookeeper.version>3.4.11</zookeeper.version>
         <shiro.version>1.4.0</shiro.version>
+        <fastdfs.version>1.26.5</fastdfs.version>
     </properties>
 
     <dependencies>
@@ -186,6 +188,11 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-thymeleaf</artifactId>
                 <version>${spring-boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.tobato</groupId>
+                <artifactId>fastdfs-client</artifactId>
+                <version>${fastdfs.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

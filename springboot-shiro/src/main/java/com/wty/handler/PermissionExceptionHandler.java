@@ -13,7 +13,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @ControllerAdvice
 @Slf4j
 public class PermissionExceptionHandler {
-    @ExceptionHandler
+
+    @ExceptionHandler(AuthorizationException.class)
     @ResponseBody
     public String ErrorHandler(AuthorizationException e) {
         log.error("没有通过权限验证！", e);
