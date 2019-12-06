@@ -22,6 +22,8 @@
         <module>../springboot-shiro</module>
         <module>../springboot-thymeleaf</module>
         <module>../springboot-fastdfs</module>
+        <module>../spingboot-TimedTask/springboot-Scheduled</module>
+        <module>../spingboot-TimedTask/springboot-Quartz</module>
     </modules>
     <packaging>pom</packaging>
     <!--核心依赖，管理大部分常用jar包的版本,分支测试-->
