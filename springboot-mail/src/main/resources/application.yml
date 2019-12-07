@@ -1,0 +1,28 @@
+server:
+  port: 8080
+spring:
+  mail:
+    host: smtp.qq.com
+    username: 123456789@qq.com # 发件人邮箱
+    password: ?????????????? # 授权码
+    default-encoding: UTF-8
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+  # thymeleaf配置
+  thymeleaf:
+    # 模板的样式。支持HTML，XML，TEXT，JAVASCRIPT
+    mode: HTML5
+    # 编码 可不用配置
+    encoding: utf-8
+    # 开发配置为false，避免修改模板需要重启服务器
+    cache: false
+    # 配置模板路径，默认是templates 可不用配置
+    prefix: classpath:/templates/
+    # 内容类别 可不用配置
+    servlet:
+      content-type: text/html

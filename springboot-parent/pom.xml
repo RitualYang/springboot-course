@@ -24,6 +24,7 @@
         <module>../springboot-fastdfs</module>
         <module>../spingboot-TimedTask/springboot-Scheduled</module>
         <module>../spingboot-TimedTask/springboot-Quartz</module>
+        <module>../springboot-mail</module>
     </modules>
     <packaging>pom</packaging>
     <!--核心依赖，管理大部分常用jar包的版本,分支测试-->
@@ -178,14 +179,14 @@
                 <artifactId>kaptcha</artifactId>
                 <version>0.0.9</version>
             </dependency>
-            <!--添加shiro依赖-->
+            <!--shiro依赖-->
             <dependency>
                 <groupId>org.apache.shiro</groupId>
                 <artifactId>shiro-spring</artifactId>
                 <version>${shiro.version}</version>
             </dependency>
 
-            <!--添加thymeleaf依赖-->
+            <!--thymeleaf依赖-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-thymeleaf</artifactId>
@@ -195,6 +196,12 @@
                 <groupId>com.github.tobato</groupId>
                 <artifactId>fastdfs-client</artifactId>
                 <version>${fastdfs.version}</version>
+            </dependency>
+            <!--mail依赖-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-mail</artifactId>
+                <version>${spring-boot.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
