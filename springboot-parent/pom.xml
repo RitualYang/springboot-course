@@ -51,6 +51,7 @@
         <zookeeper.version>3.4.11</zookeeper.version>
         <shiro.version>1.4.0</shiro.version>
         <fastdfs.version>1.26.5</fastdfs.version>
+        <quartz.version>2.2.1</quartz.version>
     </properties>
 
     <dependencies>
@@ -199,6 +200,7 @@
                 <artifactId>spring-boot-starter-thymeleaf</artifactId>
                 <version>${spring-boot.version}</version>
             </dependency>
+            <!-- fastdfs客户端依赖 -->
             <dependency>
                 <groupId>com.github.tobato</groupId>
                 <artifactId>fastdfs-client</artifactId>
@@ -208,6 +210,12 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-mail</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+            <!-- quartz定时任务依赖 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-quartz</artifactId>
                 <version>${spring-boot.version}</version>
             </dependency>
         </dependencies>
