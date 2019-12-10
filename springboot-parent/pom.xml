@@ -14,6 +14,8 @@
         <module>../springboot-freemarker</module>
         <module>../springboot-MQ/springboot-rabbitMQ/rabbitMQ-consumer</module>
         <module>../springboot-MQ/springboot-rabbitMQ/rabbitMQ-producer</module>
+        <module>../springboot-MQ/springboot-activeMQ/activeMQ-provider</module>
+        <module>../springboot-MQ/springboot-activeMQ/activeMQ-consumer</module>
         <module>../springboot-mybatis/mybatis-xml</module>
         <module>../springboot-mybatis/mybatis-annotation</module>
         <module>../springboot-redis</module>
@@ -26,6 +28,7 @@
         <module>../spingboot-TimedTask/springboot-Quartz</module>
         <module>../springboot-mail</module>
         <module>../springboot-log4j2</module>
+
     </modules>
     <packaging>pom</packaging>
     <!--核心依赖，管理大部分常用jar包的版本,分支测试-->
@@ -52,6 +55,7 @@
         <shiro.version>1.4.0</shiro.version>
         <fastdfs.version>1.26.5</fastdfs.version>
         <quartz.version>2.2.1</quartz.version>
+        <activemq-pool.version>5.15.0</activemq-pool.version>
     </properties>
 
     <dependencies>
@@ -217,6 +221,18 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-quartz</artifactId>
                 <version>${spring-boot.version}</version>
+            </dependency>
+            <!--   activemq消息队列依赖   -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-activemq</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+                    <!--连接池-->
+            <dependency>
+                <groupId>org.apache.activemq</groupId>
+                <artifactId>activemq-pool</artifactId>
+                <version>${activemq-pool.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

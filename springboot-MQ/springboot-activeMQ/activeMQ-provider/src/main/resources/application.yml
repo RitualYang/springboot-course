@@ -1,0 +1,24 @@
+spring:
+  activemq:
+    broker-url: localhost:61616
+    #true 表示使用内置的MQ，false则连接服务器
+    in-memory: false
+    # 在考虑结束之前等待的时间
+    # close-timeout: 15s
+    pool:
+      #true表示使用连接池；false时，每发送一条数据创建一个连接
+      enabled: true
+      #连接池最大连接数
+      max-connections: 10
+      #空闲的连接过期时间，默认为30秒
+      idle-timeout: 30000
+      # 在空闲连接清除线程之间运行的时间。当为负数时，没有空闲连接驱逐线程运行。
+      time-between-expiration-check: -1ms
+      # 每个连接的有效会话的最大数目。
+      max-sessions-per-connection: 500
+      # 当连接请求和池满时是否阻塞。设置false会抛“JMSException异常”。
+      block-if-full: true
+      # 如果池仍然满，则在抛出异常前阻塞时间。
+      block-if-full-timeout: -1ms
+      # 是否只使用一个MessageProducer
+      use-anonymous-producers: true
