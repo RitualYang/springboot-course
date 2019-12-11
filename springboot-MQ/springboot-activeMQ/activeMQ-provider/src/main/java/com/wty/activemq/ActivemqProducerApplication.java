@@ -2,10 +2,12 @@ package com.wty.activemq;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.jms.annotation.EnableJms;
 
 @SpringBootApplication
-public class activemqProducerApplication {
+@EnableJms
+public class ActivemqProducerApplication {
     public static void main(String[] args) {
-        SpringApplication.run(activemqProducerApplication.class,args);
+        SpringApplication.run(ActivemqProducerApplication.class,args);
     }
 }
