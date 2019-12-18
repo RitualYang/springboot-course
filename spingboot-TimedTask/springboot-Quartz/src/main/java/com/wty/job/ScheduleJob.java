@@ -6,10 +6,10 @@ import org.quartz.JobExecutionException;
 import org.springframework.scheduling.quartz.QuartzJobBean;
 
 @Slf4j
-public class QuartzJob extends QuartzJobBean {
+public class ScheduleJob extends QuartzJobBean {
 
     @Override
     protected void executeInternal(JobExecutionContext jobExecutionContext) throws JobExecutionException {
-      log.info("----QuartzJob定时任务启动----");
+        log.info("----ScheduleJob定时任务启动----");
     }
 }
