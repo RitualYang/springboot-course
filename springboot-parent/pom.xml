@@ -16,6 +16,8 @@
         <module>../springboot-MQ/springboot-rabbitMQ/rabbitMQ-producer</module>
         <module>../springboot-MQ/springboot-activeMQ/activeMQ-provider</module>
         <module>../springboot-MQ/springboot-activeMQ/activeMQ-consumer</module>
+        <module>../springboot-MQ/springboot-kafka/kafka-producer</module>
+        <module>../springboot-MQ/springboot-kafka/kafka-consumer</module>
         <module>../springboot-mybatis/mybatis-xml</module>
         <module>../springboot-mybatis/mybatis-annotation</module>
         <module>../springboot-redis</module>
@@ -28,6 +30,7 @@
         <module>../spingboot-TimedTask/springboot-Quartz</module>
         <module>../springboot-mail</module>
         <module>../springboot-log4j2</module>
+
 
     </modules>
     <packaging>pom</packaging>
@@ -48,14 +51,14 @@
         <mysql.version>8.0.17</mysql.version>
         <mapper.version>4.1.4</mapper.version>
         <druid.version>1.1.10</druid.version>
-        <zookeeper.version>3.4.11</zookeeper.version>
+        <zookeeper.version>3.4.14</zookeeper.version>
         <curator.version>2.12.0</curator.version>
         <jedis.version>2.9.1</jedis.version>
-        <zookeeper.version>3.4.11</zookeeper.version>
         <shiro.version>1.4.0</shiro.version>
         <fastdfs.version>1.26.5</fastdfs.version>
         <quartz.version>2.2.1</quartz.version>
         <activemq-pool.version>5.15.0</activemq-pool.version>
+        <kafka.version>2.2.4.RELEASE</kafka.version>
     </properties>
 
     <dependencies>
@@ -222,10 +225,16 @@
                 <artifactId>spring-boot-starter-quartz</artifactId>
                 <version>${spring-boot.version}</version>
             </dependency>
-            <!--   activemq消息队列依赖   -->
+            <!-- activemq消息队列依赖 -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-activemq</artifactId>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.springframework.boot</groupId>
+                        <artifactId>spring-boot-starter-logging</artifactId>
+                    </exclusion>
+                </exclusions>
                 <version>${spring-boot.version}</version>
             </dependency>
                     <!--连接池-->
@@ -233,6 +242,12 @@
                 <groupId>org.apache.activemq</groupId>
                 <artifactId>activemq-pool</artifactId>
                 <version>${activemq-pool.version}</version>
+            </dependency>
+            <!--kafka依赖-->
+            <dependency>
+                <groupId>org.springframework.kafka</groupId>
+                <artifactId>spring-kafka</artifactId>
+                <version>${kafka.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
