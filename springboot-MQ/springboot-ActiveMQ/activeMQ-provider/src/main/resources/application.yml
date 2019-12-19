@@ -1,4 +1,3 @@
-
 spring:
   activemq:
     user: admin
