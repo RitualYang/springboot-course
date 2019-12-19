@@ -1,20 +1,12 @@
 package com.wty.entity;
 
+import lombok.Data;
+import lombok.ToString;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import java.io.Serializable;
-
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
-
-/**
- * @Description  
- * @Author  Hunter
- * @Date 2019-12-19 
- */
 
 @Data
 @ToString
