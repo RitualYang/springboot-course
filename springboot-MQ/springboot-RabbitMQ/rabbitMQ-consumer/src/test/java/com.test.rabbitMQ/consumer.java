@@ -1,6 +1,6 @@
 package com.test.rabbitMQ;
 
-import com.rabbitmq.client.*;
+import com.rabbitMQ.client.*;
 
 import java.io.IOException;
 import java.util.concurrent.TimeoutException;

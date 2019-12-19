@@ -1,7 +1,7 @@
-package com.wty.rabbitmq.mq;
+package com.wty.rabbitMQ.mq;
 
 import com.alibaba.fastjson.JSON;
-import com.wty.rabbitmq.config.RabbitmqConfig;
+import com.wty.rabbitMQ.config.rabbitMQConfig;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -23,7 +23,7 @@ public class Producer_topics_springboot {
          * 2、routingKey
          * 3、消息内容
          */
-        rabbitTemplate.convertAndSend(RabbitmqConfig.EXCHANGE_TOPICS_INFORM,"inform.email",message);
+        rabbitTemplate.convertAndSend(rabbitMQConfig.EXCHANGE_TOPICS_INFORM,"inform.email",message);
 
     }
 

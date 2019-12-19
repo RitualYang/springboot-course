@@ -2,8 +2,8 @@ server:
   port: 44001
 spring:
   application:
-    name: rabbitmq-comsumer
-  rabbitmq:
+    name: rabbitMQ-comsumer
+  rabbitMQ:
     host: 127.0.0.1
     port: 5672
     username: guest

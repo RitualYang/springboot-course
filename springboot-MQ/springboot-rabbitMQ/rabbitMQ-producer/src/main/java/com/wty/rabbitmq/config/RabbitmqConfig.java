@@ -1,4 +1,4 @@
-package com.wty.rabbitmq.config;
+package com.wty.rabbitMQ.config;
 
 import org.springframework.amqp.core.*;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Configuration;
  * @create 2019-10-26 21:01
  */
 @Configuration
-public class RabbitmqConfig {
+public class rabbitMQConfig {
     public static final String QUEUE_INFORM_EMAIL = "queue_inform_email";
     private static final String QUEUE_INFORM_SMS = "queue_inform_sms";
     public static final String EXCHANGE_TOPICS_INFORM = "exchange_topics_inform";

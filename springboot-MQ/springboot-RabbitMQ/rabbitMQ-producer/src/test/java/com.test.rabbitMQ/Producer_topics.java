@@ -50,7 +50,7 @@ public class Producer_topics {
              * 参数明细：
              * 1、交换机的名称
              * 2、交换机的类型
-             * fanout：对应的rabbitmq的工作模式是 publish/subscribe
+             * fanout：对应的rabbitMQ的工作模式是 publish/subscribe
              * direct：对应的Routing	工作模式
              * topic：对应的Topics工作模式
              * headers： 对应的headers工作模式

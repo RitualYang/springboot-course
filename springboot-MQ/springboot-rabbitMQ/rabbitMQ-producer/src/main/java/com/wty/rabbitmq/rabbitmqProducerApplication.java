@@ -1,4 +1,4 @@
-package com.wty.rabbitmq;
+package com.wty.rabbitMQ;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

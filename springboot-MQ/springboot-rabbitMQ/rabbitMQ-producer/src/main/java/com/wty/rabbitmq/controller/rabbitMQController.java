@@ -1,6 +1,6 @@
-package com.wty.rabbitmq.controller;
+package com.wty.rabbitMQ.controller;
 
-import com.wty.rabbitmq.mq.Producer_topics_springboot;
+import com.wty.rabbitMQ.mq.Producer_topics_springboot;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
