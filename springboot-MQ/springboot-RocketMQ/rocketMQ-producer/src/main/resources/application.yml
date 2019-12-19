@@ -1,0 +1,10 @@
+rocketmq:
+  name-server: localhost:9876
+  producer:
+    group: my-group
+    send-message-timeout: 3000 # 发送消息超时时间,默认3000
+    compress-message-body-threshold: 4096
+    max-message-size: 419304 # 消息最大长度 默认1024*4(4M)
+    retry-next-server: true
+    retry-times-when-send-async-failed: 0
+    retry-times-when-send-failed: 2 # 发送消息失败重试次数，默认2
