@@ -9,11 +9,8 @@ import org.junit.runner.RunWith;
 import org.quartz.*;
 import org.quartz.impl.StdSchedulerFactory;
 import org.quartz.impl.matchers.EverythingMatcher;
-import org.quartz.impl.matchers.KeyMatcher;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-
-import java.util.EventListener;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest

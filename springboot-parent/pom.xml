@@ -14,10 +14,12 @@
         <module>../springboot-freemarker</module>
         <module>../springboot-MQ/springboot-rabbitMQ/rabbitMQ-consumer</module>
         <module>../springboot-MQ/springboot-rabbitMQ/rabbitMQ-producer</module>
-        <module>../springboot-MQ/springboot-activeMQ/activeMQ-provider</module>
-        <module>../springboot-MQ/springboot-activeMQ/activeMQ-consumer</module>
-        <module>../springboot-MQ/springboot-kafka/kafka-producer</module>
-        <module>../springboot-MQ/springboot-kafka/kafka-consumer</module>
+        <module>../springboot-MQ/springboot-ActiveMQ/activeMQ-provider</module>
+        <module>../springboot-MQ/springboot-ActiveMQ/activeMQ-consumer</module>
+        <module>../springboot-MQ/springboot-RocketMQ/rocketMQ-producer</module>
+        <module>../springboot-MQ/springboot-RocketMQ/rocketMQ-consumer</module>
+        <module>../springboot-MQ/springboot-Kafka/kafka-producer</module>
+        <module>../springboot-MQ/springboot-Kafka/kafka-consumer</module>
         <module>../springboot-mybatis/mybatis-xml</module>
         <module>../springboot-mybatis/mybatis-annotation</module>
         <module>../springboot-redis</module>
@@ -30,6 +32,7 @@
         <module>../spingboot-TimedTask/springboot-Quartz</module>
         <module>../springboot-mail</module>
         <module>../springboot-log4j2</module>
+
 
 
     </modules>
@@ -58,7 +61,8 @@
         <fastdfs.version>1.26.5</fastdfs.version>
         <quartz.version>2.2.1</quartz.version>
         <activemq-pool.version>5.15.0</activemq-pool.version>
-        <kafka.version>2.2.4.RELEASE</kafka.version>
+        <spring-kafka.version>2.2.4.RELEASE</spring-kafka.version>
+        <rocketmq.version>2.0.3</rocketmq.version>
     </properties>
 
     <dependencies>
@@ -253,7 +257,12 @@
             <dependency>
                 <groupId>org.springframework.kafka</groupId>
                 <artifactId>spring-kafka</artifactId>
-                <version>${kafka.version}</version>
+                <version>${spring-kafka.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.rocketmq</groupId>
+                <artifactId>rocketmq-spring-boot-starter</artifactId>
+                <version>${rocketmq.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
