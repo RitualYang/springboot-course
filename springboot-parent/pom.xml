@@ -33,7 +33,7 @@
         <module>../spingboot-TimedTask/springboot-Quartz-Distributed</module>
         <module>../springboot-mail</module>
         <module>../springboot-log4j2</module>
-
+        <module>../springboot-data-jpa</module>
 
 
     </modules>
@@ -264,6 +264,11 @@
                 <groupId>org.apache.rocketmq</groupId>
                 <artifactId>rocketmq-spring-boot-starter</artifactId>
                 <version>${rocketmq.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-jpa</artifactId>
+                <version>${spring-boot.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
