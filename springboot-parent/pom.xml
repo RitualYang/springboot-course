@@ -16,8 +16,8 @@
         <module>../springboot-MQ/springboot-rabbitMQ/rabbitMQ-producer</module>
         <module>../springboot-MQ/springboot-ActiveMQ/activeMQ-provider</module>
         <module>../springboot-MQ/springboot-ActiveMQ/activeMQ-consumer</module>
-        <module>../springboot-MQ/springboot-RocketMQ/rocketMQ-producer</module>
-        <module>../springboot-MQ/springboot-RocketMQ/rocketMQ-consumer</module>
+        <module>../springboot-MQ/springboot-rocketMQ/rocketMQ-producer</module>
+        <module>../springboot-MQ/springboot-rocketMQ/rocketMQ-consumer</module>
         <module>../springboot-MQ/springboot-Kafka/kafka-producer</module>
         <module>../springboot-MQ/springboot-Kafka/kafka-consumer</module>
         <module>../springboot-mybatis/mybatis-xml</module>

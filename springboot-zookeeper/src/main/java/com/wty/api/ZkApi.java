@@ -1,9 +1,8 @@
 package com.wty.api;
 
+import lombok.extern.slf4j.Slf4j;
 import org.apache.zookeeper.*;
 import org.apache.zookeeper.data.Stat;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -11,10 +10,8 @@ import javax.annotation.PostConstruct;
 import java.util.List;
 
 @Component
+@Slf4j
 public class ZkApi {
-
-    private static final Logger logger = LoggerFactory.getLogger(ZkApi.class);
-
     @Autowired
     private ZooKeeper zkClient;
 
@@ -29,7 +26,7 @@ public class ZkApi {
         try {
             return zkClient.exists(path,needWatch);
         } catch (Exception e) {
-            logger.error("【断指定节点是否存在异常】{},{}",path,e);
+            log.error("【断指定节点是否存在异常】{},{}",path,e);
             return null;
         }
     }
@@ -46,7 +43,7 @@ public class ZkApi {
         try {
             return zkClient.exists(path,watcher);
         } catch (Exception e) {
-            logger.error("【断指定节点是否存在异常】{},{}",path,e);
+            log.error("【断指定节点是否存在异常】{},{}",path,e);
             return null;
         }
     }
@@ -61,7 +58,7 @@ public class ZkApi {
             zkClient.create(path,data.getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT);
             return true;
         } catch (Exception e) {
-            logger.error("【创建持久化节点异常】{},{},{}",path,data,e);
+            log.error("【创建持久化节点异常】{},{},{}",path,data,e);
             return false;
         }
     }
@@ -79,7 +76,7 @@ public class ZkApi {
             zkClient.setData(path,data.getBytes(),-1);
             return true;
         } catch (Exception e) {
-            logger.error("【修改持久化节点异常】{},{},{}",path,data,e);
+            log.error("【修改持久化节点异常】{},{},{}",path,data,e);
             return false;
         }
     }
@@ -94,7 +91,7 @@ public class ZkApi {
             zkClient.delete(path,-1);
             return true;
         } catch (Exception e) {
-            logger.error("【删除持久化节点异常】{},{}",path,e);
+            log.error("【删除持久化节点异常】{},{}",path,e);
             return false;
         }
     }
@@ -131,10 +128,10 @@ public class ZkApi {
     @PostConstruct
     public  void init(){
         String path="/zk-watcher-2";
-        logger.info("【执行初始化测试方法。。。。。。。。。。。。】");
+        log.info("【执行初始化测试方法。。。。。。。。。。。。】");
         createNode(path,"测试");
         String value=getData(path,new WatcherApi());
-        logger.info("【执行初始化测试方法getData返回值。。。。。。。。。。。。】={}",value);
+        log.info("【执行初始化测试方法getData返回值。。。。。。。。。。。。】={}",value);
 
         // 删除节点出发 监听事件
         deleteNode(path);
