@@ -1,6 +1,7 @@
 package com.wty.server;
 
 
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.stereotype.Component;
@@ -13,9 +14,11 @@ import java.util.concurrent.CopyOnWriteArraySet;
 
 @ServerEndpoint("/websocket/{sid}")
 @Component
+@Slf4j
 public class WebSocketServer {
-    static Log log= LogFactory.getLog(WebSocketServer.class);
-    //静态变量，用来记录当前在线连接数。应该把它设计成线程安全的。
+    /**
+     * 静态变量，用来记录当前在线连接数。应该把它设计成线程安全的。
+     */
     private static int onlineCount = 0;
     //concurrent包的线程安全Set，用来存放每个客户端对应的MyWebSocket对象。
     private static CopyOnWriteArraySet<WebSocketServer> webSocketSet = new CopyOnWriteArraySet<WebSocketServer>();

@@ -34,6 +34,9 @@
         <module>../springboot-mail</module>
         <module>../springboot-log4j2</module>
         <module>../springboot-data-jpa</module>
+        <module>../springboot-netty</module>
+        <module>../springboot-elasticsearch</module>
+        <module>../springboot-solr</module>
 
 
     </modules>
@@ -95,18 +98,24 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-web</artifactId>
-                    <exclusions>
-                        <exclusion>
-                            <groupId>org.springframework.boot</groupId>
-                            <artifactId>spring-boot-starter-logging</artifactId>
-                        </exclusion>
-                    </exclusions>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.springframework.boot</groupId>
+                        <artifactId>spring-boot-starter-logging</artifactId>
+                    </exclusion>
+                </exclusions>
                 <version>${spring-boot.version}</version>
             </dependency>
             <!--websocket依赖-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-websocket</artifactId>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.springframework.boot</groupId>
+                        <artifactId>spring-boot-starter-logging</artifactId>
+                    </exclusion>
+                </exclusions>
                 <version>${spring-boot.version}</version>
             </dependency>
             <!--swagger2依赖-->

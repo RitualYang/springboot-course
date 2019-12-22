@@ -1,7 +1,6 @@
 package com.wty.utils;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import redis.clients.jedis.BinaryClient;
@@ -22,9 +21,9 @@ import java.util.Set;
  * @create 2019-12-03 21:03
  */
 @Component
+@Slf4j
 public class JedisUtil{
-	private Logger log = LoggerFactory.getLogger(JedisUtil.class);
- 
+
 	@Autowired
 	private JedisPool jedisPool;
  
@@ -174,7 +173,6 @@ public class JedisUtil{
 			jedis.select(indexdb);
 			return jedis.del(keys);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 			return 0L;
 		} finally {
@@ -196,7 +194,6 @@ public class JedisUtil{
 			jedis.select(indexdb);
 			return jedis.del(keys);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 			return 0L;
 		} finally {
@@ -219,7 +216,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			res = jedis.append(key, str);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 			return 0L;
 		} finally {
@@ -242,7 +238,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			return jedis.exists(key);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 			return false;
 		} finally {
@@ -310,7 +305,6 @@ public class JedisUtil{
 			jedis.select(indexdb);
 			return jedis.ttl(key);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 			return 0L;
 		} finally {
@@ -332,7 +326,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			return jedis.persist(key);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 			return -1L;
 		} finally {
@@ -357,7 +350,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			return jedis.setex(key, seconds, value);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -380,7 +372,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			return jedis.setnx(key, value);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 			return 0L;
 		} finally {
@@ -406,7 +397,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			return jedis.getSet(key, value);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -432,7 +422,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			res = jedis.setex(key, seconds, value);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -450,22 +439,6 @@ public class JedisUtil{
 	 * <p>
 	 * 如果替换的字符串长度过小则会这样
 	 * </p>
-	 * <p>
-	 * example:
-	 * </p>
-	 * <p>
-	 * value : bigsea@zto.cn
-	 * </p>
-	 * <p>
-	 * str : abc
-	 * </p>
-	 * <P>
-	 * 从下标7开始替换 则结果为
-	 * </p>
-	 * <p>
-	 * RES : bigsea.abc.cn
-	 * </p>
-	 *
 	 * @param key
 	 * @param str
 	 * @param offset
@@ -478,7 +451,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			return jedis.setrange(key, offset, str);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 			return 0L;
 		} finally {
@@ -502,7 +474,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			values = jedis.mget(keys);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -513,12 +484,6 @@ public class JedisUtil{
 	/**
 	 * <p>
 	 * 批量的设置key:value,可以一个
-	 * </p>
-	 * <p>
-	 * example:
-	 * </p>
-	 * <p>
-	 * obj.mset(new String[]{"key2","value1","key2","value2"})
 	 * </p>
 	 *
 	 * @param keysvalues
@@ -532,7 +497,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			res = jedis.mset(keysvalues);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -543,12 +507,6 @@ public class JedisUtil{
 	/**
 	 * <p>
 	 * 批量的设置key:value,可以一个,如果key已经存在则会失败,操作会回滚
-	 * </p>
-	 * <p>
-	 * example:
-	 * </p>
-	 * <p>
-	 * obj.msetnx(new String[]{"key2","value1","key2","value2"})
 	 * </p>
 	 *
 	 * @param keysvalues
@@ -561,7 +519,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			res = jedis.msetnx(keysvalues);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -585,7 +542,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			res = jedis.getSet(key, value);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -611,7 +567,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			res = jedis.getrange(key, startOffset, endOffset);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -634,7 +589,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			res = jedis.incr(key);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -658,7 +612,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			res = jedis.incrBy(key, integer);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -681,7 +634,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			res = jedis.decr(key);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -705,7 +657,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			res = jedis.decrBy(key, integer);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -728,7 +679,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			res = jedis.strlen(key);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -754,7 +704,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			res = jedis.hset(key, field, value);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -804,7 +753,6 @@ public class JedisUtil{
 			jedis.select(indexdb);
 			res = jedis.hmset(key, hash);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -828,7 +776,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			res = jedis.hget(key, field);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -854,7 +801,6 @@ public class JedisUtil{
 			jedis.select(indexdb);
 			res = jedis.hmget(key, fields);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -879,7 +825,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			res = jedis.hincrBy(key, field, value);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -903,7 +848,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			res = jedis.hexists(key, field);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -952,7 +896,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			res = jedis.hdel(key, fields);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -975,7 +918,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			res = jedis.hkeys(key);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -998,7 +940,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			res = jedis.hvals(key);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -1047,7 +988,6 @@ public class JedisUtil{
 			jedis.select(indexdb);
 			res = jedis.lpush(key, strs);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -1072,7 +1012,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			res = jedis.rpush(key, strs);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -1102,7 +1041,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			res = jedis.linsert(key, where, pivot, value);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -1131,7 +1069,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			res = jedis.lset(key, index, value);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -1157,7 +1094,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			res = jedis.lrem(key, count, value);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -1182,7 +1118,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			res = jedis.ltrim(key, start, end);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -1205,7 +1140,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			res = jedis.lpop(key);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -1229,7 +1163,6 @@ public class JedisUtil{
 			jedis.select(indexdb);
 			res = jedis.rpop(key);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -1245,8 +1178,8 @@ public class JedisUtil{
 	 * 如果第一个list为空或者不存在则返回null
 	 * </p>
 	 *
-	 * @param srckey
-	 * @param dstkey
+	 * @param srckey 被删除末尾元素的list
+	 * @param dstkey 被添加头部元素的list
 	 * @return
 	 */
 	public String rpoplpush(String srckey, String dstkey, int indexdb) {
@@ -1257,7 +1190,6 @@ public class JedisUtil{
 			jedis.select(indexdb);
 			res = jedis.rpoplpush(srckey, dstkey);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -1281,7 +1213,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			res = jedis.lindex(key, index);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -1304,7 +1235,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			res = jedis.llen(key);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -1333,7 +1263,6 @@ public class JedisUtil{
 			jedis.select(indexdb);
 			res = jedis.lrange(key, start, end);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -1357,7 +1286,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			return jedis.lset(key, index, value);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -1380,7 +1308,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			return jedis.sort(key, sortingParameters);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -1402,7 +1329,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			return jedis.sort(key);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -1427,7 +1353,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			res = jedis.sadd(key, members);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -1452,7 +1377,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			res = jedis.srem(key, members);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -1475,7 +1399,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			res = jedis.spop(key);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -1502,7 +1425,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			res = jedis.sdiff(keys);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -1531,7 +1453,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			res = jedis.sdiffstore(dstkey, keys);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -1555,7 +1476,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			res = jedis.sinter(keys);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -1580,7 +1500,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			res = jedis.sinterstore(dstkey, keys);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -1604,7 +1523,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			res = jedis.sunion(keys);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -1629,7 +1547,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			res = jedis.sunionstore(dstkey, keys);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -1657,7 +1574,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			res = jedis.smove(srckey, dstkey, member);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -1680,7 +1596,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			res = jedis.scard(key);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -1704,7 +1619,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			res = jedis.sismember(key, member);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -1727,7 +1641,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			res = jedis.srandmember(key);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -1750,7 +1663,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			res = jedis.smembers(key);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -1778,7 +1690,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			res = jedis.zadd(key, score, member);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -1802,7 +1713,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			return jedis.zrange(key, min, max);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -1826,7 +1736,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			return jedis.zcount(key, min, max);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 			return 0L;
 		} finally {
@@ -1881,7 +1790,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			res = jedis.zrem(key, members);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -1906,7 +1814,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			res = jedis.zincrby(key, score, member);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -1933,7 +1840,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			res = jedis.zrank(key, member);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -1960,7 +1866,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			res = jedis.zrevrank(key, member);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -1991,7 +1896,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			res = jedis.zrevrange(key, start, end);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -2016,7 +1920,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			res = jedis.zrevrangeByScore(key, max, min);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -2041,7 +1944,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			res = jedis.zrevrangeByScore(key, max, min);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -2066,7 +1968,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			res = jedis.zcount(key, min, max);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -2089,7 +1990,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			res = jedis.zcard(key);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -2113,7 +2013,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			res = jedis.zscore(key, member);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -2138,7 +2037,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			res = jedis.zremrangeByRank(key, start, end);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -2163,7 +2061,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			res = jedis.zremrangeByScore(key, start, end);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -2192,7 +2089,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			res = jedis.keys(pattern);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -2208,7 +2104,6 @@ public class JedisUtil{
 			jedis.select(database);
 			res = jedis.keys(pattern);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
@@ -2232,7 +2127,6 @@ public class JedisUtil{
 			jedis = jedisPool.getResource();
 			res = jedis.type(key);
 		} catch (Exception e) {
- 
 			log.error(e.getMessage());
 		} finally {
 			returnResource(jedisPool, jedis);
