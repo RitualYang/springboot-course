@@ -35,8 +35,9 @@
         <module>../springboot-log4j2</module>
         <module>../springboot-data-jpa</module>
         <module>../springboot-netty</module>
-        <module>../springboot-elasticsearch</module>
+        <module>../springboot-elasticsearch-7.2.0</module>
         <module>../springboot-solr</module>
+        <module>../springboot-elasticsearch-6.4.3</module>
 
 
     </modules>
@@ -67,6 +68,7 @@
         <activemq-pool.version>5.15.0</activemq-pool.version>
         <spring-kafka.version>2.2.4.RELEASE</spring-kafka.version>
         <rocketmq.version>2.0.3</rocketmq.version>
+        <elasticsearch7.version>7.2.0</elasticsearch7.version>
     </properties>
 
     <dependencies>
@@ -269,17 +271,26 @@
                 <artifactId>spring-kafka</artifactId>
                 <version>${spring-kafka.version}</version>
             </dependency>
+            <!--rocketmq依赖-->
             <dependency>
                 <groupId>org.apache.rocketmq</groupId>
                 <artifactId>rocketmq-spring-boot-starter</artifactId>
                 <version>${rocketmq.version}</version>
             </dependency>
+            <!--data-jpa依赖-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-data-jpa</artifactId>
                 <version>${spring-boot.version}</version>
             </dependency>
+            <!--elasticsearch依赖-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
         </dependencies>
+
     </dependencyManagement>
     <build>
         <plugins>
