@@ -27,7 +27,7 @@ public class CenterController {
             e.printStackTrace();
             return ApiReturnUtil.error(cid+"#"+e.getMessage());
         }
-        return ApiReturnUtil.success(cid);
+        return ApiReturnUtil.success(message);
     }
 
     @RequestMapping(value = "/websocket",method = RequestMethod.GET)
