@@ -20,7 +20,7 @@ public class TestController {
 
     @RequestMapping(value = "/selectOne",method = RequestMethod.GET)
     public String selectOne(){
-        User user = userMapper.selectOneUser("123456");
+        User user = userMapper.selectOneUser("admin");
         return user.toString();
     }
 }

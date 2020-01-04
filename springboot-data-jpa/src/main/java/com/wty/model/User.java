@@ -11,13 +11,13 @@ import java.io.Serializable;
 
 @Data
 @ToString
-@Entity
 @Table(name ="user")
 public class User implements Serializable {
 
 	private static final long serialVersionUID =  1681186685467210178L;
 
 	@Id
+	private Long uid;
    	@Column(name = "username" )
 	private String username;
 

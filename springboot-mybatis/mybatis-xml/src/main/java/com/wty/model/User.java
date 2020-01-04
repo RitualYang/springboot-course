@@ -14,6 +14,7 @@ import java.io.Serializable;
 @ToString
 @Table(name = "user")
 public class User implements Serializable {
+    private Long uid;
     private String username;
     private String password;
     private Long age;
