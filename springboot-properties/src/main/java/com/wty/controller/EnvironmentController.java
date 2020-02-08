@@ -16,6 +16,12 @@ public class EnvironmentController {
 
     @RequestMapping(value = "environment")
     public String getEnvironment() {
-        return "phone : " + environment.getProperty("demo.phone") + " ; sex : " + environment.getProperty("demo.sex") + " ; address : " + environment.getProperty("demo.address");
+        return "phone : " + environment.getProperty("demo.phone") +
+                " ; sex : " + environment.getProperty("demo.sex") +
+                " ; address : " + environment.getProperty("demo.address") +
+                " ; identity : " + environment.getProperty("demo.identity").toString() +
+//                " ; cars : " + environment.getProperty("demo.cars").toString() +
+                " ; maps : " + environment.getProperty("demo.maps").toString();
+//                + " ; girlfriend :" + environment.getProperty("demo.girlfriend").toString();
     }
 }

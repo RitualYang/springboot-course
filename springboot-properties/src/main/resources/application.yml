@@ -2,3 +2,12 @@ demo:
   phone: 111111111
   sex: 男
   address: 河南
+  identity: student,person,Chinese
+  cars:
+    - 大众
+    - 宝马
+    - 奥迪
+  maps: "{'money': '1000','age': '22'}"
+  girlfriend:
+    name: 美女
+    age: 20
