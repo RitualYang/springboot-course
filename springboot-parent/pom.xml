@@ -39,6 +39,7 @@
         <module>../springboot-elasticsearch</module>
         <module>../springboot-package/springboot-jar</module>
         <module>../springboot-package/springboot-war</module>
+        <module>../springboot-properties</module>
 
 
     </modules>
