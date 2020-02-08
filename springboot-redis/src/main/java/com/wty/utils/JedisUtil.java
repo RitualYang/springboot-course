@@ -141,7 +141,6 @@ public class JedisUtil{
 	 * <p>
 	 * 删除指定的key,也可以传入一个包含key的数组
 	 * </p>
-	 *
 	 * @param keys 一个key 也可以使 string 数组
 	 * @return 返回删除成功的个数
 	 */
@@ -204,7 +203,6 @@ public class JedisUtil{
 	 * <p>
 	 * 通过key向指定的value值追加值
 	 * </p>
-	 *
 	 * @param key
 	 * @param str
 	 * @return 成功返回 添加后value的长度 失败 返回 添加的 value 的长度 异常返回0L
@@ -228,7 +226,6 @@ public class JedisUtil{
 	 * <p>
 	 * 判断key是否存在
 	 * </p>
-	 *
 	 * @param key
 	 * @return true OR false
 	 */
@@ -249,7 +246,6 @@ public class JedisUtil{
 	 * <p>
 	 * 清空当前数据库中的所有 key,此命令从不失败。
 	 * </p>
-	 *
 	 * @return 总是返回 OK
 	 */
 	public String flushDB() {
@@ -293,7 +289,6 @@ public class JedisUtil{
 	 * <p>
 	 * 以秒为单位，返回给定 key 的剩余生存时间
 	 * </p>
-	 *
 	 * @param key
 	 * @return 当 key 不存在时，返回 -2 。当 key 存在但没有设置剩余生存时间时，返回 -1 。否则，以秒为单位，返回 key
 	 *         的剩余生存时间。 发生异常 返回 0
@@ -999,18 +994,17 @@ public class JedisUtil{
 	 * <p>
 	 * 通过key向list尾部添加字符串
 	 * </p>
-	 *
 	 * @param key
-	 * @param strs
+	 * @param sirs
 	 *            可以使一个string 也可以使string数组
 	 * @return 返回list的value个数
 	 */
-	public Long rpush(String key, String... strs) {
+	public Long rpush(String key, String... sirs) {
 		Jedis jedis = null;
 		Long res = null;
 		try {
 			jedis = jedisPool.getResource();
-			res = jedis.rpush(key, strs);
+			res = jedis.rpush(key, sirs);
 		} catch (Exception e) {
 			log.error(e.getMessage());
 		} finally {
@@ -1388,7 +1382,6 @@ public class JedisUtil{
 	 * <p>
 	 * 通过key随机删除一个set中的value并返回该值
 	 * </p>
-	 *
 	 * @param key
 	 * @return
 	 */
@@ -1413,7 +1406,6 @@ public class JedisUtil{
 	 * <p>
 	 * 以第一个set为标准
 	 * </p>
-	 *
 	 * @param keys
 	 *            可以使一个string 则返回set中所有的value 也可以是string数组
 	 * @return

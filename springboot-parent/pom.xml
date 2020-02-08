@@ -37,6 +37,8 @@
         <module>../springboot-netty</module>
         <module>../springboot-solr</module>
         <module>../springboot-elasticsearch</module>
+        <module>../springboot-package/springboot-jar</module>
+        <module>../springboot-package/springboot-war</module>
 
 
     </modules>
