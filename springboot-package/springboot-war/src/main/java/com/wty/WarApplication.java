@@ -7,16 +7,15 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 
 /**
  * @author wty
- * @create 2020-02-08 19:25
+ * @create 2020-02-08 22:43
  */
 @SpringBootApplication
 public class WarApplication extends SpringBootServletInitializer {
     public static void main(String[] args) {
         SpringApplication.run(WarApplication.class,args);
     }
-
     @Override
-    protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-        return builder.sources(WarApplication.class);
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+        return application.sources(WarApplication.class);
     }
 }

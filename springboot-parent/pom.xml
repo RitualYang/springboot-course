@@ -40,6 +40,7 @@
         <module>../springboot-package/springboot-jar</module>
         <module>../springboot-package/springboot-war</module>
         <module>../springboot-properties</module>
+        <module>../springboot-aop</module>
 
 
     </modules>
@@ -136,6 +137,18 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-amqp</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+            <!-- aop依赖 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-aop</artifactId>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.springframework.boot</groupId>
+                        <artifactId>spring-boot-starter-logging</artifactId>
+                    </exclusion>
+                </exclusions>
                 <version>${spring-boot.version}</version>
             </dependency>
             <!-- json依赖 -->
