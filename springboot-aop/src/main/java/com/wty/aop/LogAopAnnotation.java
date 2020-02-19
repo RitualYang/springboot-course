@@ -34,10 +34,10 @@ public class LogAopAnnotation {
      * @throws Throwable
      */
     @Around("annotationService()")
-    public void recordSysLog(ProceedingJoinPoint point) throws Throwable {
+    public Object recordSysLog(ProceedingJoinPoint point) throws Throwable {
         log.info("环绕前置通知");
         //先执行业务方法
-        point.proceed();
+        Object proceed = point.proceed();
         log.info("环绕后置通知");
         try {
             //获取拦截的方法名
@@ -63,5 +63,6 @@ public class LogAopAnnotation {
         }catch (Exception e){
             log.error(e.getMessage());
         }
+        return proceed;
     }
 }
