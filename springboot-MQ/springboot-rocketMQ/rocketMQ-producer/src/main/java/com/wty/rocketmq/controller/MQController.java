@@ -1,6 +1,6 @@
-package com.wty.rocketMQ.controller;
+package com.wty.rocketmq.controller;
 
-import com.wty.rocketMQ.service.RocketmqService;
+import com.wty.rocketmq.service.RocketmqService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 

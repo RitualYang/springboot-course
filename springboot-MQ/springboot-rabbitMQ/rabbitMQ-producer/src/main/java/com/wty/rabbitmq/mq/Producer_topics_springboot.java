@@ -1,7 +1,7 @@
-package com.wty.rabbitMQ.mq;
+package com.wty.rabbitmq.mq;
 
 import com.alibaba.fastjson.JSON;
-import com.wty.rabbitMQ.config.rabbitMQConfig;
+import com.wty.rabbitmq.config.rabbitMQConfig;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 

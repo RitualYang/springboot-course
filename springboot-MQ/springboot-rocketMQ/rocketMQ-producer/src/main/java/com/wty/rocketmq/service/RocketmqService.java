@@ -1,4 +1,4 @@
-package com.wty.rocketMQ.service;
+package com.wty.rocketmq.service;
 
 import org.apache.rocketmq.spring.core.RocketMQTemplate;
 import org.springframework.stereotype.Service;

@@ -1,11 +1,11 @@
-package com.wty.rocketMQ;
+package com.wty.rocketmq;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class RocketmqConsumerApplication {
+public class RocketmqProducerApplication {
     public static void main(String[] args) {
-        SpringApplication.run(RocketmqConsumerApplication.class,args);
+        SpringApplication.run(RocketmqProducerApplication.class,args);
     }
 }

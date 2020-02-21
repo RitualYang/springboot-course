@@ -1,8 +1,8 @@
-package com.wty.rabbitMQ.mq;
+package com.wty.rabbitmq.mq;
 
 
 import com.rabbitmq.client.Channel;
-import com.wty.rabbitMQ.config.rabbitMQConfig;
+import com.wty.rabbitmq.config.rabbitMQConfig;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
