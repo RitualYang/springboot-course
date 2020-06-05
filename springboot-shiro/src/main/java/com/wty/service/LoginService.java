@@ -3,7 +3,7 @@ package com.wty.service;
 import com.wty.model.User;
 
 /**
- * @author RitualYang
+ * @author wty
  * @create 2019-12-01 16:54
  */
 public interface LoginService {

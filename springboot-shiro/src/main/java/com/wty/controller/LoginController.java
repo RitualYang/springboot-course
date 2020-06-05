@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * 登录控制器
- * @author RitualYang
+ * @author wty
  * @create 2019-11-01 21:11
  */
 @RestController
@@ -28,7 +28,7 @@ public class LoginController {
                 user.getPassword()
         );
         try {
-            //进行验证，这里可以捕获异常，然后返回对应信息
+            //进行验证,这里可以捕获异常,然后返回对应信息
             subject.login(usernamePasswordToken);
         } catch (AuthenticationException e) {
             e.printStackTrace();

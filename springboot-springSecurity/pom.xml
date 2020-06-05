@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>springboot-parent</artifactId>
-        <groupId>com.ritualyang.springboot.course</groupId>
+        <groupId>com.wty.springboot.course</groupId>
         <version>1.0.0-SNAPSHOT</version>
-        <relativePath>../springboot-parent/pom.xml</relativePath>
+        <relativePath/>
     </parent>
     <artifactId>springboot-springSecurity</artifactId>
     <modelVersion>4.0.0</modelVersion>

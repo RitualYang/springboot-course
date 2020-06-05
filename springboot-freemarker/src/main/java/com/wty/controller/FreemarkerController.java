@@ -18,7 +18,7 @@ public class FreemarkerController {
     @RequestMapping("/index")
     public String freemarker(Map<String, Object> map){
         //向数据模型放数据
-        map.put("name","RitualYang");
+        map.put("name","wty");
 
         Student stu1 = new Student();
         stu1.setName("小明");

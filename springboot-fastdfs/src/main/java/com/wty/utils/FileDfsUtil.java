@@ -16,7 +16,7 @@ import java.nio.charset.Charset;
 
 /**
  * fastDFS工具类
- * @author: RitualYang
+ * @author: wty
  * @create: 2019-12-06 15:15
  **/
 @Component

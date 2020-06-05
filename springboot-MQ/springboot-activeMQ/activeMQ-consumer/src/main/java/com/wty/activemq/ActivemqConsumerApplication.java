@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.jms.annotation.EnableJms;
 
 /**
- * @author RitualYang
+ * @author wty
  *
  */
 @SpringBootApplication

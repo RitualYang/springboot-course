@@ -17,13 +17,13 @@ import java.util.concurrent.CopyOnWriteArraySet;
 @Slf4j
 public class WebSocketServer {
     /**
-     * 静态变量，用来记录当前在线连接数。应该把它设计成线程安全的。
+     * 静态变量,用来记录当前在线连接数。应该把它设计成线程安全的。
      */
     private static int onlineCount = 0;
-    //concurrent包的线程安全Set，用来存放每个客户端对应的MyWebSocket对象。
+    //concurrent包的线程安全Set,用来存放每个客户端对应的MyWebSocket对象。
     private static CopyOnWriteArraySet<WebSocketServer> webSocketSet = new CopyOnWriteArraySet<WebSocketServer>();
 
-    //与某个客户端的连接会话，需要通过它来给客户端发送数据
+    //与某个客户端的连接会话,需要通过它来给客户端发送数据
     private Session session;
 
     //接收sid
@@ -94,10 +94,10 @@ public class WebSocketServer {
      * 群发自定义消息
      */
     public static void sendInfo(String message,@PathParam("sid") String sid) throws IOException {
-        log.info("推送消息到窗口"+sid+"，推送内容:"+message);
+        log.info("推送消息到窗口"+sid+",推送内容:"+message);
         for (WebSocketServer item : webSocketSet) {
             try {
-                //这里可以设定只推送给这个sid的，为null则全部推送
+                //这里可以设定只推送给这个sid的,为null则全部推送
                 if(sid==null) {
                     item.sendMessage(message);
                 }else if(item.sid.equals(sid)){

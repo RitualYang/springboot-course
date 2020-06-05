@@ -33,7 +33,7 @@ public class ZkApi {
 
     /**
      *  检测结点是否存在 并设置监听事件
-     *      三种监听类型： 创建，删除，更新
+     *      三种监听类型： 创建,删除,更新
      *
      * @param path
      * @param watcher  传入指定的监听类
@@ -71,7 +71,7 @@ public class ZkApi {
      */
     public boolean updateNode(String path, String data){
         try {
-            //zk的数据版本是从0开始计数的。如果客户端传入的是-1，则表示zk服务器需要基于最新的数据进行更新。如果对zk的数据节点的更新操作没有原子性要求则可以使用-1.
+            //zk的数据版本是从0开始计数的。如果客户端传入的是-1,则表示zk服务器需要基于最新的数据进行更新。如果对zk的数据节点的更新操作没有原子性要求则可以使用-1.
             //version参数指定要更新的数据的版本, 如果version和真实的版本不同, 更新操作将失败. 指定version为-1则忽略版本检查
             zkClient.setData(path,data.getBytes(),-1);
             return true;

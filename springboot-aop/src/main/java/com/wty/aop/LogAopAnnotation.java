@@ -21,14 +21,14 @@ import java.lang.reflect.Method;
 @Slf4j
 public class LogAopAnnotation {
     /**
-     * 定义切入点，所以带有注解BussinessLog的方法
+     * 定义切入点,所以带有注解BussinessLog的方法
      */
     @Pointcut(value = "@annotation(com.wty.annotion.LoginLog)")
     public void annotationService() {
     }
 
     /**
-     * 环绕通知，已proceed（）方法区分前置环绕、后置环绕
+     * 环绕通知,已proceed（）方法区分前置环绕、后置环绕
      * 只有环绕通知可以使用 ProceedingJoinPoint
      * @param point
      * @throws Throwable

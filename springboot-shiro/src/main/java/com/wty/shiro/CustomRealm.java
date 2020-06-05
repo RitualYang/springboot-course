@@ -16,7 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  * 用于进行权限信息的验证
- * @author RitualYang
+ * @author wty
  * @create 2019-11-01 21:03
  */
 
@@ -26,7 +26,7 @@ public class CustomRealm extends AuthorizingRealm {
     private LoginService loginService;
 
     /**
-     * 授权，即角色或者权限验证
+     * 授权,即角色或者权限验证
      * @param principalCollection
      * @return
      */
@@ -57,7 +57,7 @@ public class CustomRealm extends AuthorizingRealm {
      */
     @Override
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authenticationToken) throws AuthenticationException {
-        //加这一步的目的是在Post请求的时候会先进认证，然后在到请求
+        //加这一步的目的是在Post请求的时候会先进认证,然后在到请求
         if (authenticationToken.getPrincipal() == null) {
             return null;
         }

@@ -17,7 +17,7 @@ import org.thymeleaf.context.Context;
 import javax.mail.internet.MimeMessage;
 
 /**
- * @author RitualYang
+ * @author wty
  * @create 2019-12-07 9:54
  */
 @Controller

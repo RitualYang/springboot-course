@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 /**
- * @author RitualYang
+ * @author wty
  * @create 2019-12-19 22:04
  */
 @SpringBootApplication

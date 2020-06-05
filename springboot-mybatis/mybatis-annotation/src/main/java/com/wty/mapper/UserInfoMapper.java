@@ -12,7 +12,7 @@ import tk.mybatis.mapper.common.Mapper;
 import java.util.List;
 
 /**
- * @author RitualYang
+ * @author wty
  * @create 2020-01-04 23:17
  */
 @Component

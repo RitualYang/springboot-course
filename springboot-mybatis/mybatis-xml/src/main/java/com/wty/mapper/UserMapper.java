@@ -4,7 +4,7 @@ import com.wty.model.User;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * @author RitualYang
+ * @author wty
  * @create 2019-11-01 17:08
  */
 @Transactional

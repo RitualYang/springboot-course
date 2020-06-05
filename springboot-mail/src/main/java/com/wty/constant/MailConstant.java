@@ -2,7 +2,7 @@ package com.wty.constant;
 
 /**
  * mail常量
- * @author RitualYang
+ * @author wty
  * @create 2019-12-07 10:18
  */
 public class MailConstant {

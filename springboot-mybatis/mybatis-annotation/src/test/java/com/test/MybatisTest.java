@@ -45,7 +45,7 @@ public class MybatisTest {
     @Test
     public void findOneForMany(){
         User one = userMapper.findOne(2);
-        log.info(one.toString());// 如果userinfos没有被调用，mybatis不进行查询userinfo操作。
+        log.info(one.toString());// 如果userinfos没有被调用,mybatis不进行查询userinfo操作。
     }
 
 

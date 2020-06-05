@@ -7,7 +7,7 @@ import javax.persistence.Table;
 import java.io.Serializable;
 
 /**
- * @author RitualYang
+ * @author wty
  * @create 2019-11-01 17:07
  */
 @Data

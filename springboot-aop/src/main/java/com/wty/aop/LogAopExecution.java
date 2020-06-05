@@ -43,7 +43,7 @@ public class LogAopExecution {
     }
 
     /**
-     * return返回值前，通知（如果出现异常则不调用）
+     * return返回值前,通知（如果出现异常则不调用）
      * @param point
      * @throws Exception
      */

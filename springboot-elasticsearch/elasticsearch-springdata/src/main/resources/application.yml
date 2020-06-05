@@ -1,0 +1,7 @@
+spring:
+  data:
+    elasticsearch:
+      cluster-name: my-elasticsearch
+      cluster-nodes: 192.168.37.134:9300
+      repositories:
+        enabled: true

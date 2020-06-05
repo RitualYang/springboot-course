@@ -1,0 +1,4 @@
+# 配置服务端口号
+server:
+  servlet:
+    context-path: /dev

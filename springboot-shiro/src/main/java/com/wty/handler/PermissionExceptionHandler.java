@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
- * @author RitualYang
+ * @author wty
  * @create 2019-12-05 22:07
  */
 @ControllerAdvice

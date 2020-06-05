@@ -4,7 +4,7 @@ import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Component;
 
 /**
- * @author RitualYang
+ * @author wty
  * @create 2019-12-10 23:04
  */
 @Component

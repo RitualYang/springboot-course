@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Date;
 
 /**
- * @author RitualYang
+ * @author wty
  * @create 2019-10-13 00:28
  */
 @RestController
@@ -23,7 +23,7 @@ public class UserController {
     public User getUser(String name){
         User user = new User();
         user.setDate(new Date());
-        user.setName("RitualYang");
+        user.setName("wty");
         user.setPassword("123456");
         return user;
     }

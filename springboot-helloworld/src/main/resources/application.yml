@@ -3,5 +3,9 @@ server:
   port: 8081
 # 服务名
 spring:
+  profiles:
+    active: prod
   application:
     name: springboot-helloworld
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss

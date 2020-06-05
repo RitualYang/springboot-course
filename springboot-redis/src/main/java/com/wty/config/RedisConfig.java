@@ -18,7 +18,7 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 import java.time.Duration;
 /**
  * RedisTemplate配置加载与缓存设置
- * @author RitualYang
+ * @author wty
  * @create 2019-11-01 21:08
  */
 @Configuration

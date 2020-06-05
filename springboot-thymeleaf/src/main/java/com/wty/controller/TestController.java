@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import java.util.*;
 
 /**
- * @author RitualYang
+ * @author wty
  * @create 2019-11-27 22:51
  */
 @Controller
@@ -18,12 +18,12 @@ public class TestController {
     @RequestMapping(value = "Model", method = RequestMethod.GET)
     public String show(Model model){
         model.addAttribute("uid","123456");
-        model.addAttribute("name","RitualYang");
+        model.addAttribute("name","wty");
         return "Model";
     }
     @RequestMapping(value = "ModelMap", method = RequestMethod.GET)
     public String index(ModelMap modelMap){
-        modelMap.put("userName","RitualYang");
+        modelMap.put("userName","wty");
         modelMap.put("date",new Date());
         List<Map<String,Object>> list = new ArrayList<>();
         Map<String,Object> map1 = new HashMap<>();

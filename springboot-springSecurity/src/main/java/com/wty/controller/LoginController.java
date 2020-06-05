@@ -6,7 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
- * @author RitualYang
+ * @author wty
  * @create 2019-11-21 20:30
  */
 @Controller

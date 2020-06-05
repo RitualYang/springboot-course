@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.Map;
 /**
  * shiro配置
- * @author RitualYang
+ * @author wty
  * @create 2019-11-01 21:11
  */
 @Configuration
@@ -40,7 +40,7 @@ public class shiroConfig {
     }
 
     /**
-     * 权限管理，配置主要是Realm的管理认证
+     * 权限管理,配置主要是Realm的管理认证
      * @return
      */
     @Bean
@@ -51,7 +51,7 @@ public class shiroConfig {
     }
 
     /**
-     * Filter工厂，设置对应的过滤条件和跳转条件
+     * Filter工厂,设置对应的过滤条件和跳转条件
      * @param securityManager
      * @return
      */
@@ -67,13 +67,13 @@ public class shiroConfig {
         filterChainDefinitionMap.put("/static/**","anon");
         // 登录 URL 放行
         filterChainDefinitionMap.put("/login", "anon");
-        //必须放在最后，否则全部拦截
+        //必须放在最后,否则全部拦截
         filterChainDefinitionMap.put("/**", "authc");
-        //登录页面，如果不设置默认会自动寻找Web工程根目录下的"/login.jsp"页面
+        //登录页面,如果不设置默认会自动寻找Web工程根目录下的"/login.jsp"页面
         shiroFilterFactoryBean.setLoginUrl("/login");
         //登录成功后要跳转的链接
         shiroFilterFactoryBean.setSuccessUrl("/index");
-        //错误页面，认证不通过跳转
+        //错误页面,认证不通过跳转
         shiroFilterFactoryBean.setUnauthorizedUrl("/error");
         shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);
         return shiroFilterFactoryBean;
@@ -81,7 +81,7 @@ public class shiroConfig {
 
     /**
      * 开启shiro aop注解支持.
-     * 使用代理方式，需要开启代码支持;
+     * 使用代理方式,需要开启代码支持;
      * @param securityManager
      * @return
      */
@@ -99,6 +99,7 @@ public class shiroConfig {
     @Bean
     public HashedCredentialsMatcher hashedCredentialsMatcher(){
         HashedCredentialsMatcher hashedCredentialsMatcher = new HashedCredentialsMatcher();
+        //加密操作
         //hashedCredentialsMatcher.setHashAlgorithmName("md5");
         //hashedCredentialsMatcher.setHashIterations(2);
         return hashedCredentialsMatcher;

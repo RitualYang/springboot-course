@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @author RitualYang
+ * @author wty
  * @create 2019-12-19 22:20
  */
 @RestController

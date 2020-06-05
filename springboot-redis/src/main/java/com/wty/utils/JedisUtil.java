@@ -17,7 +17,7 @@ import java.util.Map;
 import java.util.Set;
 /**
  * Jedis工具类
- * @author RitualYang
+ * @author wty
  * @create 2019-12-03 21:03
  */
 @Component
@@ -263,12 +263,12 @@ public class JedisUtil{
  
 	/**
 	 * <p>
-	 * 为给定 key 设置生存时间，当 key 过期时(生存时间为 0 )，它会被自动删除。
+	 * 为给定 key 设置生存时间,当 key 过期时(生存时间为 0 ),它会被自动删除。
 	 * </p>
 	 *
 	 * @param key
 	 * @param value
-	 *            过期时间，单位：秒
+	 *            过期时间,单位：秒
 	 * @return 成功返回1 如果存在 和 发生异常 返回 0
 	 */
 	public Long expire(String key, int value, int indexdb) {
@@ -287,10 +287,10 @@ public class JedisUtil{
  
 	/**
 	 * <p>
-	 * 以秒为单位，返回给定 key 的剩余生存时间
+	 * 以秒为单位,返回给定 key 的剩余生存时间
 	 * </p>
 	 * @param key
-	 * @return 当 key 不存在时，返回 -2 。当 key 存在但没有设置剩余生存时间时，返回 -1 。否则，以秒为单位，返回 key
+	 * @return 当 key 不存在时,返回 -2 。当 key 存在但没有设置剩余生存时间时,返回 -1 。否则,以秒为单位,返回 key
 	 *         的剩余生存时间。 发生异常 返回 0
 	 */
 	public Long ttl(String key,int indexdb) {
@@ -309,11 +309,11 @@ public class JedisUtil{
  
 	/**
 	 * <p>
-	 * 移除给定 key 的生存时间，将这个 key 从『易失的』(带生存时间 key )转换成『持久的』(一个不带生存时间、永不过期的 key )
+	 * 移除给定 key 的生存时间,将这个 key 从『易失的』(带生存时间 key )转换成『持久的』(一个不带生存时间、永不过期的 key )
 	 * </p>
 	 *
 	 * @param key
-	 * @return 当生存时间移除成功时，返回 1 .如果 key 不存在或 key 没有设置生存时间，返回 0 ， 发生异常 返回 -1
+	 * @return 当生存时间移除成功时,返回 1 .如果 key 不存在或 key 没有设置生存时间,返回 0 , 发生异常 返回 -1
 	 */
 	public Long persist(String key) {
 		Jedis jedis = null;
@@ -337,7 +337,7 @@ public class JedisUtil{
 	 * @param seconds
 	 *            生存时间 单位：秒
 	 * @param value
-	 * @return 设置成功时返回 OK 。当 seconds 参数不合法时，返回一个错误。
+	 * @return 设置成功时返回 OK 。当 seconds 参数不合法时,返回一个错误。
 	 */
 	public String setex(String key, int seconds, String value) {
 		Jedis jedis = null;
@@ -376,15 +376,15 @@ public class JedisUtil{
  
 	/**
 	 * <p>
-	 * 将给定 key 的值设为 value ，并返回 key 的旧值(old value)。
+	 * 将给定 key 的值设为 value ,并返回 key 的旧值(old value)。
 	 * </p>
 	 * <p>
-	 * 当 key 存在但不是字符串类型时，返回一个错误。
+	 * 当 key 存在但不是字符串类型时,返回一个错误。
 	 * </p>
 	 *
 	 * @param key
 	 * @param value
-	 * @return 返回给定 key 的旧值。当 key 没有旧值时，也即是， key 不存在时，返回 nil
+	 * @return 返回给定 key 的旧值。当 key 没有旧值时,也即是, key 不存在时,返回 nil
 	 */
 	public String getSet(String key, String value) {
 		Jedis jedis = null;
@@ -1272,7 +1272,7 @@ public class JedisUtil{
 	 * @param key
 	 * @param index
 	 * @param value
-	 * @return 操作成功返回 ok ，否则返回错误信息
+	 * @return 操作成功返回 ok ,否则返回错误信息
 	 */
 	public String lset(String key, long index, String value) {
 		Jedis jedis = null;
@@ -1311,7 +1311,7 @@ public class JedisUtil{
  
 	/**
 	 * <p>
-	 * 返回排序后的结果，排序默认以数字作为对象，值被解释为双精度浮点数，然后进行比较。
+	 * 返回排序后的结果,排序默认以数字作为对象,值被解释为双精度浮点数,然后进行比较。
 	 * </p>
 	 *
 	 * @param key
@@ -1691,7 +1691,7 @@ public class JedisUtil{
  
 	/**
 	 * <p>
-	 * 返回有序集 key 中，指定区间内的成员。min=0,max=-1代表所有元素
+	 * 返回有序集 key 中,指定区间内的成员。min=0,max=-1代表所有元素
 	 * </p>
 	 *
 	 * @param key
@@ -1738,8 +1738,8 @@ public class JedisUtil{
  
 	/**
 	 * <p>
-	 * 为哈希表 key 中的域 field 的值加上增量 increment 。增量也可以为负数，相当于对给定域进行减法操作。 如果 key
-	 * 不存在，一个新的哈希表被创建并执行 HINCRBY 命令。如果域 field 不存在，那么在执行命令前，域的值被初始化为 0 。
+	 * 为哈希表 key 中的域 field 的值加上增量 increment 。增量也可以为负数,相当于对给定域进行减法操作。 如果 key
+	 * 不存在,一个新的哈希表被创建并执行 HINCRBY 命令。如果域 field 不存在,那么在执行命令前,域的值被初始化为 0 。
 	 * 对一个储存字符串值的域 field 执行 HINCRBY 命令将造成一个错误。本操作的值被限制在 64 位(bit)有符号数字表示之内。
 	 * </p>
 	 * <p>
@@ -1749,7 +1749,7 @@ public class JedisUtil{
 	 * @param key
 	 * @param value
 	 * @param increment
-	 * @return 执行 HINCRBY 命令之后，哈希表 key 中域 field的值。异常返回0
+	 * @return 执行 HINCRBY 命令之后,哈希表 key 中域 field的值。异常返回0
 	 */
 	public Long hincrBy(String key, String value, long increment) {
 		Jedis jedis = null;

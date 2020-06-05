@@ -8,7 +8,7 @@ import org.springframework.jmx.support.RegistrationPolicy;
 
 /**
  * fastDFS配置
- * @author: RitualYang
+ * @author: wty
  * @create: 2019-12-06 15:15
  **/
 @Configuration

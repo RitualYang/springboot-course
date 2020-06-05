@@ -25,7 +25,7 @@ public class ProviderController {
     public String sendQueue(String name) {
         //方法一：添加消息到消息队列
         jmsMessagingTemplate.convertAndSend(queue, name);
-        //方法二：这种方式不需要手动创建queue，系统会自行创建名为test的队列
+        //方法二：这种方式不需要手动创建queue,系统会自行创建名为test的队列
         //jmsMessagingTemplate.convertAndSend("test", name);
         return "queue 发送成功";
     }
@@ -34,7 +34,7 @@ public class ProviderController {
     public String sendTopic(String name) {
         //方法一：添加消息到消息队列
         jmsMessagingTemplate.convertAndSend(topic, name);
-        //方法二：这种方式不需要手动创建topic，系统会自行创建名为test的队列
+        //方法二：这种方式不需要手动创建topic,系统会自行创建名为test的队列
         //jmsMessagingTemplate.convertAndSend("test", name);
         return "topic 发送成功";
     }

@@ -5,7 +5,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 
 /**
- * @author RitualYang
+ * @author wty
  * @create 2019-12-04 21:34
  */
 @Component

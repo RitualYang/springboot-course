@@ -4,7 +4,7 @@ import com.wty.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
- * @author RitualYang
+ * @author wty
  * @create 2019-12-19 22:16
  */
 public interface UserJpaDao extends JpaRepository<User,String> {

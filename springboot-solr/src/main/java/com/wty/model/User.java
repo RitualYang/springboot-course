@@ -6,7 +6,7 @@ import org.apache.solr.client.solrj.beans.Field;
 import java.io.Serializable;
 
 /**
- * @author RitualYang
+ * @author wty
  * @create 2019-12-24 18:49
  */
 @Data

@@ -33,7 +33,7 @@ public class Producer_topics_springboot {
         message.put("pageId","5a795ac7dd573c04508f3a56");
         //将消息对象转成json串
         String messageString = JSON.toJSONString(message);
-        //路由key，就是站点ID
+        //路由key,就是站点ID
         String routingKey = "5a751fab6abb5044e0d19ea1";
         /**
          * 参数：

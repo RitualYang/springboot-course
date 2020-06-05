@@ -48,7 +48,7 @@ public class QuartzManager {
 
     @Bean
     public Trigger scheduleJobTrigger() {
-        //cron方式，每隔5秒执行一次
+        //cron方式,每隔5秒执行一次
         return TriggerBuilder.newTrigger().forJob(scheduleJob())
                 .withIdentity("scheduleJobTrigger")
                 .withSchedule(CronScheduleBuilder.cronSchedule("*/5 * * * * ?"))

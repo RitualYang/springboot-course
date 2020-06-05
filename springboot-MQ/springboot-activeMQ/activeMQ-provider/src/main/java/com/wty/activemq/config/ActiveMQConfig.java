@@ -14,7 +14,7 @@ import javax.jms.Queue;
 import javax.jms.Topic;
 
 /**
- * @author: RitualYang
+ * @author: wty
  *
  */
 @Configuration
