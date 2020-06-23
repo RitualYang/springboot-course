@@ -1,5 +1,6 @@
 package com.wty.controller;
 
+import com.sun.istack.internal.NotNull;
 import com.wty.entity.JobEntity;
 import com.wty.mapper.JobEntityMapper;
 import com.wty.service.JobService;
@@ -11,7 +12,6 @@ import org.springframework.scheduling.quartz.SchedulerFactoryBean;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.PostConstruct;
-import javax.validation.constraints.NotNull;
 import java.util.Objects;
 import java.util.Set;
 
@@ -42,7 +42,9 @@ public class JobController {
     public String refresh(@PathVariable @NotNull Integer id) throws SchedulerException {
         String result;
         JobEntity entity = jobService.getJobEntityById(id);
-        if (Objects.isNull(entity)) return "error: id is not exist ";
+        if (Objects.isNull(entity)) {
+            return "error: id is not exist ";
+        }
         synchronized (log) {
             JobKey jobKey = jobService.getJobKey(entity);
             Scheduler scheduler = schedulerFactoryBean.getScheduler();
@@ -93,9 +95,11 @@ public class JobController {
                 JobDataMap map = jobService.getJobDataMap(job);
                 JobKey jobKey = jobService.getJobKey(job);
                 JobDetail jobDetail = jobService.getJobDetail(jobKey, job.getDescription(), map);
-                if (job.getStatus().equals("OPEN")) scheduler.scheduleJob(jobDetail, jobService.getTrigger(job));
-                else
+                if (job.getStatus().equals("OPEN")) {
+                    scheduler.scheduleJob(jobDetail, jobService.getTrigger(job));
+                } else {
                     log.info("Job jump name : {} , Because {} status is {}", job.getName(), job.getName(), job.getStatus());
+                }
             }
         }
     }
@@ -103,7 +107,9 @@ public class JobController {
     //修改某个Job执行的Cron
     @PostMapping("/modifyJob")
     public String modifyJob(@RequestBody Integer id,String cron) {
-        if (!CronExpression.isValidExpression(cron)) return "cron is invalid !";
+        if (!CronExpression.isValidExpression(cron)) {
+            return "cron is invalid !";
+        }
         synchronized (log) {
             JobEntity job = jobService.getJobEntityById(id);
             if (job.getStatus().equals("OPEN")) {
