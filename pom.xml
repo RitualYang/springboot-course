@@ -24,8 +24,10 @@
         <module>springboot-mybatis/mybatis-annotation</module>
         <module>springboot-redis</module>
         <module>springboot-zookeeper</module>
-        <module>springboot-springSecurity</module>
-        <module>springboot-shiro</module>
+        <module>springboot-security/springboot-shiro</module>
+        <module>springboot-security/springboot-springSecurity</module>
+        <module>springboot-security/springboot-shiro-jwt</module>
+        <module>springboot-security/springboot-springSecurity-jwt</module>
         <module>springboot-thymeleaf</module>
         <module>springboot-fastdfs</module>
         <module>spingboot-TimedTask/springboot-Scheduled</module>
@@ -49,6 +51,7 @@
         <module>springboot-webflux</module>
         <module>springboot-validation</module>
         <module>springboot-mybatis/mybatis-plus</module>
+
 
 
     </modules>

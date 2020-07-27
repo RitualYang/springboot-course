@@ -6,6 +6,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 
 @EnableWebSecurity
 public class MySecurityConfig extends WebSecurityConfigurerAdapter {
+    @Override
     public void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()// 授权配置
                 // 所有用户均可访问的资源 只支持GET请求,其它请求需做处理
@@ -23,6 +24,5 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter {
         //登出跳转界面
         http.logout().logoutSuccessUrl("templates/login.html");
     }
-
 
 }
