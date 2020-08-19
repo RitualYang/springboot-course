@@ -11,7 +11,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.wty.springboot.course</groupId>
-    <artifactId>elasticsearch-springdata</artifactId>
+    <artifactId>elasticsearch-springData</artifactId>
     <!-- elasticsearch 版本限制为6.X版本,不兼容7.X以上版本  -->
 
 

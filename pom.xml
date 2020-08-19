@@ -8,7 +8,7 @@
     <artifactId>springboot-parent</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <modules>
-        <module>springboot-helloworld</module>
+        <module>springboot-helloWorld</module>
         <module>springboot-websocket</module>
         <module>springboot-swagger2</module>
         <module>springboot-freemarker</module>
@@ -32,17 +32,16 @@
         <module>springboot-security/springboot-shiro-jwt</module>
         <module>springboot-security/springboot-springSecurity-jwt</module>
         <module>springboot-thymeleaf</module>
-        <module>springboot-fastdfs</module>
-        <module>spingboot-TimedTask/springboot-Scheduled</module>
-        <module>spingboot-TimedTask/springboot-Quartz</module>
-        <module>spingboot-TimedTask/springboot-Quartz-Distributed</module>
+        <module>springboot-fastDfs</module>
+        <module>springboot-TimedTask/springboot-Scheduled</module>
+        <module>springboot-TimedTask/springboot-Quartz</module>
+        <module>springboot-TimedTask/springboot-Quartz-Distributed</module>
         <module>springboot-mail</module>
         <module>springboot-log4j2</module>
-
         <module>springboot-netty</module>
         <module>springboot-solr</module>
-        <module>springboot-elasticsearch/elasticsearch-springdata</module>
-        <module>springboot-elasticsearch/elasticsearch-highclient</module>
+        <module>springboot-elasticsearch/elasticsearch-springData</module>
+        <module>springboot-elasticsearch/elasticsearch-highClient</module>
         <module>springboot-package/springboot-jar</module>
         <module>springboot-package/springboot-war</module>
         <module>springboot-properties</module>
@@ -53,6 +52,9 @@
         <module>springboot-MVC</module>
         <module>springboot-webflux</module>
         <module>springboot-validation</module>
+        <module>springboot-excel/springboot-poi</module>
+        <module>springboot-excel/springboot-easyPoi</module>
+        <module>springboot-excel/springboot-easyExcel</module>
 
 
 
@@ -239,7 +241,7 @@
                 <artifactId>spring-boot-starter-security</artifactId>
                 <version>${spring-boot.version}</version>
             </dependency>
-            <!-- kaptcha验证码依赖-->
+            <!-- kaptCha验证码依赖-->
             <dependency>
                 <groupId>com.github.axet</groupId>
                 <artifactId>kaptcha</artifactId>
@@ -258,7 +260,7 @@
                 <artifactId>spring-boot-starter-thymeleaf</artifactId>
                 <version>${spring-boot.version}</version>
             </dependency>
-            <!-- fastdfs客户端依赖 -->
+            <!-- fastDfs客户端依赖 -->
             <dependency>
                 <groupId>com.github.tobato</groupId>
                 <artifactId>fastdfs-client</artifactId>

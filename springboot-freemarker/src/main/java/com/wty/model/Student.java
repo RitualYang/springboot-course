@@ -6,6 +6,9 @@ import lombok.ToString;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * @author Administrator
+ */
 @Data
 @ToString
 public class Student {

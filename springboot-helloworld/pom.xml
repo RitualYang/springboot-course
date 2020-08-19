@@ -11,7 +11,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.wty.springboot.course</groupId>
-    <artifactId>springboot-helloworld</artifactId>
+    <artifactId>springboot-helloWorld</artifactId>
 
     <dependencies>
         <dependency>
