@@ -22,6 +22,9 @@
         <module>springboot-MQ/springboot-Kafka/kafka-consumer</module>
         <module>springboot-mybatis/mybatis-xml</module>
         <module>springboot-mybatis/mybatis-annotation</module>
+        <module>springboot-mybatis/mybatis-plus</module>
+        <module>springboot-ORM/springboot-hibernate</module>
+        <module>springboot-ORM/springboot-data-jpa</module>
         <module>springboot-redis</module>
         <module>springboot-zookeeper</module>
         <module>springboot-security/springboot-shiro</module>
@@ -35,7 +38,7 @@
         <module>spingboot-TimedTask/springboot-Quartz-Distributed</module>
         <module>springboot-mail</module>
         <module>springboot-log4j2</module>
-        <module>springboot-data-jpa</module>
+
         <module>springboot-netty</module>
         <module>springboot-solr</module>
         <module>springboot-elasticsearch/elasticsearch-springdata</module>
@@ -50,7 +53,7 @@
         <module>springboot-MVC</module>
         <module>springboot-webflux</module>
         <module>springboot-validation</module>
-        <module>springboot-mybatis/mybatis-plus</module>
+
 
 
 
@@ -105,6 +108,12 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
         </dependency>
     </dependencies>
 

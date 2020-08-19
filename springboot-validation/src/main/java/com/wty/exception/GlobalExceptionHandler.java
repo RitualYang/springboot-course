@@ -4,10 +4,12 @@ import com.wty.model.R;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.support.DefaultMessageSourceResolvable;
 import org.springframework.validation.BindException;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-import java.util.HashMap;
+import javax.validation.ConstraintViolationException;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -19,19 +21,38 @@ import java.util.stream.Collectors;
 @Slf4j
 public class GlobalExceptionHandler {
 
+
     /**
      * 方法参数校验异常
      */
     @ExceptionHandler(BindException.class)
     public R handleBindException(BindException e) {
         log.info("参数校验失败");
-        new HashMap<String,String>(8);
-
         List<String> collect = e.getBindingResult().getAllErrors().stream()
-                // TODO : 显示校验失败的参数名
                 .map(DefaultMessageSourceResolvable::getDefaultMessage)
                 .collect(Collectors.toList());
         return R.error(415, collect.toString());
     }
- 
+
+    /**
+     * 方法参数校验异常（配合@requestBody使用时,会抛出此异常）
+     * @param e
+     * @return
+     */
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    public R methodArgumentNotValidException(MethodArgumentNotValidException e){
+        String message = e.getBindingResult().getFieldError().getDefaultMessage();
+        return R.error(415,message);
+    }
+
+    /**
+     * 方法校验异常拦截,list类型拦截
+     * @param e
+     * @return
+     */
+    @ExceptionHandler(ConstraintViolationException.class)
+    public R constraintViolationException(ConstraintViolationException e){
+        return R.error(415,e.getMessage());
+    }
+
 }
