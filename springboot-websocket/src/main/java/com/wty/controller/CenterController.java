@@ -8,6 +8,11 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.io.IOException;
+/**
+ * @author WTY
+ * @Date 2020/8/24 23:09
+ * @Description: TODO
+ */
 @Controller
 public class CenterController {
     //页面请求

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author wty
- * @create 2019-11-01 18:00
+ * @Date 2019/11/01 18:00
  */
 @RestController
 public class TestController {

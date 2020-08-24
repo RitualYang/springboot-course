@@ -10,7 +10,7 @@ import java.util.Properties;
 /**
  * Kaptcha配置
  * @author wty
- * @create 2019-11-21 20:29
+ * @Date 2019/11/21 20:29
  */
 @Configuration
 public class KaptchaConfig {

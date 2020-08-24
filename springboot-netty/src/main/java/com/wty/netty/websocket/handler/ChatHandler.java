@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 /**
  * 处理消息的handler
  * TextWebSocketFrame: 在netty中,是用于为websocket专门处理文本的对象,frame是消息的载体
- * @author WTY
+ * @author wty
  * @Date 2020/8/9 10:21
  */
 @Slf4j

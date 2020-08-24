@@ -8,7 +8,7 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 
 /**
- * @author WTY
+ * @author wty
  * @Date 2020/7/29 21:51
  */
 public class WSServer {

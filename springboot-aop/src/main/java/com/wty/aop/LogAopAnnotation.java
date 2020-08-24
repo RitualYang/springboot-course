@@ -14,14 +14,14 @@ import java.lang.reflect.Method;
 
 /**
  * @author wty
- * @create 2020-02-13 19:40
+ * @Date 2020/02/13 19:40
  */
 @Component
 @Aspect
 @Slf4j
 public class LogAopAnnotation {
     /**
-     * 定义切入点,所以带有注解BussinessLog的方法
+     * 定义切入点,所以带有注解LoginLog的方法
      */
     @Pointcut(value = "@annotation(com.wty.annotion.LoginLog)")
     public void annotationService() {

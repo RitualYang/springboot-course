@@ -11,7 +11,7 @@ import io.netty.util.CharsetUtil;
 /**
  * {link: SimpleChannelInboundHandler}: 对于请求来讲,其实相当于[入站,入境]
  * 创建自定义助手类
- * @author WTY
+ * @author wty
  * @Date 2020/7/27 16:26
  */
 public class CustomHandler extends SimpleChannelInboundHandler<HttpObject> {

@@ -13,7 +13,7 @@ import java.util.concurrent.ThreadPoolExecutor;
 
 /**
  * 自定义异步线程池的配置
- * @author WTY
+ * @author wty
  * @Date 2020/5/4 16:57
  */
 @Slf4j

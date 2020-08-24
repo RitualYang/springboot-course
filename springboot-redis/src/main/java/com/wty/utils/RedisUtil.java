@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * @author wty
- * @create 2019-12-04 21:34
+ * @Date 2019/12/04 21:34
  */
 @Component
 public class RedisUtil {

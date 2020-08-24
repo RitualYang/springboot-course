@@ -17,7 +17,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 /**
  * 用于进行权限信息的验证
  * @author wty
- * @create 2019-11-01 21:03
+ * @Date 2019/11/01 21:03
  */
 
 public class CustomRealm extends AuthorizingRealm {

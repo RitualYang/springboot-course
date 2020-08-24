@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * @author wty
- * @create 2019-12-24 18:46
+ * @Date 2019/12/24 18:46
  */
 @SpringBootApplication
 public class SolrApplication {

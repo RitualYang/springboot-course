@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * @author wty
- * @create 2020-02-08 19:25
+ * @Date 2020/02/08 19:25
  */
 @SpringBootApplication
 public class JarApplication {

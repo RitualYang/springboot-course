@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * @author wty
- * @create 2019-10-13 00:27
+ * @Date 2019/10/13 00:27
  */
 @SpringBootApplication
 public class SwaggerApplication {

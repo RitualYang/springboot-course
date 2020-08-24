@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * @author wty
- * @create 2019-12-07 9:43
+ * @Date 2019/12/07 9:43
  */
 @SpringBootApplication
 public class MailApplication {

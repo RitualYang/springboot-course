@@ -12,7 +12,7 @@ import io.netty.handler.stream.ChunkedWriteHandler;
 
 /**
  * 初始化器：当channel注册后,会执行里面的响应的初始化方法
- * @author WTY
+ * @author wty
  * @Date 2020/7/27 16:17
  */
 public class WSServerInitializer extends ChannelInitializer<SocketChannel> {

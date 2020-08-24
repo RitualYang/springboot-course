@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author wty
- * @create 2020-02-13 19:40
+ * @Date 2020/02/13 19:40
  */
 @RestController
-@RequestMapping(value = "/log")
+@RequestMapping(value = "/aop")
 public class LogController {
 
     @LoginLog(value = "登录")
@@ -18,6 +18,7 @@ public class LogController {
         return "登录";
     }
 
+    @LoginLog(value = "登出")
     @RequestMapping(value = "/logout")
     public String logout(){
         return "登出";

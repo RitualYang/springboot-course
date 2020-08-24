@@ -1,7 +1,7 @@
 package com.wty.constant;
 
 /**
- * @author WTY
+ * @author wty
  * @Date 2020/5/30 21:54
  */
 public class MessageConstant {

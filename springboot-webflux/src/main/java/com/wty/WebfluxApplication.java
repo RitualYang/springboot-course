@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * @author WTY
+ * @author wty
  * @Date 2020/8/19 21:58
  * @Description: 启动类
  */

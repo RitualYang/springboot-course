@@ -9,56 +9,32 @@
     <version>1.0.0-SNAPSHOT</version>
     <modules>
         <module>springboot-helloWorld</module>
-        <module>springboot-websocket</module>
-        <module>springboot-swagger2</module>
-        <module>springboot-freemarker</module>
-        <module>springboot-MQ/springboot-rabbitMQ/rabbitMQ-consumer</module>
-        <module>springboot-MQ/springboot-rabbitMQ/rabbitMQ-producer</module>
-        <module>springboot-MQ/springboot-ActiveMQ/activeMQ-provider</module>
-        <module>springboot-MQ/springboot-ActiveMQ/activeMQ-consumer</module>
-        <module>springboot-MQ/springboot-rocketMQ/rocketMQ-producer</module>
-        <module>springboot-MQ/springboot-rocketMQ/rocketMQ-consumer</module>
-        <module>springboot-MQ/springboot-Kafka/kafka-producer</module>
-        <module>springboot-MQ/springboot-Kafka/kafka-consumer</module>
-        <module>springboot-mybatis/mybatis-xml</module>
-        <module>springboot-mybatis/mybatis-annotation</module>
-        <module>springboot-mybatis/mybatis-plus</module>
-        <module>springboot-ORM/springboot-hibernate</module>
-        <module>springboot-ORM/springboot-data-jpa</module>
-        <module>springboot-redis</module>
-        <module>springboot-zookeeper</module>
-        <module>springboot-security/springboot-shiro</module>
-        <module>springboot-security/springboot-springSecurity</module>
-        <module>springboot-security/springboot-shiro-jwt</module>
-        <module>springboot-security/springboot-springSecurity-jwt</module>
-        <module>springboot-thymeleaf</module>
-        <module>springboot-fastDfs</module>
-        <module>springboot-TimedTask/springboot-Scheduled</module>
-        <module>springboot-TimedTask/springboot-Quartz</module>
-        <module>springboot-TimedTask/springboot-Quartz-Distributed</module>
-        <module>springboot-mail</module>
-        <module>springboot-log4j2</module>
-        <module>springboot-netty</module>
-        <module>springboot-solr</module>
-        <module>springboot-elasticsearch/elasticsearch-springData</module>
-        <module>springboot-elasticsearch/elasticsearch-highClient</module>
-        <module>springboot-package/springboot-jar</module>
-        <module>springboot-package/springboot-war</module>
+        <module>springboot-MVC</module>
         <module>springboot-properties</module>
+        <module>springboot-tomcat</module>
+        <module>springboot-package</module>
         <module>springboot-aop</module>
         <module>springboot-async</module>
+        <module>springboot-security</module>
         <module>springboot-i18n</module>
-        <module>springboot-tomcat</module>
-        <module>springboot-MVC</module>
-        <module>springboot-webflux</module>
+        <module>springboot-log4j2</module>
+        <module>springboot-mail</module>
         <module>springboot-validation</module>
-        <module>springboot-excel/springboot-poi</module>
-        <module>springboot-excel/springboot-easyPoi</module>
-        <module>springboot-excel/springboot-easyExcel</module>
-
-
-
-
+        <module>springboot-interface</module>
+        <module>springboot-webflux</module>
+        <module>springboot-websocket</module>
+        <module>springboot-swagger2</module>
+        <module>springboot-timedTask</module>
+        <module>springboot-zookeeper</module>
+        <module>springboot-netty</module>
+        <module>springboot-fastDfs</module>
+        <module>springboot-redis</module>
+        <module>springboot-mybatis</module>
+        <module>springboot-orm</module>
+        <module>springboot-mq</module>
+        <module>springboot-solr</module>
+        <module>springboot-elasticsearch</module>
+        <module>springboot-excel</module>
     </modules>
     <packaging>pom</packaging>
     <!--核心依赖，管理大部分常用jar包的版本,分支测试-->

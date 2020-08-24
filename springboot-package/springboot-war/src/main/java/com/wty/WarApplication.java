@@ -7,7 +7,7 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 
 /**
  * @author wty
- * @create 2020-02-08 22:43
+ * @Date 2020/02/08 22:43
  */
 @SpringBootApplication
 public class WarApplication extends SpringBootServletInitializer {

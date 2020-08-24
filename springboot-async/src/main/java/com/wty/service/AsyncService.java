@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 异步处理服务
- * @author WTY
+ * @author wty
  * @Date 2020/5/4 16:48
  */
 @Slf4j

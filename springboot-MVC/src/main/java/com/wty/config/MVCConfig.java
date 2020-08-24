@@ -6,7 +6,7 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 /**
- * @author WTY
+ * @author wty
  * @Date 2020/6/23 22:50
  */
 @Configuration
@@ -18,7 +18,9 @@ public class MVCConfig implements WebMvcConfigurer {
      */
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(new TestInterceptor())// 添加拦截器
-                .addPathPatterns("/**");// 拦截对应路径下的请求
+        // 添加拦截器
+        registry.addInterceptor(new TestInterceptor())
+                // 拦截对应路径下的请求
+                .addPathPatterns("/**");
     }
 }

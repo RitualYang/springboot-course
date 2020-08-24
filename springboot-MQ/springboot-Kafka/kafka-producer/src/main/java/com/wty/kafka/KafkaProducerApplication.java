@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * @author wty
- * @create 2019-12-11 21:54
+ * @Date 2019/12/11 21:54
  */
 @SpringBootApplication
 public class KafkaProducerApplication {
