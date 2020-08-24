@@ -4,14 +4,13 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * 修改内置tomcat的服务配置
  * @author WTY
- * @Date 2020/8/19 09:46
- * @Description: 启动类
+ * @Date 2020/8/24 09:36
+ * @Description: TODO
  */
 @SpringBootApplication
-public class TomcatApplication {
+public class PoiApplication {
     public static void main(String[] args) {
-        SpringApplication.run(TomcatApplication.class,args);
+        SpringApplication.run(PoiApplication.class,args);
     }
 }

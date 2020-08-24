@@ -12,6 +12,7 @@ import java.util.Locale;
 
 /**
  * 配置国际化语言
+ * @author WTY
  */
 @Configuration
 public class LocaleConfig implements WebMvcConfigurer {

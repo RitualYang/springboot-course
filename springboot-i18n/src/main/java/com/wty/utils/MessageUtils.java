@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * 国际化工具类
+ * @author WTY
  */
 @Component
 public class MessageUtils {

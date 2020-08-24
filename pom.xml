@@ -88,6 +88,9 @@
         <spring-kafka.version>2.2.4.RELEASE</spring-kafka.version>
         <rocketmq.version>2.0.3</rocketmq.version>
         <mybatisplus.version>3.3.1</mybatisplus.version>
+        <poi.version>4.1.2</poi.version>
+        <easyPoi.version>3.3.0</easyPoi.version>
+        <easyExcel.version>2.1.7</easyExcel.version>
     </properties>
 
     <dependencies>
@@ -335,6 +338,21 @@
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus</artifactId>
                 <version>${mybatisplus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi</artifactId>
+                <version>${poi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.afterturn</groupId>
+                <artifactId>easypoi-spring-boot-starter</artifactId>
+                <version>${easyPoi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>easyexcel</artifactId>
+                <version>${easyExcel.version}</version>
             </dependency>
         </dependencies>
 

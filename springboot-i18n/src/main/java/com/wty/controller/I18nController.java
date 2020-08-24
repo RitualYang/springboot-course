@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/i18n")
-public class i18nController {
+public class I18nController {
 
     @Autowired
     private MessageUtils messageUtils;
