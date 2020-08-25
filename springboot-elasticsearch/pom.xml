@@ -13,7 +13,7 @@
     <artifactId>springboot-elasticsearch</artifactId>
 
     <modules>
-        <module>elasticsearch-highClient</module>
+        <module>elasticsearch-restClient</module>
         <module>elasticsearch-springData</module>
     </modules>
 

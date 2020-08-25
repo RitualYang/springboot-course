@@ -17,7 +17,6 @@ import java.io.Serializable;
 public class UserExcel implements Serializable {
     @ExcelIgnore
     private Integer userId;
-
     @ExcelProperty(value = "用户名",order = 0)
     private String userName;
     @ExcelProperty(value = "年龄",order = 1)
