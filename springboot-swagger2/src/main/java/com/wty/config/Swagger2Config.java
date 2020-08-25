@@ -21,7 +21,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 public class Swagger2Config {
     // 定义分隔符
-    private static final String splitor = ";";
+    private static final String SPLITOR = ";";
 
     @Bean
     public Docket createRestApi() {
@@ -29,16 +29,19 @@ public class Swagger2Config {
                 .apiInfo(apiInfo())
                 .select()
                 //此处添加需要扫描接口的包路径
-                .apis(basePackage("com.wty.com.wty.controller" + splitor + "com.wty.model"))
+                .apis(basePackage("com.wty.com.wty.controller" + SPLITOR + "com.wty.model"))
                 .paths(PathSelectors.any())
                 .build();
     }
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("Api文档")//标题
-                .description("说明")//说明
-                .version("1.0")//版本号
+                //标题
+                .title("Api文档")
+                //说明
+                .description("说明")
+                //版本号
+                .version("1.0")
                 .build();
     }
 
@@ -55,7 +58,7 @@ public class Swagger2Config {
     private static Function<Class<?>, Boolean> handlerPackage(final String basePackage)     {
         return input -> {
             // 循环判断匹配
-            for (String strPackage : basePackage.split(splitor)) {
+            for (String strPackage : basePackage.split(SPLITOR)) {
                 boolean isMatch = input.getPackage().getName().startsWith(strPackage);
                 if (isMatch) {
                     return true;

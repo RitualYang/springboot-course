@@ -23,7 +23,7 @@ public class AsyncPoolConfig implements AsyncConfigurer {
      * 返回自定义线程池
      * @return
      */
-    @Bean
+    @Bean("asyncExecutor")
     @Override
     public Executor getAsyncExecutor() {
         ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();

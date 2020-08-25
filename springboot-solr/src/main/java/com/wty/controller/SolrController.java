@@ -31,7 +31,11 @@ public class SolrController {
     @Autowired
     private SolrClient solrClient;
 
-    //批量增加
+    /**
+     * 批量增加
+     * @throws IOException
+     * @throws SolrServerException
+     */
     @RequestMapping("/addUsers")
     public void addUsers() throws IOException, SolrServerException {
         List<User> userList = new ArrayList<>();
@@ -62,7 +66,12 @@ public class SolrController {
         solrClient.commit();
     }
 
-    //根据di查询
+    /**
+     * 根据di查询
+     * @param id
+     * @throws IOException
+     * @throws SolrServerException
+     */
     @RequestMapping("/getByIdFromSolr/{id}")
     public void getByIdFromSolr(@PathVariable("id") String id) throws IOException, SolrServerException {
 
@@ -81,7 +90,12 @@ public class SolrController {
         log.info("childDocuments=================="+childDocuments);
     }
 
-    //根据di删除
+    /**
+     * 根据id删除
+     * @param id
+     * @throws IOException
+     * @throws SolrServerException
+     */
     @RequestMapping("/delById/{id}")
     public  void  delById(@PathVariable("id") String id) throws IOException, SolrServerException {
         //根据id删除信息
@@ -107,6 +121,12 @@ public class SolrController {
         log.info("status==========="+status);
     }
 
+    /**
+     * 条件查询
+     * @return
+     * @throws IOException
+     * @throws SolrServerException
+     */
     @RequestMapping("/queryFromSolr")
     public  Object  queryFromSolr() throws IOException, SolrServerException {
         //第一种方式
