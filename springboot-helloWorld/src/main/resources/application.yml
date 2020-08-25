@@ -1,0 +1,15 @@
+# 配置服务端口号
+server:
+  port: 8081
+  servlet:
+    encoding:
+      force: true
+# 服务名
+spring:
+  application:
+    name: springboot-helloWorld
+  profiles:
+    active: prod
+  # 静态资源路径配置
+  resources:
+    static-locations: classpath:/static

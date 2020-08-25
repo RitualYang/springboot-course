@@ -11,7 +11,11 @@ import javax.websocket.server.PathParam;
 import javax.websocket.server.ServerEndpoint;
 import java.io.IOException;
 import java.util.concurrent.CopyOnWriteArraySet;
-
+/**
+ * @author WTY
+ * @Date 2020/8/24 23:09
+ * @Description: TODO
+ */
 @ServerEndpoint("/websocket/{sid}")
 @Component
 @Slf4j

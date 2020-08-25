@@ -18,7 +18,7 @@ import javax.mail.internet.MimeMessage;
 
 /**
  * @author wty
- * @create 2019-12-07 9:54
+ * @Date 2019/12/07 9:54
  */
 @Controller
 public class SendMailController {

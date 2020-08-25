@@ -8,7 +8,7 @@ import java.util.concurrent.TimeoutException;
 /**
  * rabblitMQ消费者
  * @author wty
- * @create 2019-10-26 15:44
+ * @Date 2019/10/26 15:44
  */
 public class consumer {
     private static final String QUEUE = "helloworld";

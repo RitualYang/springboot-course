@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 /**
  * @author wty
- * @create 2020-02-08 21:21
+ * @Date 2020/02/08 21:21
  */
 @RestController
 @ConfigurationProperties(prefix = "demo")// 需要属性有set方法

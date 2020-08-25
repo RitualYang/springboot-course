@@ -3,7 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>springboot-parent</artifactId>
+        <artifactId>springboot-package</artifactId>
         <groupId>com.wty.springboot.course</groupId>
         <version>1.0.0-SNAPSHOT</version>
         <relativePath/>
@@ -12,6 +12,12 @@
 
     <artifactId>springboot-jar</artifactId>
     <packaging>jar</packaging>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+    </dependencies>
     <build>
         <plugins>
             <plugin>

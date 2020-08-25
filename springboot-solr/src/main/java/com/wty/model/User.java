@@ -7,7 +7,7 @@ import java.io.Serializable;
 
 /**
  * @author wty
- * @create 2019-12-24 18:49
+ * @Date 2019/12/24 18:49
  */
 @Data
 public class User implements Serializable {

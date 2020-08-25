@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * @author wty
- * @create 2019-11-01 21:03
+ * @Date 2019/11/01 21:03
  */
 @SpringBootApplication
 public class RedisApplication {

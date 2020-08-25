@@ -15,7 +15,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
  * @author wty
- * @create 2019-10-13 00:26
+ * @Date 2019/10/13 00:26
  */
 @Configuration
 @EnableSwagger2
@@ -45,7 +45,7 @@ public class Swagger2Config {
     /**
      * 重写basePackage方法,使能够实现多包访问
      * @author  wty
-     * @date 2019/1/26
+     * @date 2019/01/26
      * @param
      */
     public static Predicate<RequestHandler> basePackage(final String basePackage) {

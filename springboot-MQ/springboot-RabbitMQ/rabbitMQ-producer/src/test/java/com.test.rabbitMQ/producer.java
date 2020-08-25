@@ -11,7 +11,7 @@ import java.util.concurrent.TimeoutException;
 /**
  * rabbitMQ提供者
  * @author wty
- * @create 2019-10-26 15:11
+ * @Date 2019/10/26 15:11
  */
 public class producer {
 

@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author wty
- * @create 2019-12-11 22:08
+ * @Date 2019/12/11 22:08
  */
 @RestController
 public class ProviderController {

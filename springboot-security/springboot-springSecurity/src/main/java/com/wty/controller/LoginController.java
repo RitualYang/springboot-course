@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * @author wty
- * @create 2019-11-21 20:30
+ * @Date 2019/11/21 20:30
  */
 @Controller
 public class LoginController {

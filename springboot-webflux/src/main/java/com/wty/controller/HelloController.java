@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Mono;
 
 /**
- * @author WTY
+ * @author wty
  * @Date 2020/8/19 21:58
  * @Description: TODO
  */

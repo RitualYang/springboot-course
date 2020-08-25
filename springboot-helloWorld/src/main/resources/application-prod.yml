@@ -1,0 +1,4 @@
+# 配置服务访问路径
+server:
+  servlet:
+    context-path: /prod

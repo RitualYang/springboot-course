@@ -9,7 +9,7 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 
 /**
  * 客户端发送一个请求,服务器会返回hello netty
- * @author WTY
+ * @author wty
  * @Date 2020/7/27 16:01
  */
 public class HelloServer {

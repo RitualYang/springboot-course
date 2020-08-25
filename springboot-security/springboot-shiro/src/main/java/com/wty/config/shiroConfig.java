@@ -16,7 +16,7 @@ import java.util.Map;
 /**
  * shiro配置
  * @author wty
- * @create 2019-11-01 21:11
+ * @Date 2019/11/01 21:11
  */
 @Configuration
 public class shiroConfig {

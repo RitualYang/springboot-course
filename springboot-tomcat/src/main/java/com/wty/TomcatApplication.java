@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * 修改内置tomcat的服务配置
- * @author WTY
+ * @author wty
  * @Date 2020/8/19 09:46
  * @Description: 启动类
  */

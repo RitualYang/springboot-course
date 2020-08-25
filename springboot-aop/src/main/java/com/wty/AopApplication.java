@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * @author wty
- * @create 2020-02-13 19:39
+ * @Date 2020/02/13 19:39
  */
 @SpringBootApplication
 public class AopApplication {

@@ -10,7 +10,7 @@ import java.util.List;
 
 /**
  * @author wty
- * @create 2019-11-01 17:08
+ * @Date 2019/11/01 17:08
  */
 @Component
 public interface UserMapper extends Mapper<User> {

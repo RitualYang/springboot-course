@@ -2,7 +2,6 @@ package com.wty.model;
 
 import lombok.Data;
 import lombok.ToString;
-import org.junit.Test;
 import sun.rmi.runtime.Log;
 
 import javax.persistence.Id;
@@ -11,7 +10,7 @@ import java.io.Serializable;
 
 /**
  * @author wty
- * @create 2020-01-04 23:13
+ * @Date 2020/01/04 23:13
  */
 @Data
 @ToString

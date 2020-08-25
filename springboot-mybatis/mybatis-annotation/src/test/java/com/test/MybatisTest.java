@@ -1,10 +1,10 @@
 package com.test;
 
+import com.wty.MybatisAnnotationApplication;
 import com.wty.mapper.UserInfoMapper;
 import com.wty.mapper.UserMapper;
 import com.wty.model.User;
 import com.wty.model.UserInfo;
-import com.wty.mybatisAnnotationApplication;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -16,10 +16,10 @@ import java.util.List;
 
 /**
  * @author wty
- * @create 2020-01-04 23:10
+ * @Date 2020/01/04 23:10
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = mybatisAnnotationApplication.class)
+@SpringBootTest(classes = MybatisAnnotationApplication.class)
 @Slf4j
 public class MybatisTest {
     @Autowired

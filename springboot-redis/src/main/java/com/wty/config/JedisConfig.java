@@ -10,7 +10,7 @@ import redis.clients.jedis.JedisPoolConfig;
  * Jedis配置加载
  * 联动JedisUtil工具类
  * @author wty
- * @create 2019-12-04 21:32
+ * @Date 2019/12/04 21:32
  */
 @Configuration
 public class JedisConfig {
