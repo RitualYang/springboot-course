@@ -6,14 +6,18 @@ import io.netty.channel.ChannelFuture;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
+import org.springframework.scheduling.annotation.Async;
+import org.springframework.stereotype.Component;
 
 /**
  * 客户端发送一个请求,服务器会返回hello netty
  * @author wty
  * @Date 2020/7/27 16:01
  */
+@Component
 public class HelloServer {
-    public static void main(String[] args) throws InterruptedException {
+    @Async
+    public void start() throws InterruptedException {
         // 定义主线程组,用于接收客户端的连接,但是不做任何处理,跟老板一样,不做事
         EventLoopGroup bossGroup = new NioEventLoopGroup();
         // 从线程组,老板线程组会把任务丢给这个线程组,让手下线程组做任务.

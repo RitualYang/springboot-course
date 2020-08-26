@@ -6,13 +6,17 @@ import io.netty.channel.ChannelFuture;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
+import org.springframework.scheduling.annotation.Async;
+import org.springframework.stereotype.Component;
 
 /**
  * @author wty
  * @Date 2020/7/29 21:51
  */
+@Component
 public class WSServer {
-    public static void main(String[] args) throws InterruptedException {
+    @Async
+    public void start() throws InterruptedException {
         EventLoopGroup mainGroup = new NioEventLoopGroup();
         EventLoopGroup subGroup = new NioEventLoopGroup();
 
@@ -22,7 +26,7 @@ public class WSServer {
                     .channel(NioServerSocketChannel.class)
                     .childHandler(new WSServerInitializer());
 
-            ChannelFuture future = server.bind(8088).sync();
+            ChannelFuture future = server.bind(4444).sync();
             future.channel().closeFuture().sync();
         } finally {
             mainGroup.shutdownGracefully();
