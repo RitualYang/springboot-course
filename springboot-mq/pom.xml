@@ -15,14 +15,10 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>springboot-activeMQ/activeMQ-consumer</module>
-        <module>springboot-activeMQ/activeMQ-provider</module>
-        <module>springboot-kafka/kafka-consumer</module>
-        <module>springboot-kafka/kafka-producer</module>
-        <module>springboot-rabbitMQ/rabbitMQ-consumer</module>
-        <module>springboot-rabbitMQ/rabbitMQ-producer</module>
-        <module>springboot-rocketMQ/rocketMQ-consumer</module>
-        <module>springboot-rocketMQ/rocketMQ-producer</module>
+        <module>springboot-activeMQ</module>
+        <module>springboot-kafka</module>
+        <module>springboot-rabbitMQ</module>
+        <module>springboot-rocketMQ</module>
     </modules>
 
 
