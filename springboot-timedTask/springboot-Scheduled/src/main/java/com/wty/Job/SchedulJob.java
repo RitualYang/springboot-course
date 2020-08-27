@@ -4,7 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 /**
- * @author WTY
+ * @author wty
  * @Date 2020/8/24 23:13
  * @Description: TODO
  */

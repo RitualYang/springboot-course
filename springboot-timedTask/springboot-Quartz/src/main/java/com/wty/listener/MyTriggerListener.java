@@ -5,7 +5,7 @@ import org.quartz.JobExecutionContext;
 import org.quartz.Trigger;
 import org.quartz.TriggerListener;
 /**
- * @author WTY
+ * @author wty
  * @Date 2020/8/24 23:13
  * @Description: TODO
  */

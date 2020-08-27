@@ -12,7 +12,7 @@ import javax.websocket.server.ServerEndpoint;
 import java.io.IOException;
 import java.util.concurrent.CopyOnWriteArraySet;
 /**
- * @author WTY
+ * @author wty
  * @Date 2020/8/24 23:09
  * @Description: TODO
  */

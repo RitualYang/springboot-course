@@ -7,7 +7,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
 /**
  * TODO
  *
- * @author WTY
+ * @author wty
  * @Date 2020/8/26 16:39
  */
 @SpringBootApplication
