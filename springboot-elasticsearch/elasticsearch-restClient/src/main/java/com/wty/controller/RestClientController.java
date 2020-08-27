@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * TODO
  *
- * @author WTY
+ * @author wty
  * @Date 2020/8/25 21:59
  */
 @RestController

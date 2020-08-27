@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Configuration;
 /**
  * TODO
  *
- * @author WTY
+ * @author wty
  * @Date 2020/8/25 21:53
  */
 @Configuration

@@ -6,7 +6,7 @@ import org.quartz.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 /**
- * @author WTY
+ * @author wty
  * @Date 2020/8/24 23:13
  * @Description: TODO
  */

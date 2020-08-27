@@ -17,7 +17,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 /**
- * @author WTY
+ * @author wty
  * @Date 2020/8/24 23:13
  * @Description: TODO
  */

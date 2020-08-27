@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * TODO
  *
- * @author WTY
+ * @author wty
  * @Date 2020/8/25 20:10
  */
 @SpringBootApplication

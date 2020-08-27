@@ -2,7 +2,7 @@ package com.wty.utils;
 
 import com.wty.model.ApiReturnObject;
 /**
- * @author WTY
+ * @author wty
  * @Date 2020/8/24 23:09
  * @Description: TODO
  */

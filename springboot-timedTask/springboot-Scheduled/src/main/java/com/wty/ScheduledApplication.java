@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.scheduling.annotation.EnableScheduling;
 /**
- * @author WTY
+ * @author wty
  * @Date 2020/8/24 23:13
  * @Description: TODO
  */

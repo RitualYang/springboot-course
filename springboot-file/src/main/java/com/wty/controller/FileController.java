@@ -7,7 +7,7 @@ import org.springframework.web.multipart.MultipartFile;
 /**
  * TODO
  *
- * @author WTY
+ * @author wty
  * @Date 2020/8/26 17:17
  */
 @Slf4j
