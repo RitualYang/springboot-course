@@ -1,0 +1,14 @@
+server:
+  port: 8843
+spring:
+  application:
+    name: springboot-file
+  servlet:
+    multipart:
+      # 上传文件总大小
+      max-file-size: 10MB
+      # 上传单个文件大小
+      max-request-size: 10MB
+
+
+
