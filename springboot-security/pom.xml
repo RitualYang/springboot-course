@@ -19,5 +19,6 @@
         <module>springboot-shiro-jwt</module>
         <module>springboot-springSecurity</module>
         <module>springboot-springSecurity-jwt</module>
+        <module>springboot-security-oauth</module>
     </modules>
 </project>
