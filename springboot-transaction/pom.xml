@@ -3,25 +3,24 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>springboot-elasticsearch</artifactId>
+        <artifactId>springboot-parent</artifactId>
         <groupId>com.wty.springboot.course</groupId>
         <version>1.0.0-SNAPSHOT</version>
-        <relativePath/>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.wty.springboot.course</groupId>
-    <artifactId>elasticsearch-springData</artifactId>
+    <artifactId>springboot-transaction</artifactId>
 
     <dependencies>
-        <!--根据maven依赖的es版本下载对应版本-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
-        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+            <version>5.2.8.RELEASE</version>
+        </dependency>
     </dependencies>
+
 </project>

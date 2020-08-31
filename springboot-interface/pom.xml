@@ -15,6 +15,7 @@
     <modules>
         <module>springboot-freemarker</module>
         <module>springboot-thymeleaf</module>
+        <module>springboot-velocity</module>
     </modules>
 
 
