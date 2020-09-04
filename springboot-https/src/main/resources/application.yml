@@ -1,0 +1,7 @@
+server:
+  port: 8081
+  # 该文件通过java工具生成,浏览器未认证
+  ssl:
+    key-alias: tomcathttps
+    key-store-password: 123456
+    key-store: classpath:javaboy.p12

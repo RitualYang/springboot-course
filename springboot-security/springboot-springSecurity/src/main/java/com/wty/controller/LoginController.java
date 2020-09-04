@@ -1,9 +1,5 @@
 package com.wty.controller;
-
-import com.google.code.kaptcha.impl.DefaultKaptcha;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * @author wty
@@ -11,12 +7,5 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 public class LoginController {
-    @Autowired
-    private DefaultKaptcha defaultKaptcha;
-
-    @RequestMapping("/login")
-    public String login(){
-        return "/templates/login.html";
-    }
 
 }
