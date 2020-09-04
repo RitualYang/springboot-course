@@ -4,7 +4,7 @@
 <head>
     <title>ModelMap</title>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
-    <link rel="stylesheet" th:href="@{static/css/ModelMap.css}" />
+    <link rel="stylesheet" th:href="@{/css/ModelMap.css}" />
 </head>
 <body>
 <h1>日期转换</h1>
@@ -23,5 +23,9 @@
 </div>
 <h1>if</h1>
 <span th:if="${userName} == 'wty'" th:text="${userName}">  </span><br />
+    <script th:inline="javascript">
+        var userName = [[${userName}]]
+        console.log(userName)
+    </script>
 </body>
 </html>

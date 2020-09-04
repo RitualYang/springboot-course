@@ -2,7 +2,7 @@ spring:
   # thymeleaf配置
   thymeleaf:
     # 模板的样式。支持HTML，XML，TEXT，JAVASCRIPT
-    mode: HTML5
+    mode: HTML
     # 编码 可不用配置
     encoding: utf-8
     # 开发配置为false，避免修改模板需要重启服务器
@@ -12,5 +12,3 @@ spring:
     # 内容类别 可不用配置
     servlet:
       content-type: text/html
-  mvc:
-    static-path-pattern: /static/**
