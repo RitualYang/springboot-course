@@ -30,7 +30,7 @@
         <module>springboot-fastDfs</module>
         <module>springboot-redis</module>
         <module>springboot-mybatis</module>
-        <module>springboot-orm</module>
+        <module>springboot-jpa</module>
         <module>springboot-mq</module>
         <module>springboot-solr</module>
         <module>springboot-elasticsearch</module>

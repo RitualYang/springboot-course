@@ -5,6 +5,7 @@ import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
 import org.quartz.JobListener;
 /**
+ * job监听
  * @author wty
  * @Date 2020/8/24 23:13
  * @Description: TODO

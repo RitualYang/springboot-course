@@ -19,7 +19,7 @@ import java.util.Map;
  * @Date 2019/11/01 21:11
  */
 @Configuration
-public class shiroConfig {
+public class ShiroConfig {
 
     @Bean
     @ConditionalOnMissingBean

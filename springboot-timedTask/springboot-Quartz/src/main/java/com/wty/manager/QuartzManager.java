@@ -26,6 +26,18 @@ public class QuartzManager {
     }
 
     /**
+     * 使用jobDetail包装job
+     * @return
+     */
+    @Bean
+    public JobDetail scheduleJob(){
+        return JobBuilder.newJob(ScheduleJob.class)
+                .withIdentity("scheduleJob")
+                .storeDurably()
+                .build();
+    }
+
+    /**
      * 把jobDetail注册到trigger上去
      * @return
      */
@@ -42,14 +54,10 @@ public class QuartzManager {
                 .build();
     }
 
-    @Bean
-    public JobDetail scheduleJob(){
-        return JobBuilder.newJob(ScheduleJob.class)
-                .withIdentity("scheduleJob")
-                .storeDurably()
-                .build();
-    }
-
+    /**
+     *
+     * @return
+     */
     @Bean
     public Trigger scheduleJobTrigger() {
         //cron方式,每隔5秒执行一次

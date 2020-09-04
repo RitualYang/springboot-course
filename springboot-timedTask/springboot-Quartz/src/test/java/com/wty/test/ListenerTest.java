@@ -18,7 +18,6 @@ public class ListenerTest {
 
     @Test
     public void testJobListener() throws SchedulerException {
-
         JobDetail quartzJob = JobBuilder.newJob(QuartzJob.class)
                 .withIdentity("quartzJob")
                 .storeDurably()
@@ -29,24 +28,18 @@ public class ListenerTest {
                 .withSchedule(SimpleScheduleBuilder.simpleSchedule()
                         .withIntervalInSeconds(2)
                         .repeatForever()).build();
-
         SchedulerFactory factory = new StdSchedulerFactory();
-
         Scheduler scheduler = factory.getScheduler();
         //绑定关系：可以1：N
         scheduler.scheduleJob(quartzJob,quartzTrigger);
-
         //创建并注册一个全局的Job Listener
         scheduler.getListenerManager().addJobListener(new MyJobListener(), EverythingMatcher.allJobs());
-
-
         //启动
         scheduler.start();
     }
 
     @Test
     public void testTriggerListener() throws SchedulerException {
-
         JobDetail quartzJob = JobBuilder.newJob(QuartzJob.class)
                 .withIdentity("quartzJob")
                 .storeDurably()
@@ -57,16 +50,12 @@ public class ListenerTest {
                 .withSchedule(SimpleScheduleBuilder.simpleSchedule()
                         .withIntervalInSeconds(2)
                         .repeatForever()).build();
-
         SchedulerFactory factory = new StdSchedulerFactory();
-
         Scheduler scheduler = factory.getScheduler();
         //绑定关系：可以1：N
         scheduler.scheduleJob(quartzJob,quartzTrigger);
-
         //创建并注册一个全局的Trigger Listener
         scheduler.getListenerManager().addTriggerListener(new MyTriggerListener(), EverythingMatcher.allTriggers());
-
         //启动
         scheduler.start();
     }

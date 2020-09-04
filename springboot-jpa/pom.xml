@@ -11,11 +11,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.wty.springboot.course</groupId>
-    <artifactId>springboot-orm</artifactId>
+    <artifactId>springboot-jpa</artifactId>
     <packaging>pom</packaging>
 
     <modules>
         <module>springboot-data-jpa</module>
-        <module>springboot-hibernate</module>
     </modules>
 </project>
