@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <!-- 引入 application.properties -->
+
+    <properties resource="application.properties" />
+
+    <!-- MyBatis3Simple：不生成 Example相关类及方法 defaultModelType="flat" -->
+    <context id="MysqlContext" targetRuntime="MyBatis3Simple" >
+
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+
+        <!-- 指定生成 Mapper 的继承模板 -->
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="${generator.mappers}"/>
+        </plugin>
+
+        <!--注意context内的文件要按序放-->
+        <commentGenerator>
+            <property name="suppressDate" value="true"/>
+            <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+
+
+        <!-- jdbc 连接配置 -->
+        <jdbcConnection driverClass="${spring.datasource.driver-class-name}"
+                        connectionURL="${spring.datasource.url}"
+                        userId="${spring.datasource.username}"
+                        password="${spring.datasource.password}">
+        </jdbcConnection>
+
+        <javaTypeResolver>
+            <!-- 是否使用bigDecimal， false可自动转化以下类型（Long, Integer, Short, etc.） -->
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+
+        <!-- 生成实体类的包名和位置 ，targetPackage指的是包名,targetProject值得是路径位置-->
+        <!-- 对于生成的pojo所在包,pojo其实就是domain Entity-->
+        <javaModelGenerator targetPackage="${generator.javaModel-targetPackage}" targetProject="${generator.targetProject}">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+        <!-- 对于生成的mapper.xml所在目录 -->
+        <sqlMapGenerator targetPackage="${generator.sqlMap-targetPackage}" targetProject="src/main/resources"/>
+
+        <!-- 配置mapper对应的java映射  也可以叫dao层 -->
+        <javaClientGenerator targetPackage="${generator.javaClient-targetPackage}" targetProject="${generator.targetProject}"
+                             type="XMLMAPPER"/>
+
+        <!-- table可以有多个,每个数据库中的表都可以写一个table，tableName表示要匹配的数据库表,也可以在tableName属性中通过使用%通配符来匹配所有数据库表,只有匹配的表才会自动生成文件 -->
+        <table tableName="class"></table>
+        <table tableName="college"></table>
+        <table tableName="instruct"></table>
+        <table tableName="lesson"></table>
+        <table tableName="major"></table>
+        <table tableName="student"></table>
+        <table tableName="teacher"></table>
+    </context>
+</generatorConfiguration>

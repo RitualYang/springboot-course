@@ -1,10 +1,14 @@
 spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource #连接池使用alibaba的 druid
-    url: jdbc:mysql://localhost:3306/test?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=true
+    url: jdbc:mysql://localhost:3306/sims-demo?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=true
     username: root
     password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
 mybatis:
+  type-aliases-package: com.wty.entity
   configuration:
+    use-generated-keys: false
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+mapper:
+  identity: mysql

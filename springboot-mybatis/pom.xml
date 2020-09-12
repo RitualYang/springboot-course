@@ -6,7 +6,6 @@
         <artifactId>springboot-parent</artifactId>
         <groupId>com.wty.springboot.course</groupId>
         <version>1.0.0-SNAPSHOT</version>
-        <relativePath/>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -18,6 +17,7 @@
         <module>mybatis-annotation</module>
         <module>mybatis-xml</module>
         <module>mybatis-plus</module>
+        <module>mybatis-generator</module>
     </modules>
 
 

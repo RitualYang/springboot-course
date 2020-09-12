@@ -14,7 +14,7 @@
 
     <modules>
         <module>springboot-configuration</module>
-        <module>springboot-demo</module>
+        <module>springboot-config-demo</module>
     </modules>
 
 </project>

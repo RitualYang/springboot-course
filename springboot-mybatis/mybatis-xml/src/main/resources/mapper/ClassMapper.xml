@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wty.mapper.ClassMapper">
+  <resultMap id="BaseResultMap" type="com.wty.entity.Class">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="COLLEGE_ID" jdbcType="VARCHAR" property="collegeId" />
+    <result column="MAJOR_ID" jdbcType="VARCHAR" property="majorId" />
+    <result column="NAME" jdbcType="VARCHAR" property="name" />
+    <result column="STUDENT_NUMBER" jdbcType="INTEGER" property="studentNumber" />
+    <result column="ADVISER" jdbcType="VARCHAR" property="adviser" />
+    <result column="ESTAB_DATE" jdbcType="DATE" property="estabDate" />
+    <result column="YEAR_NUMBER" jdbcType="INTEGER" property="yearNumber" />
+    <result column="VERSION" jdbcType="INTEGER" property="version" />
+    <result column="CRATED_BY" jdbcType="VARCHAR" property="cratedBy" />
+    <result column="CRATED_TIME" jdbcType="TIMESTAMP" property="cratedTime" />
+    <result column="UPDATED_BY" jdbcType="VARCHAR" property="updatedBy" />
+    <result column="UPDATED_TIME" jdbcType="TIMESTAMP" property="updatedTime" />
+  </resultMap>
+</mapper>
