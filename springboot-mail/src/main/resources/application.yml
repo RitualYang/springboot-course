@@ -2,6 +2,7 @@ server:
   port: 8080
 spring:
   mail:
+    # 使用qq邮箱
     host: smtp.qq.com
     username: 123456789@qq.com # 发件人邮箱
     password: ?????????????? # 授权码

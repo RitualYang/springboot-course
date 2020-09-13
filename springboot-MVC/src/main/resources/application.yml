@@ -1,0 +1,5 @@
+spring:
+  # 使用jackson序列化时
+  jackson:
+    # 配置序列化date类型转换文本样式
+    date-format: yyyy-MM-dd HH:mm:ss

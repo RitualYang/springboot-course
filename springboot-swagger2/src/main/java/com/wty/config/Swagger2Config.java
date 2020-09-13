@@ -29,7 +29,7 @@ public class Swagger2Config {
                 .apiInfo(apiInfo())
                 .select()
                 //此处添加需要扫描接口的包路径
-                .apis(basePackage("com.wty.com.wty.com.wty.controller" + SPLITOR + "com.wty.model"))
+                .apis(basePackage("com.wty.controller" + SPLITOR + "com.wty.model"))
                 .paths(PathSelectors.any())
                 .build();
     }
