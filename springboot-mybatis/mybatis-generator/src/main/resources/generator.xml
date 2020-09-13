@@ -7,7 +7,7 @@
     <!-- 引入 application.properties -->
 
     <properties resource="application.properties" />
-
+    <!--MyBatis3 :生成Example相关类及方法-->
     <!-- MyBatis3Simple：不生成 Example相关类及方法 defaultModelType="flat" -->
     <context id="MysqlContext" targetRuntime="MyBatis3Simple" >
 
