@@ -30,7 +30,7 @@
         <module>springboot-fastDfs</module>
         <module>springboot-redis</module>
         <module>springboot-mybatis</module>
-        <module>springboot-jpa</module>
+        <module>springboot-data-jpa</module>
         <module>springboot-mq</module>
         <module>springboot-solr</module>
         <module>springboot-elasticsearch</module>
@@ -42,6 +42,7 @@
         <module>springboot-transaction</module>
         <module>springboot-autoConfiguration</module>
         <module>springboot-https</module>
+        <module>springboot-admin</module>
 
     </modules>
     <packaging>pom</packaging>

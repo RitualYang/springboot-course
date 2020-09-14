@@ -6,15 +6,15 @@
         <artifactId>springboot-parent</artifactId>
         <groupId>com.wty.springboot.course</groupId>
         <version>1.0.0-SNAPSHOT</version>
-        <relativePath/>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.wty.springboot.course</groupId>
-    <artifactId>springboot-jpa</artifactId>
+    <artifactId>springboot-admin</artifactId>
     <packaging>pom</packaging>
-
     <modules>
-        <module>springboot-data-jpa</module>
+        <module>springboot-admin-server</module>
+        <module>springboot-admin-client</module>
     </modules>
+
+
 </project>
