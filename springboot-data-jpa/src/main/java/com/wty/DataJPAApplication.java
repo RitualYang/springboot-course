@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
  * @Date 2019/12/19 22:04
  */
 @SpringBootApplication
-@EntityScan(basePackages = "com.wty.model")
+@EntityScan(basePackages = "com.wty.entity")
 public class DataJPAApplication {
     public static void main(String[] args) {
         SpringApplication.run(DataJPAApplication.class,args);
