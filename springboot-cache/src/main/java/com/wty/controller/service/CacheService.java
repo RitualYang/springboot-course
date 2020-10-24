@@ -30,7 +30,7 @@ public class CacheService {
     private static List<String> strArr =Arrays.asList(new String[]{"string", "String", "cache"});
 
     /**
-     * @Cacheable注解会先查询是否已经有缓存，有会使用缓存，没有则会执行方法并缓存。
+     * {@link Cacheable} 注解会先查询是否已经有缓存，有会使用缓存，没有则会执行方法并缓存。
      * String[] cacheNames() default {}; //和value注解差不多，二选一
      * String keyGenerator() default ""; //key的生成器。key/keyGenerator二选一使用
      * String cacheManager() default ""; //指定缓存管理器
@@ -52,7 +52,7 @@ public class CacheService {
 
 
     /**
-     * @CachePut注解的作用 主要针对方法配置，能够根据方法的请求参数对其结果进行缓存，和 @Cacheable 不同的是，
+     * {@link CachePut}注解的作用 主要针对方法配置，能够根据方法的请求参数对其结果进行缓存，和 @Cacheable 不同的是，
      * 它每次都会触发真实方法的调用 。简单来说就是用户更新缓存数据。但需要注意的是该注解的value 和 key 必须与
      * 要更新的缓存相同，也就是与@Cacheable 相同。
      * String[] cacheNames() default {}; //与value二选一
