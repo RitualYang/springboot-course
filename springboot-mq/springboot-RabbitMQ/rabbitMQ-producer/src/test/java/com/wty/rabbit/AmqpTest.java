@@ -25,6 +25,7 @@ public class AmqpTest {
         stringStringHashMap.put("message","我是好人");
         stringStringHashMap.put("code","ok");
         producerMessage.sendFanoutMessage(stringStringHashMap);
+        producerMessage.sendTopicMessage("kk.boot.hao","我是测试");
         producerMessage.sendDirectMessage("spring.boot.amqp","direct send message");
     }
 }
