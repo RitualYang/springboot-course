@@ -1,0 +1,8 @@
+knife4j:
+  cors: true # 开启服务端Cors配置
+  markdowns: classpath:markdown/*
+  # 安全配置
+#  basic:
+#    enable: true
+#    username: nlwwadmin
+#    password: nlww123456
