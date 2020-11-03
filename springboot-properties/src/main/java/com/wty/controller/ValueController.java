@@ -1,6 +1,5 @@
 package com.wty.controller;
 
-import com.wty.model.Girlfriend;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,6 +21,8 @@ public class ValueController {
     private String address;
     @Value("#{'${demo.identity}'.split(',')}")
     private List<String> identity;
+    @Value("${demo.identity}")
+    private String[] iden;
 //    @Value 无法获取 ‘-’ 指定的集合
 //    @Value("${demo.cars}")
 //    private List<String> cars;

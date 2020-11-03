@@ -37,7 +37,7 @@ public class GeneratorUtils {
         templates.add("template/biz.java.vm");
         templates.add("template/entity.java.vm");
         templates.add("template/mapper.java.vm");
-        templates.add("template/controller.java.vm");
+        templates.add("template/com.wty.controller.java.vm");
         return templates;
     }
 
@@ -188,7 +188,7 @@ public class GeneratorUtils {
         if (template.contains("entity.java.vm")) {
             return packagePath + "entity" + File.separator + className + ".java";
         }
-        if (template.contains("controller.java.vm")) {
+        if (template.contains("com.wty.controller.java.vm")) {
             return packagePath + "rest" + File.separator + className + "Controller.java";
         }
         if (template.contains("mapper.xml.vm")) {

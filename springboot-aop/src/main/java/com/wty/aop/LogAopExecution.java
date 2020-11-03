@@ -27,7 +27,7 @@ public class LogAopExecution {
      * @throws Exception
      */
     @Before("executionService()")
-    //@Before("execution(* com.wty.com.wty.controller.*(..))") 效果同上
+    //@Before("execution(* com.wty.com.wty.com.wty.controller.*(..))") 效果同上
     public void before(JoinPoint point){
         log.info("----Bufore前置通知调用----");
     }
