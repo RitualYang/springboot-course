@@ -1,0 +1,4 @@
+logging:
+  level:
+    com.wty: warn
+    root: info
