@@ -19,7 +19,7 @@ import java.util.List;
 public class CommitController {
 
     /**
-     * 参数校验失败抛出BindException
+     * 参数校验失败抛出MethodArgumentNotValidException
      * @param user
      * @return
      */
@@ -29,7 +29,7 @@ public class CommitController {
     }
 
     /**
-     * 参数校验失败抛出MethodArgumentNotValidException
+     * 参数校验失败抛出BindException
      * @param user
      * @return
      */

@@ -4,7 +4,6 @@ import com.wty.model.R;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.support.DefaultMessageSourceResolvable;
 import org.springframework.validation.BindException;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
@@ -21,13 +20,12 @@ import java.util.stream.Collectors;
 @Slf4j
 public class GlobalExceptionHandler {
 
-
     /**
      * 方法参数校验异常
      */
     @ExceptionHandler(BindException.class)
     public R handleBindException(BindException e) {
-        log.info("参数校验失败");
+        log.info("参数校验失败,异常:BindException");
         List<String> collect = e.getBindingResult().getAllErrors().stream()
                 .map(DefaultMessageSourceResolvable::getDefaultMessage)
                 .collect(Collectors.toList());
@@ -41,7 +39,7 @@ public class GlobalExceptionHandler {
      */
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public R methodArgumentNotValidException(MethodArgumentNotValidException e){
-        log.info("参数校验失败");
+        log.info("参数校验失败,异常:MethodArgumentNotValidException");
         String message = e.getBindingResult().getFieldError().getDefaultMessage();
         return R.error(415,message);
     }
@@ -54,7 +52,7 @@ public class GlobalExceptionHandler {
      */
     @ExceptionHandler(ConstraintViolationException.class)
     public R constraintViolationException(ConstraintViolationException e){
-        log.info("参数校验失败");
+        log.info("参数校验失败,异常ConstraintViolationException");
         return R.error(415,e.getMessage());
     }
 
