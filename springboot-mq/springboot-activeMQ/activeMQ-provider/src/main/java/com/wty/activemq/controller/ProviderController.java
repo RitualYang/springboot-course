@@ -21,7 +21,7 @@ public class ProviderController {
     @Autowired
     private JmsMessagingTemplate jmsMessagingTemplate;
 
-    @RequestMapping(value = "sendQueue",method = RequestMethod.GET)
+    @RequestMapping(value = "sendQueue", method = RequestMethod.GET)
     public String sendQueue(String name) {
         //方法一：添加消息到消息队列
         jmsMessagingTemplate.convertAndSend(queue, name);
@@ -30,7 +30,7 @@ public class ProviderController {
         return "queue 发送成功";
     }
 
-    @RequestMapping(value = "sendTopic",method = RequestMethod.GET)
+    @RequestMapping(value = "sendTopic", method = RequestMethod.GET)
     public String sendTopic(String name) {
         //方法一：添加消息到消息队列
         jmsMessagingTemplate.convertAndSend(topic, name);

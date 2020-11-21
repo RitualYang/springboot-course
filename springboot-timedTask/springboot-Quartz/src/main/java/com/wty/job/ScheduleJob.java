@@ -4,10 +4,10 @@ import lombok.extern.slf4j.Slf4j;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
 import org.springframework.scheduling.quartz.QuartzJobBean;
+
 /**
  * @author wty
- * @Date 2020/8/24 23:13
- * @Description: TODO
+ * @date 2020/8/24 23:13
  */
 @Slf4j
 public class ScheduleJob extends QuartzJobBean {

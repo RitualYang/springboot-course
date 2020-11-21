@@ -70,5 +70,4 @@ public class Lesson implements Serializable {
     @TableField("UPDATED_TIME")
     private LocalDateTime updatedTime;
 
-
 }

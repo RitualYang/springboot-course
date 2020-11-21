@@ -4,13 +4,16 @@ import lombok.extern.slf4j.Slf4j;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
 import org.quartz.JobListener;
+import org.springframework.stereotype.Component;
+
 /**
  * job监听
+ *
  * @author wty
- * @Date 2020/8/24 23:13
- * @Description: TODO
+ * @date 2020/8/24 23:13
  */
 @Slf4j
+@Component
 public class MyJobListener implements JobListener {
     @Override
     public String getName() {

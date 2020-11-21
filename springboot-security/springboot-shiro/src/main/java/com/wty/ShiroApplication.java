@@ -5,11 +5,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * @author wty
- * @Date 2019/12/01 17:17
+ * @date 2019/12/01 17:17
  */
 @SpringBootApplication
 public class ShiroApplication {
     public static void main(String[] args) {
-        SpringApplication.run(ShiroApplication.class,args);
+        SpringApplication.run(ShiroApplication.class, args);
     }
 }

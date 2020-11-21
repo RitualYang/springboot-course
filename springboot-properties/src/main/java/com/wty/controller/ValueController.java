@@ -9,7 +9,7 @@ import java.util.Map;
 
 /**
  * @author wty
- * @Date 2020/02/08 21:14
+ * @date 2020/02/08 21:14
  */
 @RestController
 public class ValueController {
@@ -23,18 +23,18 @@ public class ValueController {
     private List<String> identity;
     @Value("${demo.identity}")
     private String[] iden;
-//    @Value 无法获取 ‘-’ 指定的集合
+    //    @Value 无法获取 ‘-’ 指定的集合
 //    @Value("${demo.cars}")
 //    private List<String> cars;
     @Value("#{${demo.maps}}")
-    private Map<String,String> maps;
+    private Map<String, String> maps;
 //    @Value("${demo.girlfriend}")
 //    private Girlfriend girlfriend;
 
     @RequestMapping(value = "value")
-    public String getValue(){
+    public String getValue() {
         return "phone : " + phone + " ; sex : " + sex + " ; address : " + address + " ; identity : " +
-                identity.toString()  + " ; maps : " + maps.toString();
+                identity.toString() + " ; maps : " + maps.toString();
 //        +" ; girlfriend :" + girlfriend.toString();
     }
 }

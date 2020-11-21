@@ -21,13 +21,13 @@ spring:
       test-while-idle: true
       test-on-borrow: false
       test-on-return: false
-      # 打开PSCache，并且指定每个连接上PSCache的大小
+      # 打开PSCache,并且指定每个连接上PSCache的大小
       pool-prepared-statements: true
       max-open-prepared-statements: 20
       max-pool-prepared-statement-per-connection-size: 20
       # 配置监控统计拦截的filters, 去掉后监控界面sql无法统计, 'wall'用于防火墙
       filters: stat,wall
-      # Spring监控AOP切入点，如x.y.z.service.*,配置多个英文逗号分隔
+      # Spring监控AOP切入点,如x.y.z.service.*,配置多个英文逗号分隔
       aop-patterns: com.wty.servie.*
       # WebStatFilter配置
       web-stat-filter:
@@ -39,7 +39,7 @@ spring:
       # StatViewServlet配置
       stat-view-servlet:
         enabled: true
-        # 访问路径为/druid时，跳转到StatViewServlet
+        # 访问路径为/druid时,跳转到StatViewServlet
         url-pattern: /druid/*
         # 是否能够重置数据
         reset-enable: false
@@ -48,7 +48,7 @@ spring:
         login-password: 123456
         # IP白名单
         # allow: 127.0.0.1
-        #　IP黑名单（共同存在时，deny优先于allow）
+        #　IP黑名单(共同存在时,deny优先于allow)
         # deny: 192.168.1.218
       # 配置StatFilter
       filter:

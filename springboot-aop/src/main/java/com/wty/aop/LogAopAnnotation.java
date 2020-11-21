@@ -13,8 +13,10 @@ import org.springframework.stereotype.Component;
 import java.lang.reflect.Method;
 
 /**
+ * 扫描注解实现aop
+ *
  * @author wty
- * @Date 2020/02/13 19:40
+ * @date 2020/02/13 19:40
  */
 @Component
 @Aspect
@@ -28,8 +30,9 @@ public class LogAopAnnotation {
     }
 
     /**
-     * 环绕通知,已proceed（）方法区分前置环绕、后置环绕
+     * 环绕通知,已proceed()方法区分前置环绕、后置环绕
      * 只有环绕通知可以使用 ProceedingJoinPoint
+     *
      * @param point
      * @throws Throwable
      */
@@ -60,7 +63,7 @@ public class LogAopAnnotation {
             LoginLog annotation = currentMethod.getAnnotation(LoginLog.class);
             String loginLogName = annotation.value();
             log.info("value = " + loginLogName);
-        }catch (Exception e){
+        } catch (Exception e) {
             log.error(e.getMessage());
         }
         return proceed;

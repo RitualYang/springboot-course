@@ -4,7 +4,7 @@ import lombok.Data;
 
 /**
  * @author wty
- * @Date 2020/02/08 21:49
+ * @date 2020/02/08 21:49
  */
 @Data
 public class Girlfriend {

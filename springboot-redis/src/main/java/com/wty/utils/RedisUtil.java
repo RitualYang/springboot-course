@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * @author wty
- * @Date 2019/12/04 21:34
+ * @date 2019/12/04 21:34
  */
 @Component
 public class RedisUtil {
@@ -14,8 +14,8 @@ public class RedisUtil {
     @Autowired
     private RedisTemplate redisTemplate;
 
-    public String set(String key,String msg) {
-        redisTemplate.opsForValue().set(key,msg);
+    public String set(String key, String msg) {
+        redisTemplate.opsForValue().set(key, msg);
         return "success";
     }
 

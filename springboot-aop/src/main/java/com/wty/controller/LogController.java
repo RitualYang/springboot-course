@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author wty
- * @Date 2020/02/13 19:40
+ * @date 2020/02/13 19:40
  */
 @RestController
 @RequestMapping(value = "/aop")
@@ -14,13 +14,13 @@ public class LogController {
 
     @LoginLog(value = "登录")
     @RequestMapping(value = "/login")
-    public String login(){
+    public String login() {
         return "登录";
     }
 
     @LoginLog(value = "登出")
     @RequestMapping(value = "/logout")
-    public String logout(){
+    public String logout() {
         return "登出";
     }
 }

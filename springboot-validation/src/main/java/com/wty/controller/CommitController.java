@@ -12,7 +12,7 @@ import java.util.List;
 
 /**
  * @author wty
- * @Date 2020/6/23 22:37
+ * @date 2020/6/23 22:37
  */
 @Validated
 @RestController
@@ -20,26 +20,29 @@ public class CommitController {
 
     /**
      * 参数校验失败抛出BindException
+     *
      * @param user
      * @return
      */
     @PostMapping("/register")
-    public R register(@RequestBody @Valid User user){
+    public R register(@RequestBody @Valid User user) {
         return R.ok("验证通过");
     }
 
     /**
      * 参数校验失败抛出MethodArgumentNotValidException
+     *
      * @param user
      * @return
      */
     @PostMapping("/register2")
-    public R register2(@Validated User user){
+    public R register2(@Validated User user) {
         return R.ok("验证通过");
     }
 
     /**
      * 参数校验失败抛出ConstraintViolationException
+     *
      * @param userList
      * @return
      */

@@ -8,23 +8,23 @@ import lombok.Data;
 import java.io.Serializable;
 
 /**
+ * excel测试实体
  * @author wty
- * @Date 2020/8/24 10:38
- * @Description: TODO
+ * @date 2020/8/24 10:38
  */
 @Data
 @AllArgsConstructor
 public class UserExcel implements Serializable {
     @ExcelIgnore
     private Integer userId;
-    @ExcelProperty(value = "用户名",order = 0)
+    @ExcelProperty(value = "用户名", order = 0)
     private String userName;
-    @ExcelProperty(value = "年龄",order = 1)
+    @ExcelProperty(value = "年龄", order = 1)
     private Integer age;
-    @ExcelProperty(value = "手机号",order = 2)
+    @ExcelProperty(value = "手机号", order = 2)
     private String mobile;
-    @ExcelProperty(value = "邮箱",order = 3)
+    @ExcelProperty(value = "邮箱", order = 3)
     private String email;
-    @ExcelProperty(value = "地址",order = 4)
+    @ExcelProperty(value = "地址", order = 4)
     private String address;
 }

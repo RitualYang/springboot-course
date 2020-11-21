@@ -12,16 +12,16 @@ import java.util.Date;
 
 /**
  * @author wty
- * @Date 2019/10/13 00:28
+ * @date 2019/10/13 00:28
  */
 @RestController
 @RequestMapping(value = "/user")
 public class UserController {
 
     @GetMapping("/getUser")
-    @ApiOperation(value="获取用户", notes="")
+    @ApiOperation(value = "获取用户", notes = "")
     @ApiImplicitParam(name = "name", value = "用户姓名", required = true, dataType = "String")
-    public User getUser(String name){
+    public User getUser(String name) {
         User user = new User();
         user.setDate(new Date());
         user.setName("wty");

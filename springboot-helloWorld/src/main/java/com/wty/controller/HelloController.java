@@ -8,14 +8,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author wty
- * @Date 2019/05/12 17:55
+ * @date 2019/05/12 17:55
  */
 @Slf4j
 @RestController
 public class HelloController {
 
     @RequestMapping("/hello")
-    public String hello(){
+    public String hello() {
         return "Hello World!!!!";
     }
 

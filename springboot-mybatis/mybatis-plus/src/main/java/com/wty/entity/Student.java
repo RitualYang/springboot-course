@@ -115,13 +115,13 @@ public class Student implements Serializable {
     private String marital;
 
     /**
-     * 籍贯（省） 国标行政区域代码-省级
+     * 籍贯(省) 国标行政区域代码-省级
      */
     @TableField("DOMICILE_PLACE_PROVINCE")
     private String domicilePlaceProvince;
 
     /**
-     * 籍贯（市） 国标行政区域代码-市级
+     * 籍贯(市) 国标行政区域代码-市级
      */
     @TableField("DOMICILE_PLACE_CITY")
     private String domicilePlaceCity;
@@ -197,6 +197,5 @@ public class Student implements Serializable {
      */
     @TableField("UPDATED_TIME")
     private LocalDateTime updatedTime;
-
 
 }

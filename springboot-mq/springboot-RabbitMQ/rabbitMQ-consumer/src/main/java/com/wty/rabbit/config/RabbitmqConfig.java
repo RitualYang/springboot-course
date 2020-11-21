@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * @author wty
- * @Date 2019/10/26 21:01
+ * @date 2019/10/26 21:01
  */
 @Configuration
 public class RabbitmqConfig {
@@ -23,24 +23,29 @@ public class RabbitmqConfig {
     public final static String FOURTH_QUEUE = "fourthQueue";
 
     @Bean("firstQueue")
-    public Queue getFirstQueue(){
-        return new Queue(FIRST_QUEUE,true);
+    public Queue getFirstQueue() {
+        return new Queue(FIRST_QUEUE, true);
     }
+
     @Bean("secondQueue")
-    public Queue getSecondQueue(){
-        return new Queue(SECOND_QUEUE,true);
+    public Queue getSecondQueue() {
+        return new Queue(SECOND_QUEUE, true);
     }
+
     @Bean("thirdQueue")
-    public Queue getThirdQueue(){
-        return new Queue(THIRD_QUEUE,true);
+    public Queue getThirdQueue() {
+        return new Queue(THIRD_QUEUE, true);
     }
+
     @Bean("fourthQueue")
-    public Queue getFourthQueue(){
-        return new Queue(FOURTH_QUEUE,true);
+    public Queue getFourthQueue() {
+        return new Queue(FOURTH_QUEUE, true);
     }
+
     /**
      * 在消费端转换JSON消息
      * 监听类都要加上containerFactory属性
+     *
      * @param connectionFactory
      * @return
      */

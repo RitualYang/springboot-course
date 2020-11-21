@@ -8,8 +8,9 @@ import org.springframework.jmx.support.RegistrationPolicy;
 
 /**
  * fastDFS配置
+ *
  * @author: wty
- * @Date: 2019/12/06 15:15
+ * @date: 2019/12/06 15:15
  **/
 @Configuration
 @Import(FdfsClientConfig.class) // 导入FastDFS-Client组件

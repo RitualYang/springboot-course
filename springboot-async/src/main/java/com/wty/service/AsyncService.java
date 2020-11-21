@@ -10,8 +10,9 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 异步处理服务
+ *
  * @author wty
- * @Date 2020/5/4 16:48
+ * @date 2020/5/4 16:48
  */
 @Slf4j
 @Service
@@ -19,6 +20,7 @@ public class AsyncService {
 
     /**
      * 异步调用方法
+     *
      * @throws InterruptedException
      */
     @Async("asyncExecutor")
@@ -30,6 +32,7 @@ public class AsyncService {
 
     /**
      * 同步调用方法
+     *
      * @throws InterruptedException
      */
     public void syncProcess() throws InterruptedException {
@@ -40,6 +43,7 @@ public class AsyncService {
 
     /**
      * 带有返回值的异步方法(适合在存在多个方法调用时间过长时使用)
+     *
      * @return
      * @throws InterruptedException
      */

@@ -6,12 +6,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * http://localhost:8080/swagger-ui.html
  * http://localhost:8080/doc.html
+ *
  * @author wty
- * @Date 2019/10/13 00:27
+ * @date 2019/10/13 00:27
  */
 @SpringBootApplication
 public class SwaggerApplication {
     public static void main(String[] args) {
-        SpringApplication.run(SwaggerApplication.class,args);
+        SpringApplication.run(SwaggerApplication.class, args);
     }
 }

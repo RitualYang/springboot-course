@@ -13,10 +13,12 @@ import org.springframework.context.annotation.Configuration;
 
 import java.util.HashMap;
 import java.util.Map;
+
 /**
  * shiro配置
+ *
  * @author wty
- * @Date 2019/11/01 21:11
+ * @date 2019/11/01 21:11
  */
 @Configuration
 public class ShiroConfig {
@@ -31,6 +33,7 @@ public class ShiroConfig {
 
     /**
      * 将自己的验证方式加入容器
+     *
      * @return
      */
     @Bean
@@ -41,6 +44,7 @@ public class ShiroConfig {
 
     /**
      * 权限管理,配置主要是Realm的管理认证
+     *
      * @return
      */
     @Bean
@@ -52,6 +56,7 @@ public class ShiroConfig {
 
     /**
      * Filter工厂,设置对应的过滤条件和跳转条件
+     *
      * @param securityManager
      * @return
      */
@@ -61,10 +66,10 @@ public class ShiroConfig {
         shiroFilterFactoryBean.setSecurityManager(securityManager);
         //拦截器
         Map<String, String> filterChainDefinitionMap = new HashMap<>(6);
-        //登出过滤器（Shiro已经替我们实现了）
+        //登出过滤器(Shiro已经替我们实现了)
         filterChainDefinitionMap.put("/logout", "logout");
         //authc:所有url都必须认证通过才可以访问; anon:所有url都都可以匿名访问
-        filterChainDefinitionMap.put("/static/**","anon");
+        filterChainDefinitionMap.put("/static/**", "anon");
         // 登录 URL 放行
         filterChainDefinitionMap.put("/login", "anon");
         //必须放在最后,否则全部拦截
@@ -82,6 +87,7 @@ public class ShiroConfig {
     /**
      * 开启shiro aop注解支持.
      * 使用代理方式,需要开启代码支持;
+     *
      * @param securityManager
      * @return
      */
@@ -93,11 +99,12 @@ public class ShiroConfig {
     }
 
     /**
-     *凭证匹配器
+     * 凭证匹配器
+     *
      * @return
      */
     @Bean
-    public HashedCredentialsMatcher hashedCredentialsMatcher(){
+    public HashedCredentialsMatcher hashedCredentialsMatcher() {
         HashedCredentialsMatcher hashedCredentialsMatcher = new HashedCredentialsMatcher();
         //加密操作
         //hashedCredentialsMatcher.setHashAlgorithmName("md5");

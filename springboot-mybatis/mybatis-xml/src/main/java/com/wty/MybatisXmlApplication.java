@@ -6,12 +6,12 @@ import tk.mybatis.spring.annotation.MapperScan;
 
 /**
  * @author wty
- * @Date 2019/11/01 16:59
+ * @date 2019/11/01 16:59
  */
 @SpringBootApplication
 @MapperScan("com.wty.mapper")
 public class MybatisXmlApplication {
     public static void main(String[] args) {
-        SpringApplication.run(MybatisXmlApplication.class,args);
+        SpringApplication.run(MybatisXmlApplication.class, args);
     }
 }

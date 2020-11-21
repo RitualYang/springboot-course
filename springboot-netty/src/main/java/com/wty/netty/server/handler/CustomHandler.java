@@ -11,8 +11,9 @@ import io.netty.util.CharsetUtil;
 /**
  * {link: SimpleChannelInboundHandler}: 对于请求来讲,其实相当于[入站,入境]
  * 创建自定义助手类
+ *
  * @author wty
- * @Date 2020/7/27 16:26
+ * @date 2020/7/27 16:26
  */
 public class CustomHandler extends SimpleChannelInboundHandler<HttpObject> {
     @Override
@@ -25,11 +26,11 @@ public class CustomHandler extends SimpleChannelInboundHandler<HttpObject> {
             // 定义发送的数据消息
             ByteBuf content = Unpooled.copiedBuffer("hello netty~", CharsetUtil.UTF_8);
             // 构建一个 http response
-            FullHttpResponse response = new DefaultFullHttpResponse(HttpVersion.HTTP_1_1, HttpResponseStatus.OK,content);
+            FullHttpResponse response = new DefaultFullHttpResponse(HttpVersion.HTTP_1_1, HttpResponseStatus.OK, content);
 
             // 为响应增加数据类型和长度
-            response.headers().set(HttpHeaderNames.CONTENT_TYPE,"text/plain");
-            response.headers().set(HttpHeaderNames.CONTENT_LENGTH,content.readableBytes());
+            response.headers().set(HttpHeaderNames.CONTENT_TYPE, "text/plain");
+            response.headers().set(HttpHeaderNames.CONTENT_LENGTH, content.readableBytes());
 
             // 把响应写到客户端
             channelHandlerContext.writeAndFlush(response);
@@ -77,7 +78,6 @@ public class CustomHandler extends SimpleChannelInboundHandler<HttpObject> {
         System.out.println("channel可写更改 ...");
         super.channelWritabilityChanged(ctx);
     }
-
 
     @Override
     public void handlerAdded(ChannelHandlerContext ctx) throws Exception {

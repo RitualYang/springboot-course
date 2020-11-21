@@ -15,6 +15,6 @@ import com.wty.entity.Class;
  */
 public interface ClassMapper extends BaseMapper<Class> {
 
-    IPage<Class> selectPage(Page<?> page,String version);
+    IPage<Class> selectPage(Page<?> page, String version);
 
 }

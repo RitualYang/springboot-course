@@ -10,10 +10,8 @@ import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 /**
- * TODO
- *
  * @author wty
- * @Date 2020/8/26 16:46
+ * @date 2020/8/26 16:46
  */
 @Order(2)
 @Slf4j
@@ -22,6 +20,7 @@ public class HelloApplicationRunner implements ApplicationRunner {
 
     @Autowired
     private HelloServer helloServer;
+
     @Override
     public void run(ApplicationArguments args) throws Exception {
         System.out.println(helloServer);

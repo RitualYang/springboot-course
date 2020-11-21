@@ -7,9 +7,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+
 /**
  * @author wty
- * @Date 2020/02/08 21:21
+ * @date 2020/02/08 21:21
  */
 @RestController
 @ConfigurationProperties(prefix = "demo")// 需要属性有set方法
@@ -20,11 +21,11 @@ public class ConfigurationPropertiesController {
     private String address;
     private List<String> identity;
     private List<String> cars;
-//    private Map<String,String> maps;
+    //    private Map<String,String> maps;
     private Girlfriend girlfriend;
 
     @RequestMapping(value = "properties")
-    public String getProperties(){
+    public String getProperties() {
         return "phone : " + phone + " ; sex : " + sex + " ; address : " + address + " ; identity : " +
                 identity.toString() + " ; cars : " + cars.toString() + " ; maps : " + " ; girlfriend :"
                 + girlfriend.toString();

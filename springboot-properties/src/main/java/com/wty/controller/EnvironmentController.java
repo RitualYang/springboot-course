@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author wty
- * @Date 2020/02/08 21:18
+ * @date 2020/02/08 21:18
  */
 @RestController
 public class EnvironmentController {

@@ -18,10 +18,10 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- * TODO
+ * token过滤器
  *
  * @author wty
- * @Date 2020/9/15 11:03
+ * @date 2020/9/15 11:03
  */
 public class TokenFilter extends GenericFilterBean {
     @Override

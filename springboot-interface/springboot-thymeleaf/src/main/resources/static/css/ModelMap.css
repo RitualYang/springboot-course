@@ -1,12 +1,15 @@
-h1{
+h1 {
     background-color: darkgoldenrod;
 }
-div{
+
+div {
     color: aquamarine;
 }
-p{
+
+p {
     color: #66ff36;
 }
-span{
+
+span {
     background-color: magenta;
 }

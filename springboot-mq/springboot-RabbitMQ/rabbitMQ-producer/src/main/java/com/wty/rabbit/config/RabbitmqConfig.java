@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * @author wty
- * @Date 2019/10/26 21:01
+ * @date 2019/10/26 21:01
  */
 @Configuration
 public class RabbitmqConfig {
@@ -39,59 +39,68 @@ public class RabbitmqConfig {
     private final static String TOPIC_ROUTING_KEY = "*.boot.*";
 
     @Bean("directExchange")
-    public DirectExchange getDirectExchange(){
+    public DirectExchange getDirectExchange() {
 
-        return new DirectExchange(DIRECT_EXCHANGE,true,false);
+        return new DirectExchange(DIRECT_EXCHANGE, true, false);
     }
+
     @Bean("topicExchange")
-    public TopicExchange getTopicExchange(){
-        return new TopicExchange(TOPIC_EXCHANGE,true,false);
+    public TopicExchange getTopicExchange() {
+        return new TopicExchange(TOPIC_EXCHANGE, true, false);
     }
+
     @Bean("fanoutExchange")
-    public FanoutExchange getFanoutExchange(){
-        return new FanoutExchange(FANOUT_EXCHANGE,true,false);
+    public FanoutExchange getFanoutExchange() {
+        return new FanoutExchange(FANOUT_EXCHANGE, true, false);
     }
 
     @Bean("firstQueue")
-    public Queue getFirstQueue(){
-        return new Queue(FIRST_QUEUE,true);
+    public Queue getFirstQueue() {
+        return new Queue(FIRST_QUEUE, true);
     }
+
     @Bean("secondQueue")
-    public Queue getSecondQueue(){
-        return new Queue(SECOND_QUEUE,true);
+    public Queue getSecondQueue() {
+        return new Queue(SECOND_QUEUE, true);
     }
+
     @Bean("thirdQueue")
-    public Queue getThirdQueue(){
-        return new Queue(THIRD_QUEUE,true);
+    public Queue getThirdQueue() {
+        return new Queue(THIRD_QUEUE, true);
     }
+
     @Bean("fourthQueue")
-    public Queue getFourthQueue(){
-        return new Queue(FOURTH_QUEUE,true);
+    public Queue getFourthQueue() {
+        return new Queue(FOURTH_QUEUE, true);
     }
 
     @Bean
     public Binding bindFirst(@Qualifier("firstQueue") Queue queue, @Qualifier("directExchange")
-            DirectExchange exchange){
+            DirectExchange exchange) {
         return BindingBuilder.bind(queue).to(exchange).with(DIRECT_ROUTING_KEY);
     }
+
     @Bean
     public Binding bindSecond(@Qualifier("secondQueue") Queue queue, @Qualifier("topicExchange")
-            TopicExchange exchange){
+            TopicExchange exchange) {
         return BindingBuilder.bind(queue).to(exchange).with(TOPIC_ROUTING_KEY);
     }
+
     @Bean
     public Binding bindThird(@Qualifier("thirdQueue") Queue queue, @Qualifier("fanoutExchange")
-            FanoutExchange exchange){
+            FanoutExchange exchange) {
         return BindingBuilder.bind(queue).to(exchange);
     }
+
     @Bean
     public Binding bindFourth(@Qualifier("fourthQueue") Queue queue, @Qualifier("fanoutExchange")
-            FanoutExchange exchange){
+            FanoutExchange exchange) {
         return BindingBuilder.bind(queue).to(exchange);
     }
 
     /**
      * 所有的消息发送都会转换成JSON格式发到交换机
+     *
      * @param connectionFactory
      * @return
      */

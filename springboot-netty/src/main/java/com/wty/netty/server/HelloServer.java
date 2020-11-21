@@ -11,8 +11,9 @@ import org.springframework.stereotype.Component;
 
 /**
  * 客户端发送一个请求,服务器会返回hello netty
+ *
  * @author wty
- * @Date 2020/7/27 16:01
+ * @date 2020/7/27 16:01
  */
 @Component
 public class HelloServer {
@@ -26,7 +27,7 @@ public class HelloServer {
         try {
             // netty服务器的创建, ServerBootstrap 是一个启动类
             ServerBootstrap serverBootstrap = new ServerBootstrap();
-            serverBootstrap.group(bossGroup,workerGroup) // 设置主从线程组
+            serverBootstrap.group(bossGroup, workerGroup) // 设置主从线程组
                     .channel(NioServerSocketChannel.class) // 设置nio的双向通道
                     .childHandler(new ServerInitializer());  // 子处理器：处理workerGroup
             // 启动server,并且设置8088为启动的端口号,同时启动方式为同步

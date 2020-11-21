@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * TODO
+ * es测试接口
  *
  * @author wty
- * @Date 2020/8/25 21:59
+ * @date 2020/8/25 21:59
  */
 @RestController
 @RequestMapping("/es")

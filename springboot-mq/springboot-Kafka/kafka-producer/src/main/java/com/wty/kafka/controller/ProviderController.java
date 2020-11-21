@@ -8,17 +8,17 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author wty
- * @Date 2019/12/11 22:08
+ * @date 2019/12/11 22:08
  */
 @RestController
 public class ProviderController {
 
     @Autowired
-    private KafkaTemplate<String,Object> kafkaTemplate;
+    private KafkaTemplate<String, Object> kafkaTemplate;
 
-    @RequestMapping(value = "send",method = RequestMethod.GET)
-    public boolean send(String message){
-        kafkaTemplate.send("testTopic",message);
+    @RequestMapping(value = "send", method = RequestMethod.GET)
+    public boolean send(String message) {
+        kafkaTemplate.send("testTopic", message);
         return true;
     }
 }

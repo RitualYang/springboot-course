@@ -7,6 +7,7 @@ import java.util.Date;
 public class Class {
     /**
      * 班级ID
+     *
      * @Id 注解使用：该数据库属性为int 或long类型,并设置主键自增才能使用
      * 如果不是。需要设置  mybatis.configuration.use-generated-keys=false
      */

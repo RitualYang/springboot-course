@@ -10,19 +10,20 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 /**
- * TODO
+ * security配置
  *
  * @author wty
- * @Date 2020/9/4 16:00
+ * @date 2020/9/4 16:00
  */
 @Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
     /**
      * 密码加密规则
+     *
      * @return
      */
     @Bean
-    PasswordEncoder passwordEncoder(){
+    PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
@@ -39,7 +40,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.inMemoryAuthentication()
-                .withUser("WTY")
+                .withUser("wty")
                 .password("$2a$10$L4QAuz.G4ms8SUlRaESukOtkkkhtEkDEQ6Z6zHQeap6iU6muzFQZK")
                 .roles("admin")
                 .and();

@@ -4,11 +4,11 @@
 <head>
     <title>ModelMap</title>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
-    <link rel="stylesheet" th:href="@{/css/ModelMap.css}" />
+    <link rel="stylesheet" th:href="@{/css/ModelMap.css}"/>
 </head>
 <body>
 <h1>日期转换</h1>
-<p th:text="${#dates.format(date, 'yyyy-MM-dd HH:mm:ss')}" />
+<p th:text="${#dates.format(date, 'yyyy-MM-dd HH:mm:ss')}"/>
 <h1>便利</h1>
 <div th:each="user,index :${list}">
     <p th:text="'第' + ${index.count} + '个用户'">
@@ -22,10 +22,10 @@
     <p th:case="*">userName没有匹配的case</p>
 </div>
 <h1>if</h1>
-<span th:if="${userName} == 'wty'" th:text="${userName}">  </span><br />
-    <script th:inline="javascript">
-        var userName = [[${userName}]]
-        console.log(userName)
-    </script>
+<span th:if="${userName} == 'wty'" th:text="${userName}">  </span><br/>
+<script th:inline="javascript">
+    var userName = [[${userName}]]
+    console.log(userName)
+</script>
 </body>
 </html>

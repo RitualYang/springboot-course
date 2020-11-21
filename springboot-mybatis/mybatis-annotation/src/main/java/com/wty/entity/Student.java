@@ -98,13 +98,13 @@ public class Student {
     private String marital;
 
     /**
-     * 籍贯（省） 国标行政区域代码-省级
+     * 籍贯(省) 国标行政区域代码-省级
      */
     @Column(name = "DOMICILE_PLACE_PROVINCE")
     private String domicilePlaceProvince;
 
     /**
-     * 籍贯（市） 国标行政区域代码-市级
+     * 籍贯(市) 国标行政区域代码-市级
      */
     @Column(name = "DOMICILE_PLACE_CITY")
     private String domicilePlaceCity;
@@ -452,36 +452,36 @@ public class Student {
     }
 
     /**
-     * 获取籍贯（省） 国标行政区域代码-省级
+     * 获取籍贯(省) 国标行政区域代码-省级
      *
-     * @return DOMICILE_PLACE_PROVINCE - 籍贯（省） 国标行政区域代码-省级
+     * @return DOMICILE_PLACE_PROVINCE - 籍贯(省) 国标行政区域代码-省级
      */
     public String getDomicilePlaceProvince() {
         return domicilePlaceProvince;
     }
 
     /**
-     * 设置籍贯（省） 国标行政区域代码-省级
+     * 设置籍贯(省) 国标行政区域代码-省级
      *
-     * @param domicilePlaceProvince 籍贯（省） 国标行政区域代码-省级
+     * @param domicilePlaceProvince 籍贯(省) 国标行政区域代码-省级
      */
     public void setDomicilePlaceProvince(String domicilePlaceProvince) {
         this.domicilePlaceProvince = domicilePlaceProvince == null ? null : domicilePlaceProvince.trim();
     }
 
     /**
-     * 获取籍贯（市） 国标行政区域代码-市级
+     * 获取籍贯(市) 国标行政区域代码-市级
      *
-     * @return DOMICILE_PLACE_CITY - 籍贯（市） 国标行政区域代码-市级
+     * @return DOMICILE_PLACE_CITY - 籍贯(市) 国标行政区域代码-市级
      */
     public String getDomicilePlaceCity() {
         return domicilePlaceCity;
     }
 
     /**
-     * 设置籍贯（市） 国标行政区域代码-市级
+     * 设置籍贯(市) 国标行政区域代码-市级
      *
-     * @param domicilePlaceCity 籍贯（市） 国标行政区域代码-市级
+     * @param domicilePlaceCity 籍贯(市) 国标行政区域代码-市级
      */
     public void setDomicilePlaceCity(String domicilePlaceCity) {
         this.domicilePlaceCity = domicilePlaceCity == null ? null : domicilePlaceCity.trim();

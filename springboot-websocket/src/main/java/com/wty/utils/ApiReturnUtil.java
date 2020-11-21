@@ -1,10 +1,10 @@
 package com.wty.utils;
 
 import com.wty.model.ApiReturnObject;
+
 /**
  * @author wty
- * @Date 2020/8/24 23:09
- * @Description: TODO
+ * @date 2020/8/24 23:09
  */
 public class ApiReturnUtil {
     public static ApiReturnObject error(String msg) {

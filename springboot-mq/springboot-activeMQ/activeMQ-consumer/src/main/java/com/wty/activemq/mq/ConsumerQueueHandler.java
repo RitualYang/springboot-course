@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 public class ConsumerQueueHandler {
 
     // 使用JmsListener配置消费者监听的队列,其中name是接收到的消息
-    @JmsListener(destination = "springboot-queue",containerFactory = "jmsListenerContainerQueue")
+    @JmsListener(destination = "springboot-queue", containerFactory = "jmsListenerContainerQueue")
     // SendTo 会将此方法返回的数据, 写入到 OutQueue 中去.
     @SendTo("SQueue")
     public String receive(String text) {

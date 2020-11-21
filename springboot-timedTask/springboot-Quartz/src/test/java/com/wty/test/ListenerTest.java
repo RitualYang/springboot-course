@@ -1,6 +1,5 @@
 package com.wty.test;
 
-
 import com.wty.job.QuartzJob;
 import com.wty.listener.MyJobListener;
 import com.wty.listener.MyTriggerListener;
@@ -31,7 +30,7 @@ public class ListenerTest {
         SchedulerFactory factory = new StdSchedulerFactory();
         Scheduler scheduler = factory.getScheduler();
         //绑定关系：可以1：N
-        scheduler.scheduleJob(quartzJob,quartzTrigger);
+        scheduler.scheduleJob(quartzJob, quartzTrigger);
         //创建并注册一个全局的Job Listener
         scheduler.getListenerManager().addJobListener(new MyJobListener(), EverythingMatcher.allJobs());
         //启动
@@ -53,12 +52,11 @@ public class ListenerTest {
         SchedulerFactory factory = new StdSchedulerFactory();
         Scheduler scheduler = factory.getScheduler();
         //绑定关系：可以1：N
-        scheduler.scheduleJob(quartzJob,quartzTrigger);
+        scheduler.scheduleJob(quartzJob, quartzTrigger);
         //创建并注册一个全局的Trigger Listener
         scheduler.getListenerManager().addTriggerListener(new MyTriggerListener(), EverythingMatcher.allTriggers());
         //启动
         scheduler.start();
     }
-
 
 }

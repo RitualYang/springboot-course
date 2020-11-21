@@ -103,5 +103,4 @@ public class Class implements Serializable {
     @TableField("UPDATED_TIME")
     private LocalDateTime updatedTime;
 
-
 }

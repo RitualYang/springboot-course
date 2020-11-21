@@ -5,17 +5,17 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
- * TODO
+ * velocity测试接口
  *
  * @author wty
- * @Date 2020/8/31 15:48
+ * @date 2020/8/31 15:48
  */
 @Controller
 @RequestMapping("/velocity")
 public class VelocityController {
 
     @GetMapping("/velocityTest")
-    public String velocityTest(){
+    public String velocityTest() {
         return null;
 
     }

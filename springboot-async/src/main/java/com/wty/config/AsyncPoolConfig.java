@@ -7,20 +7,23 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.AsyncConfigurer;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
+
 import java.lang.reflect.Method;
 import java.util.concurrent.Executor;
 import java.util.concurrent.ThreadPoolExecutor;
 
 /**
  * 自定义异步线程池的配置
+ *
  * @author wty
- * @Date 2020/5/4 16:57
+ * @date 2020/5/4 16:57
  */
 @Slf4j
 @Configuration
 public class AsyncPoolConfig implements AsyncConfigurer {
     /**
      * 返回自定义线程池
+     *
      * @return
      */
     @Bean("asyncExecutor")
@@ -46,6 +49,7 @@ public class AsyncPoolConfig implements AsyncConfigurer {
 
     /**
      * 自定义异步任务异常处理类
+     *
      * @return
      */
     @Override
@@ -58,7 +62,7 @@ public class AsyncPoolConfig implements AsyncConfigurer {
         @Override
         public void handleUncaughtException(Throwable ex, Method method, Object... params) {
             log.info("AsyncError: {}, Method: {}, Param: {}",
-                    ex.getMessage(),method.getName(), JSON.toJSONString(params));
+                    ex.getMessage(), method.getName(), JSON.toJSONString(params));
             ex.printStackTrace();
             // TODO:报告异常给开发者
         }

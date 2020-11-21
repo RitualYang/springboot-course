@@ -10,7 +10,7 @@ import java.util.HashMap;
 
 /**
  * @author wty
- * @Date 2019/10/31 20:30
+ * @date 2019/10/31 20:30
  */
 @RestController
 @RequestMapping("/rabbitmq")
@@ -19,21 +19,23 @@ public class RabbitmqController {
     private ProducerMessage producerMessage;
 
     @GetMapping("/sendFanoutMessage")
-    public String sendFanoutMessage(){
+    public String sendFanoutMessage() {
         HashMap<String, String> stringStringHashMap = new HashMap<>();
-        stringStringHashMap.put("message","我是好人");
-        stringStringHashMap.put("code","ok");
+        stringStringHashMap.put("message", "我是好人");
+        stringStringHashMap.put("code", "ok");
         producerMessage.sendFanoutMessage(stringStringHashMap);
         return "消息发送成功";
     }
+
     @GetMapping("/sendDirectMessage")
-    public String sendDirectMessage(){
-        producerMessage.sendDirectMessage("spring.boot.amqp","direct send message");
+    public String sendDirectMessage() {
+        producerMessage.sendDirectMessage("spring.boot.amqp", "direct send message");
         return "消息发送成功";
     }
+
     @GetMapping("/sendFanoutMessage")
-    public String sendTopicMessage(){
-        producerMessage.sendTopicMessage("kk.boot.hao","我是测试");
+    public String sendTopicMessage() {
+        producerMessage.sendTopicMessage("kk.boot.hao", "我是测试");
         return "消息发送成功";
     }
 

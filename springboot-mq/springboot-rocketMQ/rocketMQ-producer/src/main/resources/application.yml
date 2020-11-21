@@ -7,4 +7,4 @@ rocketmq:
     max-message-size: 419304 # 消息最大长度 默认1024*4(4M)
     retry-next-server: true
     retry-times-when-send-async-failed: 0
-    retry-times-when-send-failed: 2 # 发送消息失败重试次数，默认2
+    retry-times-when-send-failed: 2 # 发送消息失败重试次数,默认2

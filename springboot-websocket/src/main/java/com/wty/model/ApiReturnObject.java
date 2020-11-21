@@ -1,10 +1,10 @@
 package com.wty.model;
 
 import lombok.Data;
+
 /**
  * @author wty
- * @Date 2020/8/24 23:09
- * @Description: TODO
+ * @date 2020/8/24 23:09
  */
 @Data
 public class ApiReturnObject {

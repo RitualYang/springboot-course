@@ -10,22 +10,22 @@ import java.util.Map;
 
 /**
  * @author wty
- * @Date 2020/6/23 22:55
+ * @date 2020/6/23 22:55
  */
 @RestController
 @Slf4j
 public class MVCController {
 
     @GetMapping("/testMvc")
-    public String TestMvc(){
+    public String TestMvc() {
         log.info("执行请求");
         return "请求执行完毕";
     }
 
     @GetMapping("/testDate")
-    public Map TestDate(){
+    public Map TestDate() {
         HashMap<Object, Object> objectObjectHashMap = new HashMap<>();
-        objectObjectHashMap.put("date",new Date());
+        objectObjectHashMap.put("date", new Date());
         return objectObjectHashMap;
     }
 }

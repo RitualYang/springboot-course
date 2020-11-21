@@ -11,7 +11,6 @@
         <module>springboot-helloWorld</module>
         <module>springboot-MVC</module>
         <module>springboot-properties</module>
-        <module>springboot-tomcat</module>
         <module>springboot-package</module>
         <module>springboot-aop</module>
         <module>springboot-async</module>
@@ -43,10 +42,13 @@
         <module>springboot-https</module>
         <module>springboot-admin</module>
         <module>springboot-log</module>
+        <module>springboot-server</module>
+        <module>springboot-mongodb</module>
+        <module>springboot-search</module>
 
     </modules>
     <packaging>pom</packaging>
-    <!--核心依赖，管理大部分常用jar包的版本,分支测试-->
+    <!--核心依赖,管理大部分常用jar包的版本,分支测试-->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -81,12 +83,12 @@
     </properties>
 
     <dependencies>
-        <!-- 简洁开发依赖（开发工具须安装对应插件）-->
+        <!-- 简洁开发依赖(开发工具须安装对应插件)-->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
-        <!--  springboot热部署依赖（须配置自动编译）  -->
+        <!--  springboot热部署依赖(须配置自动编译)  -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
@@ -111,7 +113,7 @@
                 <artifactId>spring-boot-starter</artifactId>
                 <version>${spring-boot.version}</version>
             </dependency>
-            <!--对web项目开发的支持，包括了Tomcat和springMVC的依赖-->
+            <!--对web项目开发的支持,包括了Tomcat和springMVC的依赖-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-web</artifactId>
@@ -180,7 +182,7 @@
                 <artifactId>mysql-connector-java</artifactId>
                 <version>${mysql.version}</version>
             </dependency>
-                    <!--   mybatis通用mapper依赖  -->
+            <!--   mybatis通用mapper依赖  -->
             <dependency>
                 <groupId>tk.mybatis</groupId>
                 <artifactId>mapper-spring-boot-starter</artifactId>
@@ -283,7 +285,7 @@
                 </exclusions>
                 <version>${spring-boot.version}</version>
             </dependency>
-                    <!--连接池-->
+            <!--连接池-->
             <dependency>
                 <groupId>org.apache.activemq</groupId>
                 <artifactId>activemq-pool</artifactId>

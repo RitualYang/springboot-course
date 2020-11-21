@@ -5,11 +5,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * @author wty
- * @Date 2019/12/11 21:54
+ * @date 2019/12/11 21:54
  */
 @SpringBootApplication
 public class KafkaProducerApplication {
     public static void main(String[] args) {
-        SpringApplication.run(KafkaProducerApplication.class,args);
+        SpringApplication.run(KafkaProducerApplication.class, args);
     }
 }

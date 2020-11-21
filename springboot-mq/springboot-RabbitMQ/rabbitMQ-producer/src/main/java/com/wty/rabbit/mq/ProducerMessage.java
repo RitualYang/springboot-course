@@ -8,8 +8,6 @@ import org.springframework.stereotype.Component;
 import java.util.HashMap;
 
 /**
- * TODO
- *
  * @author wty
  * @date 2020/10/24 14:03
  */
@@ -18,13 +16,15 @@ public class ProducerMessage {
     @Autowired
     private RabbitTemplate rabbitTemplate;
 
-    public void sendDirectMessage(String routingKey,String message){
-        rabbitTemplate.convertAndSend(RabbitmqConfig.DIRECT_EXCHANGE,routingKey,message);
+    public void sendDirectMessage(String routingKey, String message) {
+        rabbitTemplate.convertAndSend(RabbitmqConfig.DIRECT_EXCHANGE, routingKey, message);
     }
-    public void sendTopicMessage(String routingKey,String message){
-        rabbitTemplate.convertAndSend(RabbitmqConfig.DIRECT_EXCHANGE,routingKey,message);
+
+    public void sendTopicMessage(String routingKey, String message) {
+        rabbitTemplate.convertAndSend(RabbitmqConfig.DIRECT_EXCHANGE, routingKey, message);
     }
-    public void sendFanoutMessage(HashMap hashMap){
-        rabbitTemplate.convertAndSend(RabbitmqConfig.FANOUT_EXCHANGE,null,hashMap);
+
+    public void sendFanoutMessage(HashMap hashMap) {
+        rabbitTemplate.convertAndSend(RabbitmqConfig.FANOUT_EXCHANGE, null, hashMap);
     }
 }

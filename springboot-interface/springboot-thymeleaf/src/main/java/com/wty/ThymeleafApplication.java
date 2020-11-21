@@ -5,11 +5,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * @author wty
- * @Date 2019/11/27 22:50
+ * @date 2019/11/27 22:50
  */
 @SpringBootApplication
 public class ThymeleafApplication {
     public static void main(String[] args) {
-        SpringApplication.run(ThymeleafApplication.class,args);
+        SpringApplication.run(ThymeleafApplication.class, args);
     }
 }

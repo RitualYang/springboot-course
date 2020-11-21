@@ -17,14 +17,18 @@ import java.io.IOException;
 import java.util.Properties;
 
 /**
+ * quartz配置
  * @author wty
- * @Date 2020/8/24 23:13
- * @Description: TODO
+ * @date 2020/8/24 23:13
  */
 @Configuration
-public class ConfigureQuartz {
+public class QuartzConfig {
 
-    //配置JobFactory
+    /**
+     * 配置JobFactory
+     * @param applicationContext
+     * @return
+     */
     @Bean
     public JobFactory jobFactory(ApplicationContext applicationContext) {
         AutowiringSpringBeanJobFactory jobFactory = new AutowiringSpringBeanJobFactory();
@@ -51,7 +55,11 @@ public class ConfigureQuartz {
         return factory;
     }
 
-    //从quartz.properties文件中读取Quartz配置属性
+    /**
+     * 读取quartz.properties文件中读取Quartz配置属性
+     * @return
+     * @throws IOException
+     */
     @Bean
     public Properties quartzProperties() throws IOException {
         PropertiesFactoryBean propertiesFactoryBean = new PropertiesFactoryBean();
@@ -60,7 +68,9 @@ public class ConfigureQuartz {
         return propertiesFactoryBean.getObject();
     }
 
-    //配置JobFactory,为quartz作业添加自动连接支持
+    /**
+     * 配置JobFactory,为quartz作业添加自动连接支持
+     */
     public final class AutowiringSpringBeanJobFactory extends SpringBeanJobFactory implements
             ApplicationContextAware {
         private AutowireCapableBeanFactory beanFactory;

@@ -13,8 +13,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * 登录控制器
+ *
  * @author wty
- * @Date 2019/11/01 21:11
+ * @date 2019/11/01 21:11
  */
 @RestController
 public class LoginController {
@@ -42,6 +43,7 @@ public class LoginController {
 
     /**
      * 注解验角色和权限
+     *
      * @return
      */
     @RequiresRoles("admin")

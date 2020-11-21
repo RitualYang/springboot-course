@@ -8,7 +8,7 @@ import java.util.Date;
 
 /**
  * @author wty
- * @Date 2019/10/13 00:29
+ * @date 2019/10/13 00:29
  */
 @Data
 @ApiModel(value = "用户")

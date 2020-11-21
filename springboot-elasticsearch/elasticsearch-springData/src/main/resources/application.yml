@@ -1,7 +1,13 @@
+# springboot 2.3.X 以前版本配置方法
+#spring:
+#  data:
+#    elasticsearch:
+#      cluster-nodes: 192.168.37.128:9300
+#      cluster-name: my-elasticsearch
+#      repositories:
+#        enabled: true
 spring:
-  data:
-    elasticsearch:
-      cluster-name: my-elasticsearch
-      cluster-nodes: 192.168.37.134:9300
-      repositories:
-        enabled: true
+  elasticsearch:
+    rest:
+      uris: http://192.168.37.128:9200
+      read-timeout: 10s

@@ -3,10 +3,10 @@ package com.wty.controller;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * TODO
+ * 登录接口
  *
  * @author wty
- * @Date 2020/9/14 16:19
+ * @date 2020/9/14 16:19
  */
 @RestController
 public class LoginController {

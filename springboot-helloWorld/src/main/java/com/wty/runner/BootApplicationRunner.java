@@ -7,10 +7,10 @@ import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 /**
+ * @author wty
  * @Order(2): 改变启动优先级
  * 项目启动运行调用
- * @author wty
- * @Date 2020/5/4 17:28
+ * @date 2020/5/4 17:28
  */
 @Order(2)
 @Slf4j

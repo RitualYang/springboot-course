@@ -11,8 +11,7 @@ public class RocketmqService {
     @Resource
     private RocketMQTemplate rocketMQTemplate;
 
-
-    public boolean send(String topic, String msg){
+    public boolean send(String topic, String msg) {
         rocketMQTemplate.convertAndSend(topic, msg);
         return true;
     }

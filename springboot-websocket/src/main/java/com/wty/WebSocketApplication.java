@@ -5,8 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * @author wty
- * @Date 2020/8/24 23:09
- * @Description: TODO
+ * @date 2020/8/24 23:09
  */
 @SpringBootApplication
 public class WebSocketApplication {

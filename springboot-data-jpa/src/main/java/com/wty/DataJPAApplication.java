@@ -6,12 +6,12 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 /**
  * @author wty
- * @Date 2019/12/19 22:04
+ * @date 2019/12/19 22:04
  */
 @SpringBootApplication
 @EntityScan(basePackages = "com.wty.entity")
 public class DataJPAApplication {
     public static void main(String[] args) {
-        SpringApplication.run(DataJPAApplication.class,args);
+        SpringApplication.run(DataJPAApplication.class, args);
     }
 }

@@ -6,14 +6,14 @@ import org.springframework.stereotype.Component;
 
 /**
  * @author wty
- * @Date 2019/12/11 22:12
+ * @date 2019/12/11 22:12
  */
 @Component
 @Slf4j
 public class ConsumerHandler {
 
     @KafkaListener(topics = "testTopic")
-    public void onMessage(String message){
+    public void onMessage(String message) {
         log.info(message);
     }
 }

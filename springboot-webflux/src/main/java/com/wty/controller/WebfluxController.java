@@ -6,17 +6,17 @@ import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Mono;
 
 /**
+ * webflux测试接口
+ *
  * @author wty
- * @Date 2020/8/19 21:58
- * @Description: TODO
+ * @date 2020/8/19 21:58
  */
 @RestController
-@RequestMapping("/hello")
-public class HelloController {
-
+@RequestMapping("/webflux")
+public class WebfluxController {
 
     @GetMapping("/mono")
-    public Mono<String> mono(){
+    public Mono<String> mono() {
         return Mono.just("hello world");
     }
 }

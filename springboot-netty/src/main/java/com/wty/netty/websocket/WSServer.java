@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * @author wty
- * @Date 2020/7/29 21:51
+ * @date 2020/7/29 21:51
  */
 @Component
 public class WSServer {
@@ -22,7 +22,7 @@ public class WSServer {
 
         try {
             ServerBootstrap server = new ServerBootstrap();
-            server.group(mainGroup,subGroup)
+            server.group(mainGroup, subGroup)
                     .channel(NioServerSocketChannel.class)
                     .childHandler(new WSServerInitializer());
 

@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * @author wty
- * @Date 2019/12/05 22:07
+ * @date 2019/12/05 22:07
  */
 @ControllerAdvice
 @Slf4j

@@ -5,15 +5,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.scheduling.annotation.EnableAsync;
 
 /**
- * TODO
- *
  * @author wty
- * @Date 2020/8/26 16:39
+ * @date 2020/8/26 16:39
  */
 @SpringBootApplication
 @EnableAsync
 public class NettyApplication {
     public static void main(String[] args) {
-        SpringApplication.run(NettyApplication.class,args);
+        SpringApplication.run(NettyApplication.class, args);
     }
 }

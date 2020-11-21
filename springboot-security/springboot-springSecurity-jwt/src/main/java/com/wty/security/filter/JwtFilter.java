@@ -24,10 +24,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * TODO
+ * jwt用户登录过滤器
  *
  * @author wty
- * @Date 2020/9/14 16:24
+ * @date 2020/9/14 16:24
  */
 public class JwtFilter extends AbstractAuthenticationProcessingFilter {
 
@@ -38,6 +38,7 @@ public class JwtFilter extends AbstractAuthenticationProcessingFilter {
 
     /**
      * 校验用户信息
+     *
      * @param request
      * @param response
      * @return
@@ -47,12 +48,13 @@ public class JwtFilter extends AbstractAuthenticationProcessingFilter {
      */
     @Override
     public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response) throws AuthenticationException, IOException, ServletException {
-        User user = new ObjectMapper().readValue(request.getInputStream(),User.class);
-        return getAuthenticationManager().authenticate(new UsernamePasswordAuthenticationToken(user.getUsername(),user.getPassword()));
+        User user = new ObjectMapper().readValue(request.getInputStream(), User.class);
+        return getAuthenticationManager().authenticate(new UsernamePasswordAuthenticationToken(user.getUsername(), user.getPassword()));
     }
 
     /**
      * 验证成功回调
+     *
      * @param request
      * @param response
      * @param chain
@@ -72,10 +74,10 @@ public class JwtFilter extends AbstractAuthenticationProcessingFilter {
         String token = Jwts.builder().claim("authorities", sb)
                 .setSubject(authResult.getName())
                 .setExpiration(new Date(System.currentTimeMillis() + 3600 * 1000))
-                .signWith(SignatureAlgorithm.ES512,"wty").compact();
+                .signWith(SignatureAlgorithm.ES512, "wty").compact();
         Map<String, String> result = new HashMap<>();
-        result.put("token",token);
-        result.put("msg","登录成功");
+        result.put("token", token);
+        result.put("msg", "登录成功");
         PrintWriter writer = response.getWriter();
         response.setContentType("application/json; charset=UTF-8");
         writer.write(new ObjectMapper().writeValueAsString(result));
@@ -85,6 +87,7 @@ public class JwtFilter extends AbstractAuthenticationProcessingFilter {
 
     /**
      * 验证失败回调
+     *
      * @param request
      * @param response
      * @param failed
@@ -94,7 +97,7 @@ public class JwtFilter extends AbstractAuthenticationProcessingFilter {
     @Override
     protected void unsuccessfulAuthentication(HttpServletRequest request, HttpServletResponse response, AuthenticationException failed) throws IOException, ServletException {
         Map<String, String> result = new HashMap<>();
-        result.put("msg","登录失败");
+        result.put("msg", "登录失败");
         PrintWriter writer = response.getWriter();
         response.setContentType("application/json; charset=UTF-8");
         writer.write(new ObjectMapper().writeValueAsString(result));

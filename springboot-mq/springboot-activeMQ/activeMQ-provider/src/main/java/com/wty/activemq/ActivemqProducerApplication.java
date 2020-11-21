@@ -8,6 +8,6 @@ import org.springframework.jms.annotation.EnableJms;
 @EnableJms
 public class ActivemqProducerApplication {
     public static void main(String[] args) {
-        SpringApplication.run(ActivemqProducerApplication.class,args);
+        SpringApplication.run(ActivemqProducerApplication.class, args);
     }
 }

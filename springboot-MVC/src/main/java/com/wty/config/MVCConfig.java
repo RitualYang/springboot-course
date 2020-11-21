@@ -26,16 +26,18 @@ import java.util.List;
 /**
  * 替换序列化方式二种选用一次即可生效
  * 日期格式化输出设置.实体的属性上添加注解
- *          @JSONField(format = "yyyy-MM-dd")
- * 控制字段是否输出,添加注解
- *          @JSONField(serialize = true)
+ *
  * @author wty
- * @Date 2020/6/23 22:50
+ * @JSONField(format = "yyyy-MM-dd")
+ * 控制字段是否输出,添加注解
+ * @JSONField(serialize = true)
+ * @date 2020/6/23 22:50
  */
 @Configuration
 public class MVCConfig implements WebMvcConfigurer {
     /**
      * 添加拦截器配置
+     *
      * @param registry
      */
     @Override
@@ -48,20 +50,24 @@ public class MVCConfig implements WebMvcConfigurer {
 
     /**
      * 自定义过滤器添加
+     * 如果过滤器没有使用@Component注册到容器需要手动注册到过滤器容器中
+     * 优点：可以自由配置拦截的URL
      * @return
      */
-    @Bean
+    /*@Bean
     public FilterRegistrationBean registerFilter() {
         FilterRegistrationBean registration = new FilterRegistrationBean();
         registration.setFilter(new TimeFilter());
+        // 匹配请求路径
         registration.addUrlPatterns("/*");
         registration.setName("TimeFilter");
         registration.setOrder(1);
         return registration;
-    }
+    }*/
 
     /**
      * 全局跨域解决方案
+     *
      * @return
      */
     @Bean
@@ -80,10 +86,11 @@ public class MVCConfig implements WebMvcConfigurer {
      * 替换序列化方式-1-
      * 使用 fastjson 代替 jackson
      * 先把JackSon的消息转换器删除.
-     *   (1)源码分析可知，返回json的过程为:
-     *      Controller调用结束后返回一个数据对象，for循环遍历conventers，找到支持application/json的HttpMessageConverter，然后将返回的数据序列化成json。
-     *      具体参考org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor的writeWithMessageConverters方法
-     *   (2)由于是list结构，我们添加的fastjson在最后。因此必须要将jackson的转换器删除，不然会先匹配上jackson，导致没使用 fastjson
+     * (1)源码分析可知,返回json的过程为:
+     * Controller调用结束后返回一个数据对象,for循环遍历conventers,找到支持application/json的HttpMessageConverter,然后将返回的数据序列化成json。
+     * 具体参考org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor的writeWithMessageConverters方法
+     * (2)由于是list结构,我们添加的fastjson在最后。因此必须要将jackson的转换器删除,不然会先匹配上jackson,导致没使用 fastjson
+     *
      * @param converters
      */
     @Override
@@ -124,7 +131,7 @@ public class MVCConfig implements WebMvcConfigurer {
      * +支持fastjson的HttpMessageConverter
      * @return HttpMessageConverters
      */
-    @Bean
+    /*@Bean
     public HttpMessageConverters fastJsonHttpMessageConverters() {
         //1.需要定义一个convert转换消息的对象;
         FastJsonHttpMessageConverter fastJsonHttpMessageConverter = new FastJsonHttpMessageConverter();
@@ -143,5 +150,5 @@ public class MVCConfig implements WebMvcConfigurer {
         fastJsonHttpMessageConverter.setFastJsonConfig(fastJsonConfig);
         HttpMessageConverter<?> converter = fastJsonHttpMessageConverter;
         return new HttpMessageConverters(converter);
-    }
+    }*/
 }

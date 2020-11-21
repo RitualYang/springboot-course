@@ -5,12 +5,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * @author wty
- * @Date 2020/8/24 23:13
- * @Description: TODO
+ * @date 2020/8/24 23:13
  */
 @SpringBootApplication
 public class QuartzApplication {
     public static void main(String[] args) {
-        SpringApplication.run(QuartzApplication.class,args);
+        SpringApplication.run(QuartzApplication.class, args);
     }
 }

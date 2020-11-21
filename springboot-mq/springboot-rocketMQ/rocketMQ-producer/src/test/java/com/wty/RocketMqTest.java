@@ -14,13 +14,11 @@ public class RocketMqTest {
     @Autowired
     private RocketMQTemplate rocketMQTemplate;
 
-    public void test(){
+    public void test() {
         // 如下两种方式等价
         rocketMQTemplate.convertAndSend("test-topic-1", "Hello, World!");
         //rocketMQTemplate.send("test-topic-1", MessageBuilder.withPayload("Hello, World! I'm from spring message").build());
         log.info("send finished!");
     }
-
-
 
 }

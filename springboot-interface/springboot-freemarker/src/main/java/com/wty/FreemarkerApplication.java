@@ -3,15 +3,13 @@ package com.wty;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-
 /**
  * @author wty
- * @Date 2020/8/24 22:59
- * @Description: TODO
+ * @date 2020/8/24 22:59
  */
 @SpringBootApplication
 public class FreemarkerApplication {
     public static void main(String[] args) {
-        SpringApplication.run(FreemarkerApplication.class,args);
+        SpringApplication.run(FreemarkerApplication.class, args);
     }
 }

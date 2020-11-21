@@ -4,11 +4,11 @@ import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
-
 import java.util.Set;
 
 /**
  * 角色
+ *
  * @author ADMIN
  */
 @Data

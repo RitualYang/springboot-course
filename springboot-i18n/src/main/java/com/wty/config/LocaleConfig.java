@@ -12,6 +12,7 @@ import java.util.Locale;
 
 /**
  * 配置国际化语言
+ *
  * @author wty
  */
 @Configuration

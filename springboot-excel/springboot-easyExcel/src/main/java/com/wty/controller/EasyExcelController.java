@@ -13,9 +13,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * easyExcel测试接口
+ *
  * @author wty
- * @Date 2020/8/24 10:30
- * @Description: TODO
+ * @date 2020/8/24 10:30
  */
 @Controller
 @RequestMapping("/easyExcel")
@@ -30,14 +31,14 @@ public class EasyExcelController {
         EasyExcel.write(response.getOutputStream(), UserExcel.class).sheet("模板").doWrite(data());
     }
 
-    private List<UserExcel> data(){
+    private List<UserExcel> data() {
         ArrayList<UserExcel> userExcels = new ArrayList<>();
-        userExcels.add(new UserExcel(1,"admin",18,"15555555555","1@qq.com","北京"));
-        userExcels.add(new UserExcel(2,"admin",18,"15555555555","2@qq.com","上海"));
-        userExcels.add(new UserExcel(3,"admin",18,"15555555555","3@qq.com","广州"));
-        userExcels.add(new UserExcel(4,"admin",13,"15555555555","4@qq.com","深圳"));
-        userExcels.add(new UserExcel(5,"admin",12,"15555555555","5@qq.com","杭州"));
-        userExcels.add(new UserExcel(6,"admin",23,"15555555555","6@qq.com","成都"));
+        userExcels.add(new UserExcel(1, "admin", 18, "15555555555", "1@qq.com", "北京"));
+        userExcels.add(new UserExcel(2, "admin", 18, "15555555555", "2@qq.com", "上海"));
+        userExcels.add(new UserExcel(3, "admin", 18, "15555555555", "3@qq.com", "广州"));
+        userExcels.add(new UserExcel(4, "admin", 13, "15555555555", "4@qq.com", "深圳"));
+        userExcels.add(new UserExcel(5, "admin", 12, "15555555555", "5@qq.com", "杭州"));
+        userExcels.add(new UserExcel(6, "admin", 23, "15555555555", "6@qq.com", "成都"));
         return userExcels;
     }
 }

@@ -5,20 +5,21 @@ import com.wty.job.ScheduleJob;
 import org.quartz.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
 /**
  * @author wty
- * @Date 2020/8/24 23:13
- * @Description: TODO
+ * @date 2020/8/24 23:13
  */
 @Configuration
 public class QuartzManager {
 
     /**
      * 使用jobDetail包装job
+     *
      * @return
      */
     @Bean
-    public JobDetail quartzJob(){
+    public JobDetail quartzJob() {
         return JobBuilder.newJob(QuartzJob.class)
                 .withIdentity("quartzJob")
                 .storeDurably()
@@ -27,10 +28,11 @@ public class QuartzManager {
 
     /**
      * 使用jobDetail包装job
+     *
      * @return
      */
     @Bean
-    public JobDetail scheduleJob(){
+    public JobDetail scheduleJob() {
         return JobBuilder.newJob(ScheduleJob.class)
                 .withIdentity("scheduleJob")
                 .storeDurably()
@@ -39,6 +41,7 @@ public class QuartzManager {
 
     /**
      * 把jobDetail注册到trigger上去
+     *
      * @return
      */
     @Bean
@@ -55,7 +58,6 @@ public class QuartzManager {
     }
 
     /**
-     *
      * @return
      */
     @Bean

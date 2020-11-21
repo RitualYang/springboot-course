@@ -4,14 +4,14 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * TODO
+ * esClient启动
  *
  * @author wty
- * @Date 2020/8/25 20:10
+ * @date 2020/8/25 20:10
  */
 @SpringBootApplication
 public class ElasticsearchClientApplication {
     public static void main(String[] args) {
-        SpringApplication.run(ElasticsearchClientApplication.class,args);
+        SpringApplication.run(ElasticsearchClientApplication.class, args);
     }
 }

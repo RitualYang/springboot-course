@@ -2,8 +2,9 @@ package com.wty.constant;
 
 /**
  * mail常量
+ *
  * @author wty
- * @Date 2019/12/07 10:18
+ * @date 2019/12/07 10:18
  */
 public class MailConstant {
     // 接收地址

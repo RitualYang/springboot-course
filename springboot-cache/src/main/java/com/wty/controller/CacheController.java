@@ -1,16 +1,16 @@
 package com.wty.controller;
 
-import com.wty.controller.service.CacheService;
+import com.wty.service.CacheService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * TODO
+ * cache测试接口
  *
  * @author wty
- * @Date 2020/8/27 15:47
+ * @date 2020/8/27 15:47
  */
 @RestController
 @RequestMapping("/cache")

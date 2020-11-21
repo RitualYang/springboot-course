@@ -10,8 +10,6 @@ import java.io.IOException;
 import java.util.HashMap;
 
 /**
- * TODO
- *
  * @author wty
  * @date 2020/10/24 14:26
  */
@@ -22,16 +20,19 @@ public class ConsumerHandler {
     public void firstProcess(String msg, Message message, Channel channel) {
         System.out.println("First Queue received msg : " + msg);
     }
+
     @RabbitListener(queues = {RabbitmqConfig.SECOND_QUEUE})
-    public void secondProcess(String msg, Message message, Channel channel){
+    public void secondProcess(String msg, Message message, Channel channel) {
         System.out.println("First Queue received msg : " + message);
     }
+
     @RabbitListener(queues = {RabbitmqConfig.FOURTH_QUEUE})
-    public void fourthProcess(HashMap map,Message message, Channel channel){
+    public void fourthProcess(HashMap map, Message message, Channel channel) {
         System.out.println("First Queue received msg : " + map);
     }
+
     @RabbitListener(queues = {RabbitmqConfig.THIRD_QUEUE})
-    public void thirdProcess(HashMap map, Channel channel){
+    public void thirdProcess(HashMap map, Channel channel) {
         System.out.println("First Queue received msg : " + map);
     }
 }

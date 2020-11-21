@@ -10,8 +10,7 @@ import java.util.concurrent.Executor;
 
 /**
  * @author wty
- * @Date 2020/8/25 12:17
- * @Description: TODO
+ * @date 2020/8/25 12:17
  */
 @Slf4j
 @Service
@@ -21,14 +20,14 @@ public class CompletableFutureService {
     private Executor asyncExecutor;
 
     public void supplyAsync() throws ExecutionException, InterruptedException {
-        /**异步执行*/
+        /*异步执行*/
         CompletableFuture<Integer> infoFuture = CompletableFuture.supplyAsync(() -> {
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            log.info("异步方法调用结束时间：{}",System.currentTimeMillis());
+            log.info("异步方法调用结束时间：{}", System.currentTimeMillis());
             return 1001;
         }, asyncExecutor);
         /*需等待infoFuture方法执行完毕才能执行*/

@@ -4,15 +4,17 @@ import com.wty.model.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.*;
 
 /**
+ * freemarker页面测试接口
  * @author wty
- * @Date 2020/8/24 22:59
- * @Description: TODO
+ * @date 2020/8/24 22:59
  */
 @Controller
+@RequestMapping("/freemarker")
 public class FreemarkerController {
 
     @GetMapping("/test")

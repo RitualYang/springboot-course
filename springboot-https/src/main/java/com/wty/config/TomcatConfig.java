@@ -8,10 +8,10 @@ import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactor
 import org.springframework.context.annotation.Configuration;
 
 /**
- * TODO
+ * tomcat服务配置
  *
  * @author wty
- * @Date 2020/9/4 09:47
+ * @date 2020/9/4 09:47
  */
 @Configuration
 public class TomcatConfig {
@@ -34,6 +34,7 @@ public class TomcatConfig {
 
     /**
      * 配置请求转发,将8081的http请求重定向到8081的https接口
+     *
      * @return
      */
     private Connector createTomcatConnector() {

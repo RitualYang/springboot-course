@@ -15,7 +15,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
  * @author wty
- * @Date 2019/10/13 00:26
+ * @date 2019/10/13 00:26
  */
 @Configuration
 @EnableSwagger2
@@ -29,7 +29,7 @@ public class Swagger2Config {
                 .apiInfo(apiInfo())
                 .select()
                 //此处添加需要扫描接口的包路径
-                .apis(basePackage("com.wty.com.wty.controller" + SPLITOR + "com.wty.model"))
+                .apis(basePackage("com.wty.controller" + SPLITOR + "com.wty.model"))
                 .paths(PathSelectors.any())
                 .build();
     }
@@ -47,15 +47,16 @@ public class Swagger2Config {
 
     /**
      * 重写basePackage方法,使能够实现多包访问
-     * @author  wty
-     * @date 2019/01/26
+     *
      * @param
+     * @author wty
+     * @date 2019/01/26
      */
     public static Predicate<RequestHandler> basePackage(final String basePackage) {
         return input -> declaringClass(input).transform(handlerPackage(basePackage)).or(true);
     }
 
-    private static Function<Class<?>, Boolean> handlerPackage(final String basePackage)     {
+    private static Function<Class<?>, Boolean> handlerPackage(final String basePackage) {
         return input -> {
             // 循环判断匹配
             for (String strPackage : basePackage.split(SPLITOR)) {

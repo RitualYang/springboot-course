@@ -1,8 +1,8 @@
 -- in your Quartz properties file, you'll need to set org.quartz.jobStore.driverDelegateClass = org.quartz.impl.jdbcjobstore.StdJDBCDelegate
 -- 你需要在你的quartz.properties文件中设置org.quartz.jobStore.driverDelegateClass = org.quartz.impl.jdbcjobstore.StdJDBCDelegate
--- StdJDBCDelegate说明支持集群，所有的任务信息都会保存到数据库中，可以控制事物，还有就是如果应用服务器关闭或者重启，任务信息都不会丢失，并且可以恢复因服务器关闭或者重启而导致执行失败的任务
+-- StdJDBCDelegate说明支持集群,所有的任务信息都会保存到数据库中,可以控制事物,还有就是如果应用服务器关闭或者重启,任务信息都不会丢失,并且可以恢复因服务器关闭或者重启而导致执行失败的任务
 -- This is the script from Quartz to create the tables in a MySQL database, modified to use INNODB instead of MYISAM
--- 这是来自quartz的脚本，在MySQL数据库中创建以下的表，修改为使用INNODB而不是MYISAM
+-- 这是来自quartz的脚本,在MySQL数据库中创建以下的表,修改为使用INNODB而不是MYISAM
 -- 你需要在数据库中执行以下的sql脚本
 DROP TABLE IF EXISTS QRTZ_FIRED_TRIGGERS;
 DROP TABLE IF EXISTS QRTZ_PAUSED_TRIGGER_GRPS;
@@ -67,7 +67,7 @@ FOREIGN KEY (SCHED_NAME,TRIGGER_NAME,TRIGGER_GROUP)
 REFERENCES QRTZ_TRIGGERS(SCHED_NAME,TRIGGER_NAME,TRIGGER_GROUP))
 ENGINE=InnoDB;
 
--- 存储Cron Trigger，包括Cron表达式和时区信息
+-- 存储Cron Trigger,包括Cron表达式和时区信息
 CREATE TABLE QRTZ_CRON_TRIGGERS (
 SCHED_NAME VARCHAR(120) NOT NULL,
 TRIGGER_NAME VARCHAR(200) NOT NULL,
@@ -100,7 +100,7 @@ CREATE TABLE QRTZ_SIMPROP_TRIGGERS
     REFERENCES QRTZ_TRIGGERS(SCHED_NAME,TRIGGER_NAME,TRIGGER_GROUP))
 ENGINE=InnoDB;
 
--- Trigger作为Blob类型存储(用于Quartz用户用JDBC创建他们自己定制的Trigger类型，JobStore并不知道如何存储实例的时候)
+-- Trigger作为Blob类型存储(用于Quartz用户用JDBC创建他们自己定制的Trigger类型,JobStore并不知道如何存储实例的时候)
 CREATE TABLE QRTZ_BLOB_TRIGGERS (
 SCHED_NAME VARCHAR(120) NOT NULL,
 TRIGGER_NAME VARCHAR(200) NOT NULL,
@@ -127,7 +127,7 @@ TRIGGER_GROUP VARCHAR(200) NOT NULL,
 PRIMARY KEY (SCHED_NAME,TRIGGER_GROUP))
 ENGINE=InnoDB;
 
--- 存储与已触发的Trigger相关的状态信息，以及相联Job的执行信息
+-- 存储与已触发的Trigger相关的状态信息,以及相联Job的执行信息
 CREATE TABLE QRTZ_FIRED_TRIGGERS (
 SCHED_NAME VARCHAR(120) NOT NULL,
 ENTRY_ID VARCHAR(95) NOT NULL,
@@ -145,7 +145,7 @@ REQUESTS_RECOVERY VARCHAR(1) NULL,
 PRIMARY KEY (SCHED_NAME,ENTRY_ID))
 ENGINE=InnoDB;
 
--- 存储少量的有关 Scheduler的状态信息，和别的 Scheduler 实例(假如是用于一个集群中)
+-- 存储少量的有关 Scheduler的状态信息,和别的 Scheduler 实例(假如是用于一个集群中)
 CREATE TABLE QRTZ_SCHEDULER_STATE (
 SCHED_NAME VARCHAR(120) NOT NULL,
 INSTANCE_NAME VARCHAR(200) NOT NULL,

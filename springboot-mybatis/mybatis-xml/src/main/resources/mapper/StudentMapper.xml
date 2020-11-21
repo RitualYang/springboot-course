@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.wty.mapper.StudentMapper">
-  <resultMap id="BaseResultMap" type="com.wty.entity.Student">
-    <!--
-      WARNING - @mbg.generated
-    -->
-    <id column="ID" jdbcType="VARCHAR" property="id" />
-    <result column="COLLEGE_ID" jdbcType="VARCHAR" property="collegeId" />
-    <result column="CLASS_ID" jdbcType="VARCHAR" property="classId" />
-    <result column="NAME" jdbcType="VARCHAR" property="name" />
-    <result column="ID_CARD_NO" jdbcType="VARCHAR" property="idCardNo" />
-    <result column="ENG_NAME" jdbcType="VARCHAR" property="engName" />
-    <result column="MOBILE_PHONE" jdbcType="VARCHAR" property="mobilePhone" />
-    <result column="GENDER" jdbcType="VARCHAR" property="gender" />
-    <result column="BIRTH" jdbcType="DATE" property="birth" />
-    <result column="AVATAR" jdbcType="VARCHAR" property="avatar" />
-    <result column="HEIGHT" jdbcType="DECIMAL" property="height" />
-    <result column="WEIGHT" jdbcType="DECIMAL" property="weight" />
-    <result column="NATION" jdbcType="VARCHAR" property="nation" />
-    <result column="POLITICAL" jdbcType="VARCHAR" property="political" />
-    <result column="MARITAL" jdbcType="VARCHAR" property="marital" />
-    <result column="DOMICILE_PLACE_PROVINCE" jdbcType="VARCHAR" property="domicilePlaceProvince" />
-    <result column="DOMICILE_PLACE_CITY" jdbcType="VARCHAR" property="domicilePlaceCity" />
-    <result column="DOMICILE_PLACE_ADDRESS" jdbcType="VARCHAR" property="domicilePlaceAddress" />
-    <result column="HOBBY" jdbcType="VARCHAR" property="hobby" />
-    <result column="INTRO" jdbcType="VARCHAR" property="intro" />
-    <result column="PRESENT_ADDRESS" jdbcType="VARCHAR" property="presentAddress" />
-    <result column="EMAIL" jdbcType="VARCHAR" property="email" />
-    <result column="ENTRY_DATE" jdbcType="DATE" property="entryDate" />
-    <result column="STATUS" jdbcType="VARCHAR" property="status" />
-    <result column="VERSION" jdbcType="INTEGER" property="version" />
-    <result column="CREATED_BY" jdbcType="VARCHAR" property="createdBy" />
-    <result column="CREATED_TIME" jdbcType="TIMESTAMP" property="createdTime" />
-    <result column="UPDATED_BY" jdbcType="VARCHAR" property="updatedBy" />
-    <result column="UPDATED_TIME" jdbcType="TIMESTAMP" property="updatedTime" />
-  </resultMap>
+    <resultMap id="BaseResultMap" type="com.wty.entity.Student">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <id column="ID" jdbcType="VARCHAR" property="id"/>
+        <result column="COLLEGE_ID" jdbcType="VARCHAR" property="collegeId"/>
+        <result column="CLASS_ID" jdbcType="VARCHAR" property="classId"/>
+        <result column="NAME" jdbcType="VARCHAR" property="name"/>
+        <result column="ID_CARD_NO" jdbcType="VARCHAR" property="idCardNo"/>
+        <result column="ENG_NAME" jdbcType="VARCHAR" property="engName"/>
+        <result column="MOBILE_PHONE" jdbcType="VARCHAR" property="mobilePhone"/>
+        <result column="GENDER" jdbcType="VARCHAR" property="gender"/>
+        <result column="BIRTH" jdbcType="DATE" property="birth"/>
+        <result column="AVATAR" jdbcType="VARCHAR" property="avatar"/>
+        <result column="HEIGHT" jdbcType="DECIMAL" property="height"/>
+        <result column="WEIGHT" jdbcType="DECIMAL" property="weight"/>
+        <result column="NATION" jdbcType="VARCHAR" property="nation"/>
+        <result column="POLITICAL" jdbcType="VARCHAR" property="political"/>
+        <result column="MARITAL" jdbcType="VARCHAR" property="marital"/>
+        <result column="DOMICILE_PLACE_PROVINCE" jdbcType="VARCHAR" property="domicilePlaceProvince"/>
+        <result column="DOMICILE_PLACE_CITY" jdbcType="VARCHAR" property="domicilePlaceCity"/>
+        <result column="DOMICILE_PLACE_ADDRESS" jdbcType="VARCHAR" property="domicilePlaceAddress"/>
+        <result column="HOBBY" jdbcType="VARCHAR" property="hobby"/>
+        <result column="INTRO" jdbcType="VARCHAR" property="intro"/>
+        <result column="PRESENT_ADDRESS" jdbcType="VARCHAR" property="presentAddress"/>
+        <result column="EMAIL" jdbcType="VARCHAR" property="email"/>
+        <result column="ENTRY_DATE" jdbcType="DATE" property="entryDate"/>
+        <result column="STATUS" jdbcType="VARCHAR" property="status"/>
+        <result column="VERSION" jdbcType="INTEGER" property="version"/>
+        <result column="CREATED_BY" jdbcType="VARCHAR" property="createdBy"/>
+        <result column="CREATED_TIME" jdbcType="TIMESTAMP" property="createdTime"/>
+        <result column="UPDATED_BY" jdbcType="VARCHAR" property="updatedBy"/>
+        <result column="UPDATED_TIME" jdbcType="TIMESTAMP" property="updatedTime"/>
+    </resultMap>
 </mapper>

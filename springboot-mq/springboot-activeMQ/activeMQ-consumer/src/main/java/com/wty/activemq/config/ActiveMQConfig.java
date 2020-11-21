@@ -14,7 +14,6 @@ import javax.jms.Topic;
 
 /**
  * @author: wty
- *
  */
 @Configuration
 public class ActiveMQConfig {
@@ -23,18 +22,18 @@ public class ActiveMQConfig {
     private String usrName;
 
     @Value("${spring.activemq.password}")
-    private  String password;
+    private String password;
 
     @Value("${spring.activemq.broker-url}")
-    private  String brokerUrl;
+    private String brokerUrl;
 
     @Bean
-    public Queue queue(){
+    public Queue queue() {
         return new ActiveMQQueue("springboot-queue");
     }
 
     @Bean
-    public Topic topic(){
+    public Topic topic() {
         return new ActiveMQTopic("springboot-toppic");
     }
 
@@ -44,14 +43,14 @@ public class ActiveMQConfig {
     }
 
     @Bean
-    public JmsListenerContainerFactory<?> jmsListenerContainerQueue(ActiveMQConnectionFactory connectionFactory){
+    public JmsListenerContainerFactory<?> jmsListenerContainerQueue(ActiveMQConnectionFactory connectionFactory) {
         DefaultJmsListenerContainerFactory bean = new DefaultJmsListenerContainerFactory();
         bean.setConnectionFactory(connectionFactory);
         return bean;
     }
 
     @Bean
-    public JmsListenerContainerFactory<?> jmsListenerContainerTopic(ActiveMQConnectionFactory connectionFactory){
+    public JmsListenerContainerFactory<?> jmsListenerContainerTopic(ActiveMQConnectionFactory connectionFactory) {
         DefaultJmsListenerContainerFactory bean = new DefaultJmsListenerContainerFactory();
         //设置为发布订阅方式, 默认情况下使用的生产消费者方式
         bean.setPubSubDomain(true);

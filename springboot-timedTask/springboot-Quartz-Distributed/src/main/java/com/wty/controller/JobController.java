@@ -14,10 +14,11 @@ import org.springframework.web.bind.annotation.*;
 import javax.annotation.PostConstruct;
 import java.util.Objects;
 import java.util.Set;
+
 /**
+ * 定时任务接口
  * @author wty
- * @Date 2020/8/24 23:13
- * @Description: TODO
+ * @date 2020/8/24 23:13
  */
 @RestController
 @Slf4j
@@ -68,7 +69,6 @@ public class JobController {
         return result;
     }
 
-
     //重启数据库中所有的Job
     @RequestMapping("/refresh/all")
     public String refreshAll() {
@@ -110,7 +110,7 @@ public class JobController {
 
     //修改某个Job执行的Cron
     @PostMapping("/modifyJob")
-    public String modifyJob(@RequestBody Integer id,String cron) {
+    public String modifyJob(@RequestBody Integer id, String cron) {
         if (!CronExpression.isValidExpression(cron)) {
             return "cron is invalid !";
         }

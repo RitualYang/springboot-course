@@ -9,10 +9,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import java.util.List;
 
 /**
- * TODO
- *
  * @author wty
- * @Date 2020/9/15 20:29
+ * @date 2020/9/15 20:29
  */
 @SpringBootTest
 public class DataJpaTest {
@@ -21,7 +19,7 @@ public class DataJpaTest {
     private ClassMapper classMapper;
 
     @Test
-    public void test(){
+    public void test() {
         List<Class> all = classMapper.findAll();
         System.out.println(all);
     }

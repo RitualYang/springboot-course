@@ -5,12 +5,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * @author wty
- * @Date 2020/8/24 09:36
- * @Description: TODO
+ * @date 2020/8/24 09:36
  */
 @SpringBootApplication
 public class PoiApplication {
     public static void main(String[] args) {
-        SpringApplication.run(PoiApplication.class,args);
+        SpringApplication.run(PoiApplication.class, args);
     }
 }

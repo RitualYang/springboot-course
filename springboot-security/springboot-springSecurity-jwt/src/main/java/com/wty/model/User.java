@@ -8,10 +8,8 @@ import java.util.Collection;
 import java.util.List;
 
 /**
- * TODO
- *
  * @author wty
- * @Date 2020/9/14 16:20
+ * @date 2020/9/14 16:20
  */
 @Data
 public class User implements UserDetails {

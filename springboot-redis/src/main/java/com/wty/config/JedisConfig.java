@@ -9,8 +9,9 @@ import redis.clients.jedis.JedisPoolConfig;
 /**
  * Jedis配置加载
  * 联动JedisUtil工具类
+ *
  * @author wty
- * @Date 2019/12/04 21:32
+ * @date 2019/12/04 21:32
  */
 @Configuration
 public class JedisConfig {
@@ -33,10 +34,10 @@ public class JedisConfig {
 //    private String password;
 
     @Value("${spring.redis.block-when-exhausted}")
-    private boolean  blockWhenExhausted;
+    private boolean blockWhenExhausted;
 
     @Bean
-    public JedisPool redisPoolFactory() throws Exception{
+    public JedisPool redisPoolFactory() throws Exception {
         JedisPoolConfig jedisPoolConfig = new JedisPoolConfig();
         jedisPoolConfig.setMaxIdle(maxIdle);
         jedisPoolConfig.setMaxWaitMillis(maxWaitMillis);

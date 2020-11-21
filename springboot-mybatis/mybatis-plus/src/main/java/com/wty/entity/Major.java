@@ -89,5 +89,4 @@ public class Major implements Serializable {
     @TableField("UPDATED_TIME")
     private LocalDateTime updatedTime;
 
-
 }

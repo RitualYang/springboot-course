@@ -18,7 +18,7 @@ import javax.mail.internet.MimeMessage;
 
 /**
  * @author wty
- * @Date 2019/12/07 9:54
+ * @date 2019/12/07 9:54
  */
 @Controller
 public class SendMailController {
@@ -31,7 +31,7 @@ public class SendMailController {
     @Autowired
     private TemplateEngine templateEngine;
 
-    @RequestMapping(value = "sendSimpleEmail",method = RequestMethod.GET)
+    @RequestMapping(value = "sendSimpleEmail", method = RequestMethod.GET)
     public String sendSimpleEmail() {
         try {
             SimpleMailMessage message = new SimpleMailMessage();
@@ -47,7 +47,7 @@ public class SendMailController {
         }
     }
 
-    @RequestMapping(value = "sendHtmlEmail",method = RequestMethod.GET)
+    @RequestMapping(value = "sendHtmlEmail", method = RequestMethod.GET)
     public String sendHtmlEmail() {
         MimeMessage message = null;
         try {
@@ -67,7 +67,7 @@ public class SendMailController {
         }
     }
 
-    @RequestMapping(value = "sendAttachmentsMail",method = RequestMethod.GET)
+    @RequestMapping(value = "sendAttachmentsMail", method = RequestMethod.GET)
     public String sendAttachmentsMail() {
         MimeMessage message = null;
         try {
@@ -88,7 +88,7 @@ public class SendMailController {
         }
     }
 
-    @RequestMapping(value = "sendInlineMail",method = RequestMethod.GET)
+    @RequestMapping(value = "sendInlineMail", method = RequestMethod.GET)
     public String sendInlineMail() {
         MimeMessage message = null;
         try {
@@ -109,7 +109,7 @@ public class SendMailController {
         }
     }
 
-    @RequestMapping(value = "sendTemplateEmail",method = RequestMethod.GET)
+    @RequestMapping(value = "sendTemplateEmail", method = RequestMethod.GET)
     public String sendTemplateEmail(String code) {
         MimeMessage message = null;
         try {

@@ -7,7 +7,7 @@ server:
     uri-encoding: UTF-8
     # 用于当所有可能的请求处理线程都在使用传入的连接请求最大队列长度。
     accept-count: 100
-    # 连接服务器接受和处理在任何给定时间的最大数量。 一旦已达到极限，操作系统可能基于“acceptCount”属性仍将接受连接.
+    # 连接服务器接受和处理在任何给定时间的最大数量。 一旦已达到极限,操作系统可能基于“acceptCount”属性仍将接受连接.
     max-connections: 8192
     # 请求主体的最大量吞咽
     max-swallow-size: 2MB

@@ -1,6 +1,5 @@
 package com.wty.test;
 
-
 import com.wty.entity.Class;
 import com.wty.mapper.ClassMapper;
 import lombok.extern.slf4j.Slf4j;
@@ -13,7 +12,7 @@ import java.util.List;
 
 /**
  * @author wty
- * @Date 2020/01/04 23:10
+ * @date 2020/01/04 23:10
  */
 @SpringBootTest
 @Slf4j
@@ -23,12 +22,11 @@ public class MybatisTest {
     private ClassMapper classMapper;
 
     @Test
-    public void select(){
+    public void select() {
         List<Class> classes = classMapper.selectAll();
         for (Class aClass : classes) {
             System.out.println(aClass.toString());
         }
     }
-
 
 }

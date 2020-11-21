@@ -14,8 +14,9 @@ import java.time.LocalDateTime;
 /**
  * 处理消息的handler
  * TextWebSocketFrame: 在netty中,是用于为websocket专门处理文本的对象,frame是消息的载体
+ *
  * @author wty
- * @Date 2020/8/9 10:21
+ * @date 2020/8/9 10:21
  */
 @Slf4j
 public class ChatHandler extends SimpleChannelInboundHandler<TextWebSocketFrame> {
@@ -40,6 +41,7 @@ public class ChatHandler extends SimpleChannelInboundHandler<TextWebSocketFrame>
     /**
      * 当客户端连接服务端之后(打开连接)
      * 获取客户端的channel,并且放到channelGroup中去进行管理
+     *
      * @param ctx
      */
     @Override
@@ -48,14 +50,14 @@ public class ChatHandler extends SimpleChannelInboundHandler<TextWebSocketFrame>
     }
 
     /**
-     *
      * @param ctx
      */
     @Override
     public void handlerRemoved(ChannelHandlerContext ctx) throws Exception {
         // 当触发handlerRemoved,ChannelGroup会自动移除客户端的channel
         // clients.remove(ctx.channel());
-        log.info(ctx.channel().id() + " 长id:" + ctx.channel().id().asLongText());        log.info(ctx.channel().id() + " 长id:" + ctx.channel().id().asLongText());
+        log.info(ctx.channel().id() + " 长id:" + ctx.channel().id().asLongText());
+        log.info(ctx.channel().id() + " 长id:" + ctx.channel().id().asLongText());
         log.info(ctx.channel().id() + " 短id:" + ctx.channel().id().asShortText());
     }
 }

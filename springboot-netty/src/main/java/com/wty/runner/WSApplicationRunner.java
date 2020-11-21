@@ -9,10 +9,8 @@ import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 /**
- * TODO
- *
  * @author wty
- * @Date 2020/8/26 16:46
+ * @date 2020/8/26 16:46
  */
 @Order(1)
 @Slf4j
@@ -21,6 +19,7 @@ public class WSApplicationRunner implements ApplicationRunner {
 
     @Autowired
     private WSServer wsServer;
+
     @Override
     public void run(ApplicationArguments args) throws Exception {
         System.out.println(wsServer);

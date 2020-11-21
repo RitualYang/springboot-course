@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * @author wty
- * @Date 2020/5/30 21:45
+ * @date 2020/5/30 21:45
  */
 @SpringBootApplication
 public class I18nApplication {

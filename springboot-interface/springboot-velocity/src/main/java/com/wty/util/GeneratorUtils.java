@@ -72,7 +72,7 @@ public class GeneratorUtils {
             columnEntity.setAttrName(attrName);
             columnEntity.setAttrname(StringUtils.uncapitalize(attrName));
 
-            //列的数据类型，转换成Java类型
+            //列的数据类型,转换成Java类型
             String attrType = config.getString(columnEntity.getDataType(), "unknowType");
             columnEntity.setAttrType(attrType);
 
@@ -85,7 +85,7 @@ public class GeneratorUtils {
         }
         tableEntity.setColumns(columsList);
 
-        //没主键，则第一个字段为主键
+        //没主键,则第一个字段为主键
         if (tableEntity.getPk() == null) {
             tableEntity.setPk(tableEntity.getColumns().get(0));
         }
@@ -127,11 +127,10 @@ public class GeneratorUtils {
                 IOUtils.closeQuietly(sw);
                 zip.closeEntry();
             } catch (IOException e) {
-                throw new RuntimeException("渲染模板失败，表名：" + tableEntity.getTableName(), e);
+                throw new RuntimeException("渲染模板失败,表名：" + tableEntity.getTableName(), e);
             }
         }
     }
-
 
     /**
      * 列名转换成Java属性名
@@ -157,7 +156,7 @@ public class GeneratorUtils {
         try {
             return new PropertiesConfiguration("generator.properties");
         } catch (ConfigurationException e) {
-            throw new RuntimeException("获取配置文件失败，", e);
+            throw new RuntimeException("获取配置文件失败,", e);
         }
     }
 

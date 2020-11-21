@@ -16,8 +16,9 @@ import java.nio.charset.Charset;
 
 /**
  * fastDFS工具类
+ *
  * @author: wty
- * @Date: 2019/12/06 15:15
+ * @date: 2019/12/06 15:15
  **/
 @Component
 @Slf4j
@@ -29,12 +30,11 @@ public class FileDfsUtil {
     @Autowired
     private ThumbImageConfig thumbImageConfig;
 
-
     /**
-     * @Description: 上传文件
      * @param file 文件对象
      * @return 文件路径
      * @throws IOException String
+     * @Description: 上传文件
      */
     public String uploadFile(MultipartFile file) throws IOException {
         StorePath storePath = storageClient.uploadFile(file.getInputStream(), file.getSize(),
@@ -43,10 +43,10 @@ public class FileDfsUtil {
     }
 
     /**
-     * @Description: 上传文件
-     * @param bytes 文件数据
-     * @param format 文件格式（后缀）
+     * @param bytes  文件数据
+     * @param format 文件格式(后缀)
      * @return String 文件路径
+     * @Description: 上传文件
      */
     public String uploadFile(byte[] bytes, String format) {
         StorePath storePath = storageClient.uploadFile(new ByteArrayInputStream(bytes), bytes.length, format, null);
@@ -54,10 +54,10 @@ public class FileDfsUtil {
     }
 
     /**
-     * @Description: 上传文件
      * @param file 文件对象
      * @return
      * @throws IOException String
+     * @Description: 上传文件
      */
     public String uploadFile(File file) throws IOException {
         StorePath storePath = storageClient.uploadFile(FileUtils.openInputStream(file), file.length(),
@@ -66,10 +66,10 @@ public class FileDfsUtil {
     }
 
     /**
-     * @Description: 把字符串作为指定格式的文件上传
      * @param content
      * @param fileExtension
      * @return String
+     * @Description: 把字符串作为指定格式的文件上传
      */
     public String uploadFile(String content, String fileExtension) {
         byte[] buff = content.getBytes(Charset.forName("UTF-8"));
@@ -79,10 +79,10 @@ public class FileDfsUtil {
     }
 
     /**
-     * @Description: 上传文件
      * @param file 文件对象
      * @return 文件路径
      * @throws IOException String
+     * @Description: 上传文件
      */
     public String uploadImageAndCrtThumbImage(MultipartFile file) throws IOException {
         StorePath storePath = storageClient.uploadImageAndCrtThumbImage(file.getInputStream(), file.getSize(),
@@ -91,19 +91,19 @@ public class FileDfsUtil {
     }
 
     /**
-     * @Description: 根据图片路径获取缩略图路径（使用uploadImageAndCrtThumbImage方法上传图片）
      * @param filePath 图片路径
      * @return String 缩略图路径
+     * @Description: 根据图片路径获取缩略图路径(使用uploadImageAndCrtThumbImage方法上传图片)
      */
     public String getThumbImagePath(String filePath) {
         return thumbImageConfig.getThumbImagePath(filePath);
     }
 
     /**
-     * @Description: 根据文件路径下载文件
      * @param filePath 文件路径
      * @return 文件字节数据
      * @throws IOException byte[]
+     * @Description: 根据文件路径下载文件
      */
     public byte[] downFile(String filePath) throws IOException {
         StorePath storePath = StorePath.parseFromUrl(filePath);
@@ -116,8 +116,8 @@ public class FileDfsUtil {
     }
 
     /**
-     * @Description: 根据文件地址删除文件
      * @param filePath 文件访问地址
+     * @Description: 根据文件地址删除文件
      */
     public void deleteFile(String filePath) {
         StorePath storePath = StorePath.parseFromUrl(filePath);

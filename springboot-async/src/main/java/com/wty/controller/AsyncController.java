@@ -14,8 +14,7 @@ import java.util.concurrent.Future;
 
 /**
  * @author wty
- * @Date 2020/8/25 10:31
- * @Description: TODO
+ * @date 2020/8/25 10:31
  */
 @Slf4j
 @RestController
@@ -28,7 +27,6 @@ public class AsyncController {
     @Autowired
     private CompletableFutureService completableFutureService;
 
-
     @GetMapping("/call")
     private String callAsyncService() throws InterruptedException, ExecutionException {
         long start = System.currentTimeMillis();
@@ -39,10 +37,10 @@ public class AsyncController {
         asyncService.asyncProcess();
         long asyncTime = System.currentTimeMillis();
         log.info("异步方法用时：{}", asyncTime - syncTime);
-        log.info("方法执行完成：{}!",asyncTime);
+        log.info("方法执行完成：{}!", asyncTime);
         Future<Integer> integerFuture = asyncService.asyncProcessHasReturn();
         long asyncReturnTime = System.currentTimeMillis();
-        log.info("异步方法获取参数：{},用时：{}",integerFuture.get(),asyncReturnTime - asyncTime);
+        log.info("异步方法获取参数：{},用时：{}", integerFuture.get(), asyncReturnTime - asyncTime);
         return "ok" + System.currentTimeMillis();
     }
 

@@ -1,0 +1,6 @@
+server:
+  undertow:
+    direct-buffers: true
+    threads:
+      io: 4
+      worker: 160

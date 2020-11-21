@@ -5,11 +5,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * @author wty
- * @Date 2020/6/23 22:35
+ * @date 2020/6/23 22:35
  */
 @SpringBootApplication
 public class ValidationApplication {
     public static void main(String[] args) {
-        SpringApplication.run(ValidationApplication.class,args);
+        SpringApplication.run(ValidationApplication.class, args);
     }
 }

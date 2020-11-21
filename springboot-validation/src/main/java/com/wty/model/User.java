@@ -6,7 +6,7 @@ import javax.validation.constraints.NotNull;
 
 /**
  * @author wty
- * @Date 2020/6/23 22:36
+ * @date 2020/6/23 22:36
  */
 @Data
 public class User {

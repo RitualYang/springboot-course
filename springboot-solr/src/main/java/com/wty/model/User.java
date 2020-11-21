@@ -7,13 +7,12 @@ import java.io.Serializable;
 
 /**
  * @author wty
- * @Date 2019/12/24 18:49
+ * @date 2019/12/24 18:49
  */
 @Data
 public class User implements Serializable {
 
     private static final long serialVersionUID = -9207626360510555637L;
-
 
     @Field("id")
     private Long id;

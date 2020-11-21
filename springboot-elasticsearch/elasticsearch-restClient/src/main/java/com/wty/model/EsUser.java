@@ -4,10 +4,10 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 
 /**
- * TODO:xxx
+ * es测试用户实体
  *
  * @author wty
- * @Date 2020/8/25 22:50
+ * @date 2020/8/25 22:50
  */
 @Data
 @AllArgsConstructor

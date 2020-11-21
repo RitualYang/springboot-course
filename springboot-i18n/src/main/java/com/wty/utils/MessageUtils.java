@@ -7,8 +7,9 @@ import org.springframework.stereotype.Component;
 
 /**
  * 国际化工具类
+ *
  * @author wty
- * @Date 2020/5/30 21:52
+ * @date 2020/5/30 21:52
  */
 @Component
 public class MessageUtils {

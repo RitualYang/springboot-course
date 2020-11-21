@@ -7,10 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * TODO
- *
  * @author wty
- * @Date 2020/8/31 17:15
+ * @date 2020/8/31 17:15
  */
 @RestController
 @RequestMapping("/demo")
@@ -20,7 +18,7 @@ public class DemoController {
     private AutoConfigurationService autoConfigurationService;
 
     @GetMapping("/test")
-    public String test(){
+    public String test() {
         return autoConfigurationService.hello();
     }
 }

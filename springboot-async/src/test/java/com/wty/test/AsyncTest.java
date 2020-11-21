@@ -13,8 +13,9 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 异步服务功能测试
+ *
  * @author wty
- * @Date 2020/5/4 17:14
+ * @date 2020/5/4 17:14
  */
 @Slf4j
 @SpringBootTest
@@ -25,7 +26,8 @@ public class AsyncTest {
     private AsyncService asyncService;
 
     @Test
-    public void contextLoad(){ }
+    public void contextLoad() {
+    }
 
     @Test
     public void testAsyncProcess() throws InterruptedException {

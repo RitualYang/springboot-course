@@ -8,17 +8,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+
 /**
  * @author wty
- * @Date 2020/8/24 23:13
- * @Description: TODO
+ * @date 2020/8/24 23:13
  */
 @Service
 public class JobService {
 
     @Autowired
     private JobEntityMapper jobEntityMapper;
-
 
     //通过Id获取Job
     public JobEntity getJobEntityById(Integer id) {
