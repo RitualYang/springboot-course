@@ -1,4 +1,4 @@
-package com.wty.test;
+package com.wty.es;
 
 import org.elasticsearch.client.RestHighLevelClient;
 import org.junit.jupiter.api.Test;

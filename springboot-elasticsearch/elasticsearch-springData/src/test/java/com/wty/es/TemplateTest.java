@@ -1,5 +1,6 @@
-package com.wty;
+package com.wty.es;
 
+import com.wty.ElasticsearchDataApplication;
 import com.wty.model.User;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

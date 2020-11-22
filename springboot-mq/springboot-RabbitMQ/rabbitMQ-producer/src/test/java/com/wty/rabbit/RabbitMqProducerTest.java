@@ -12,18 +12,26 @@ import java.util.HashMap;
  * @date 2020/10/24 14:07
  */
 @SpringBootTest
-public class AmqpTest {
+public class RabbitMqProducerTest {
 
     @Autowired
     private ProducerMessage producerMessage;
 
     @Test
-    public void sendMessage() {
+    public void sendFanoutMessage() {
         HashMap<String, String> stringStringHashMap = new HashMap<>();
         stringStringHashMap.put("message", "我是好人");
         stringStringHashMap.put("code", "ok");
         producerMessage.sendFanoutMessage(stringStringHashMap);
-        producerMessage.sendTopicMessage("kk.boot.hao", "我是测试");
+    }
+
+    @Test
+    public void sendDirectMessage() {
         producerMessage.sendDirectMessage("spring.boot.amqp", "direct send message");
+    }
+
+    @Test
+    public void sendTopicMessage() {
+        producerMessage.sendTopicMessage("kk.boot.hao", "我是测试");
     }
 }

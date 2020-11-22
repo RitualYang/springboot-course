@@ -1,5 +1,6 @@
-package com.wty;
+package com.wty.es;
 
+import com.wty.ElasticsearchDataApplication;
 import com.wty.model.User;
 import com.wty.repository.UserRepository;
 import lombok.extern.slf4j.Slf4j;

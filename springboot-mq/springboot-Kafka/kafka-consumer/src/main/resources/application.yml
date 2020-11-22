@@ -1,4 +1,8 @@
+server:
+  port: 8081
 spring:
+  application:
+    name: kafka-consumer
   kafka:
     # 指定kafka server的地址
     bootstrap-servers: localhost:9092
@@ -9,6 +13,8 @@ spring:
       enable-auto-commit: true
       # 如果'enable.auto.commit'为true,则消费者偏移自动提交给Kafka的频率(以毫秒为单位),默认值为5000。
       auto-commit-interval: 1000
-      # 指定消息key和消息体的编解码方式
+      # 指定消息key和消息体的编解码方式(序列化)
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      # 该属性指定了消费者在读取一个没有偏移量的分区或偏移量无效的情况下该作何处理
+      auto-offset-reset: latest

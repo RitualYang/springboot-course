@@ -1,4 +1,8 @@
+server:
+  port: 8080
 spring:
+  application:
+    name:kafka-producer
   kafka:
     # 指定kafka server的地址
     bootstrap-servers: localhost:9092

@@ -16,6 +16,7 @@ public class ColumnEntity {
 
     /**属性名称(第一个字母大写),如：user_name => UserName*/
     private String attrName;
+    private String attrname;
     /**属性类型*/
     private String attrType;
     /**auto_increment*/
