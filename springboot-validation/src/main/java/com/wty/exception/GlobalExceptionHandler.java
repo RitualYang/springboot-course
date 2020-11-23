@@ -4,6 +4,7 @@ import com.wty.model.R;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.support.DefaultMessageSourceResolvable;
 import org.springframework.validation.BindException;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
@@ -21,12 +22,13 @@ import java.util.stream.Collectors;
 @Slf4j
 public class GlobalExceptionHandler {
 
+
     /**
      * 方法参数校验异常
      */
     @ExceptionHandler(BindException.class)
     public R handleBindException(BindException e) {
-        log.info("参数校验失败");
+        log.info("参数校验失败,异常:BindException");
         List<String> collect = e.getBindingResult().getAllErrors().stream()
                 .map(DefaultMessageSourceResolvable::getDefaultMessage)
                 .collect(Collectors.toList());
@@ -40,15 +42,14 @@ public class GlobalExceptionHandler {
      * @return
      */
     @ExceptionHandler(MethodArgumentNotValidException.class)
-    public R methodArgumentNotValidException(MethodArgumentNotValidException e) {
-        log.info("参数校验失败");
+    public R methodArgumentNotValidException(MethodArgumentNotValidException e){
+        log.info("参数校验失败,异常:MethodArgumentNotValidException");
         String message = e.getBindingResult().getFieldError().getDefaultMessage();
-        return R.error(415, message);
+        return R.error(415,message);
     }
 
     /**
      * 方法校验异常拦截,list类型拦截
-     *
      * @param e
      * @return
      */
