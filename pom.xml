@@ -78,7 +78,7 @@
         <rocketmq.version>2.0.3</rocketmq.version>
         <mybatisplus.version>3.3.1</mybatisplus.version>
         <poi.version>4.1.2</poi.version>
-        <easyPoi.version>3.3.0</easyPoi.version>
+        <easyPoi.version>4.2.0</easyPoi.version>
         <easyExcel.version>2.2.6</easyExcel.version>
     </properties>
 

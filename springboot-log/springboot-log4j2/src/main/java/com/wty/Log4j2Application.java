@@ -8,8 +8,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @date 2019/12/07 21:54
  */
 @SpringBootApplication
-public class Log4j2Appliaction {
+public class Log4j2Application {
     public static void main(String[] args) {
-        SpringApplication.run(Log4j2Appliaction.class, args);
+        SpringApplication.run(Log4j2Application.class, args);
     }
 }
