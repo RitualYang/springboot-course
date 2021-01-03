@@ -1,0 +1,10 @@
+spring:
+  data:
+    mongodb:
+#      host: localhost
+#      port: 27017
+#      password: 123456
+#      database: runoob
+#      username: runoob
+      # 上方配置认证无法通过,采用url拼接方式(mongodb://用户名:密码@ip:端口/库名);如不采用密码认证(mongodb://ip:端口/库名)
+      uri: mongodb://runoob:123456@localhost:27017/runoob

@@ -1,7 +1,6 @@
 package com.wty.controller;
 
 import com.alibaba.excel.EasyExcel;
-import com.sun.deploy.net.URLEncoder;
 import com.wty.model.UserExcel;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 

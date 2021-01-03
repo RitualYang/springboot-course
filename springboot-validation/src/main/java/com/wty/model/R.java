@@ -11,6 +11,7 @@ import java.io.Serializable;
 @Data
 public class R implements Serializable {
 
+    private static final long serialVersionUID = 4661431837259759482L;
     private Integer code;
     private String message;
 

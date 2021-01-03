@@ -15,6 +15,7 @@ import java.io.Serializable;
 @Data
 @AllArgsConstructor
 public class UserExcel implements Serializable {
+    private static final long serialVersionUID = -4787504584468394160L;
     @ExcelIgnore
     private Integer userId;
     @ExcelProperty(value = "用户名", order = 0)

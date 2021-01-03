@@ -5,6 +5,7 @@ import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 import org.springframework.data.elasticsearch.annotations.Field;
+import org.springframework.data.elasticsearch.annotations.FieldType;
 
 import java.io.Serializable;
 
@@ -20,8 +21,7 @@ import java.io.Serializable;
 @Document(indexName = "test_user", shards = 3)
 public class User implements Serializable {
 
-    private static final long serialVersionUID = -3801087608776267142L;
-
+    private static final long serialVersionUID = 9108709748606360501L;
     @Id
     @JsonProperty
     private Long id;
@@ -35,4 +35,10 @@ public class User implements Serializable {
     private String mobile;
     @JsonProperty
     private String email;
+    @JsonProperty
+    @Field(analyzer = "ik_smart",searchAnalyzer = "ik_max_word",type = FieldType.Text)
+    private String title;
+    @JsonProperty
+    @Field(analyzer = "ik_smart",searchAnalyzer = "ik_max_word",type = FieldType.Text)
+    private String content;
 }

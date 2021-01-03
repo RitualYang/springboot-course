@@ -1,6 +1,5 @@
 package com.wty.controller;
 
-import com.sun.istack.internal.NotNull;
 import com.wty.entity.JobEntity;
 import com.wty.mapper.JobEntityMapper;
 import com.wty.service.JobService;
@@ -8,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.quartz.*;
 import org.quartz.impl.matchers.GroupMatcher;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.lang.NonNull;
 import org.springframework.scheduling.quartz.SchedulerFactoryBean;
 import org.springframework.web.bind.annotation.*;
 
@@ -44,7 +44,7 @@ public class JobController {
 
     //根据ID重启某个Job
     @RequestMapping("/refresh/{id}")
-    public String refresh(@PathVariable @NotNull Integer id) throws SchedulerException {
+    public String refresh(@PathVariable @NonNull Integer id) throws SchedulerException {
         String result;
         JobEntity entity = jobService.getJobEntityById(id);
         if (Objects.isNull(entity)) {

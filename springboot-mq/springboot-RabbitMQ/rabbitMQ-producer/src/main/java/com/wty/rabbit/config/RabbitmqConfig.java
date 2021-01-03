@@ -16,8 +16,8 @@ import org.springframework.context.annotation.Configuration;
 public class RabbitmqConfig {
     /**
      * 声明交换机
-     * direct：
-     * topic：
+     * direct：直连交换机
+     * topic： 匹配交换机
      * fanout： 广播交换机
      */
     public final static String DIRECT_EXCHANGE = "directExchange";

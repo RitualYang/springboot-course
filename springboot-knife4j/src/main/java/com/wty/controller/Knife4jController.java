@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
  * @date 2020/9/3 09:58
  */
 @Api(value = "测试", tags = "测试用例")
-@RestController
-@RequestMapping("/knife4j")
+@RestController("knifeController")
+@RequestMapping("/kni")
 public class Knife4jController {
 
     @GetMapping("/getInfo")

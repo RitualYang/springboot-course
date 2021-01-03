@@ -3,10 +3,7 @@ package com.wty.utils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import redis.clients.jedis.BinaryClient;
-import redis.clients.jedis.Jedis;
-import redis.clients.jedis.JedisPool;
-import redis.clients.jedis.SortingParams;
+import redis.clients.jedis.*;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -921,7 +918,7 @@ public class JedisUtil {
      * @param value 添加的value
      * @return
      */
-    public Long linsert(String key, BinaryClient.LIST_POSITION where, String pivot,
+    public Long linsert(String key, ListPosition where, String pivot,
                         String value) {
         Jedis jedis = null;
         Long res = null;
@@ -1936,7 +1933,7 @@ public class JedisUtil {
      */
     public static void returnResource(JedisPool jedisPool, Jedis jedis) {
         if (jedis != null) {
-            jedisPool.returnResource(jedis);
+            jedis.close();
         }
     }
 }

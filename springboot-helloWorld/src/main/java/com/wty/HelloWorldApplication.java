@@ -23,7 +23,7 @@ public class HelloWorldApplication {
         SpringApplication.run(HelloWorldApplication.class, args);
 
         // 2.通过api调整web启动模式
-         /*SpringApplication application = new SpringApplication(HelloWorldApplication.class);
+        /*SpringApplication application = new SpringApplication(HelloWorldApplication.class);
          application.setBannerMode(Banner.Mode.OFF);
          application.run(args);*/
 

@@ -13,6 +13,7 @@ import java.io.Serializable;
  */
 @Data
 public class ExcelUser implements Serializable {
+    private static final long serialVersionUID = -2948620267497993197L;
     @Excel(name = "用户名",orderNum = "1")
     private String userName;
     @Excel(name = "登录密码",orderNum = "2")

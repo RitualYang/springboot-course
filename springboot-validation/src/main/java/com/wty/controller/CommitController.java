@@ -2,12 +2,16 @@ package com.wty.controller;
 
 import com.wty.model.R;
 import com.wty.model.User;
+import org.hibernate.validator.constraints.Length;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 import java.util.List;
 
 /**
@@ -46,5 +50,16 @@ public class CommitController {
     @PostMapping("/register3")
     public R register3(@RequestBody @Valid List<User> userList) {
         return R.ok("全部验证成功");
+    }
+
+    /**
+     * ''   "" 是个黑洞
+     * @param url
+     * @return
+     */
+    @GetMapping("/testString")
+    public R testString(@NotBlank(message = "url 为空") String url){
+        System.out.println(url.length());
+        return R.ok("验证通过" + url);
     }
 }
