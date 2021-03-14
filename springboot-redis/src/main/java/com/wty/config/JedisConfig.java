@@ -36,8 +36,13 @@ public class JedisConfig {
     @Value("${spring.redis.block-when-exhausted}")
     private boolean blockWhenExhausted;
 
+    /**
+     * Jedis连接池配置
+     * @return
+     * @throws Exception
+     */
     @Bean
-    public JedisPool redisPoolFactory() throws Exception {
+    public JedisPool JedisPoolFactory() throws Exception {
         JedisPoolConfig jedisPoolConfig = new JedisPoolConfig();
         jedisPoolConfig.setMaxIdle(maxIdle);
         jedisPoolConfig.setMaxWaitMillis(maxWaitMillis);

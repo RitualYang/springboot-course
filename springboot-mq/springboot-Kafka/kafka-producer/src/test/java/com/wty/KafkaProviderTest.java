@@ -18,6 +18,9 @@ public class KafkaProviderTest {
     private KafkaTemplate<String, Object> kafkaTemplate;
 
     @Test
+    public void contextLoad(){}
+
+    @Test
     public void send(String message) {
         kafkaTemplate.send("testTopic", message);
     }

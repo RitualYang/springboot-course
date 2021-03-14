@@ -15,6 +15,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest(classes = {JunitApplication.class})
 public class JunitTest {
 
+    @Test
+    public void contextLoad(){}
 
     @BeforeAll
     public static void init(){

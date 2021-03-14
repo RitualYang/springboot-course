@@ -7,7 +7,7 @@ spring:
     max-active: 8 # 连接池最大阻塞等待时间(使用负值表示没有限制)
     max-idle: 8 # 连接池中的最大空闲连接
     min-idle: 0 # 连接池中的最小空闲连接
-    timeout: 1000 # 连接超时时间(毫秒)
+    timeout: 300 # 连接超时时间(毫秒)
     # redis数据库索引,默认0
     database: 0
     # 使用jedis时,配置如下数据

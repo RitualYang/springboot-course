@@ -17,6 +17,8 @@ public class DataJpaTest {
 
     @Autowired
     private ClassMapper classMapper;
+    @Test
+    public void contextLoad(){}
 
     @Test
     public void test() {

@@ -31,6 +31,8 @@ public class ClientTest {
 
     @Resource
     private RestHighLevelClient client;
+    @Test
+    public void contextLoad(){}
 
     @Test
     public void searchHigh() throws IOException {

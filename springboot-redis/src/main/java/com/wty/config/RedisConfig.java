@@ -30,6 +30,11 @@ public class RedisConfig extends CachingConfigurerSupport {
     private static final StringRedisSerializer STRING_SERIALIZER = new StringRedisSerializer();
     private static final GenericJackson2JsonRedisSerializer JACKSON__SERIALIZER = new GenericJackson2JsonRedisSerializer();
 
+    /**
+     * redis做默认缓存配置
+     * @param redisConnectionFactory
+     * @return
+     */
     @Bean
     public CacheManager cacheManager(RedisConnectionFactory redisConnectionFactory) {
         //设置缓存过期时间
@@ -42,6 +47,11 @@ public class RedisConfig extends CachingConfigurerSupport {
                 .build();
     }
 
+    /**
+     * redisTemplate配置
+     * @param factory
+     * @return
+     */
     @Bean
     @ConditionalOnMissingBean(name = "redisTemplate")
     public RedisTemplate<String, Object> redisTemplate(RedisConnectionFactory factory) {
