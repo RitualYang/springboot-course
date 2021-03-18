@@ -21,7 +21,6 @@
         <module>springboot-interface</module>
         <module>springboot-webflux</module>
         <module>springboot-websocket</module>
-        <module>springboot-swagger2</module>
         <module>springboot-timedTask</module>
         <module>springboot-zookeeper</module>
         <module>springboot-netty</module>
@@ -36,7 +35,6 @@
         <module>springboot-file</module>
         <module>springboot-cache</module>
         <module>springboot-actuator</module>
-        <module>springboot-knife4j</module>
         <module>springboot-transaction</module>
         <module>springboot-autoConfiguration</module>
         <module>springboot-https</module>
@@ -46,6 +44,7 @@
         <module>springboot-mongodb</module>
         <module>springboot-search</module>
         <module>springboot-test</module>
+        <module>springboot-api</module>
     </modules>
     <packaging>pom</packaging>
     <!--核心依赖,管理大部分常用jar包的版本,分支测试-->

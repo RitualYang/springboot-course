@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: springfox-swagger3
+server:
+  port: 8080
+springfox:
+  documentation:
+    swagger-ui:
+      enabled: true
