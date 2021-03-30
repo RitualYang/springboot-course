@@ -8,6 +8,9 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.Resource;
+import java.util.concurrent.Callable;
+
 /**
  * @author wty
  * @date 2020/8/26 16:46

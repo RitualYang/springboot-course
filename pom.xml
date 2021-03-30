@@ -29,8 +29,6 @@
         <module>springboot-mybatis</module>
         <module>springboot-data-jpa</module>
         <module>springboot-mq</module>
-        <module>springboot-solr</module>
-        <module>springboot-elasticsearch</module>
         <module>springboot-excel</module>
         <module>springboot-file</module>
         <module>springboot-cache</module>

@@ -7,24 +7,26 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * TODO
+ * JapiDocs文档生成入口
  *
  * @author wty
  * @date 2021 /3/14 21:57
  */
 @SpringBootApplication
-public class JapiDocsApplication {
+public class JApiDocsApplication {
     /**
      * The entry point of application.
      *
      * @param args the input arguments
      */
     public static void main(String[] args) {
-        SpringApplication.run(JapiDocsApplication.class,args);
+        SpringApplication.run(JApiDocsApplication.class,args);
         createDoc();
-
     }
 
+    /**
+     * 创建接口文档
+     */
     public static void createDoc(){
         DocsConfig config = new DocsConfig();
         config.setProjectPath("E:\\自主项目\\springboot-course\\springboot-api\\springboot-JapiDocs"); // 项目根目录

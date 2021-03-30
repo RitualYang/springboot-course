@@ -7,7 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.kafka.core.KafkaTemplate;
 
 /**
- * TODO
+ * kafka发送者测试
  *
  * @author wty
  * @date 2020/11/21 15:26

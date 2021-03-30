@@ -6,7 +6,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.interceptor.TransactionAspectSupport;
 
 /**
- * TODO
+ * 事务测试
  *
  * @author wty
  * @Date 2020/11/16 16:28

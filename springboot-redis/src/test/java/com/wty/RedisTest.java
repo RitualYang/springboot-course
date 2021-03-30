@@ -7,7 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.redis.core.RedisTemplate;
 
 /**
- * TODO
+ * redis测试
  *
  * @author wty
  * @date 2021/1/13 23:44

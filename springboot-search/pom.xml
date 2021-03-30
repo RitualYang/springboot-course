@@ -12,4 +12,8 @@
     <artifactId>springboot-search</artifactId>
     <packaging>pom</packaging>
 
+    <modules>
+        <module>springboot-solr</module>
+        <module>springboot-elasticsearch</module>
+    </modules>
 </project>
