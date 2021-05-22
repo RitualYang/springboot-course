@@ -9,4 +9,3 @@ out
 gen
 /.idea/
 **/target
-/springboot-workspace/**

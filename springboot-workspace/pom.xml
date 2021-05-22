@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.wty.springboot</groupId>
+    <artifactId>springboot-workspace</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+    </properties>
+
+    <modules>
+        <module>../springboot-parent</module>
+<!--        <module>../springboot-helloWorld</module>-->
+<!--        <module>../springboot-MVC</module>-->
+<!--        <module>../springboot-properties</module>-->
+<!--        <module>../springboot-package</module>-->
+<!--        <module>../springboot-aop</module>-->
+<!--        <module>../springboot-async</module>-->
+<!--        <module>../springboot-security</module>-->
+<!--        <module>../springboot-i18n</module>-->
+<!--        <module>../springboot-mail</module>-->
+<!--        <module>../springboot-validation</module>-->
+<!--        <module>../springboot-interface</module>-->
+<!--        <module>../springboot-webflux</module>-->
+<!--        <module>../springboot-websocket</module>-->
+<!--        <module>../springboot-timedTask</module>-->
+<!--        <module>../springboot-zookeeper</module>-->
+<!--        <module>../springboot-netty</module>-->
+<!--        <module>../springboot-fastDfs</module>-->
+<!--        <module>../springboot-redis</module>-->
+<!--        <module>../springboot-mybatis</module>-->
+<!--        <module>../springboot-data-jpa</module>-->
+<!--        <module>../springboot-mq</module>-->
+<!--        <module>../springboot-excel</module>-->
+<!--        <module>../springboot-file</module>-->
+<!--        <module>../springboot-cache</module>-->
+<!--        <module>../springboot-actuator</module>-->
+<!--        <module>../springboot-transaction</module>-->
+<!--        <module>../springboot-autoConfiguration</module>-->
+<!--        <module>../springboot-https</module>-->
+<!--        <module>../springboot-admin</module>-->
+<!--        <module>../springboot-log</module>-->
+<!--        <module>../springboot-server</module>-->
+<!--        <module>../springboot-mongodb</module>-->
+<!--        <module>../springboot-search</module>-->
+<!--        <module>../springboot-test</module>-->
+<!--        <module>../springboot-api</module>-->
+    </modules>
+
+</project>
