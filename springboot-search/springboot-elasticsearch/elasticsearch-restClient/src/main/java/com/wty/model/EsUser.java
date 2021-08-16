@@ -2,6 +2,7 @@ package com.wty.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * es测试用户实体
@@ -11,8 +12,10 @@ import lombok.Data;
  */
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 public class EsUser {
+    private Long id;
     private String userName;
     private Integer age;
-    private String gander;
+    private boolean gander;
 }
