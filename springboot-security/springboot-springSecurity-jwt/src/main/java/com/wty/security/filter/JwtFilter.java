@@ -1,7 +1,7 @@
 package com.wty.security.filter;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.wty.model.User;
+import com.wty.model.UserModel;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -48,7 +48,7 @@ public class JwtFilter extends AbstractAuthenticationProcessingFilter {
      */
     @Override
     public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response) throws AuthenticationException, IOException, ServletException {
-        User user = new ObjectMapper().readValue(request.getInputStream(), User.class);
+        UserModel user = new ObjectMapper().readValue(request.getInputStream(), UserModel.class);
         return getAuthenticationManager().authenticate(new UsernamePasswordAuthenticationToken(user.getUsername(), user.getPassword()));
     }
 

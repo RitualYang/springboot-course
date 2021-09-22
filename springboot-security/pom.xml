@@ -10,15 +10,14 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.wty.springboot</groupId>
     <artifactId>springboot-security</artifactId>
     <packaging>pom</packaging>
 
     <modules>
-        <module>springboot-shiro</module>
-        <module>springboot-shiro-jwt</module>
+<!--        <module>springboot-shiro</module>-->
+<!--        <module>springboot-shiro-jwt</module>-->
         <module>springboot-springSecurity</module>
-        <module>springboot-springSecurity-jwt</module>
-        <module>springboot-security-oauth</module>
+<!--        <module>springboot-springSecurity-jwt</module>-->
+<!--        <module>springboot-security-oauth</module>-->
     </modules>
 </project>

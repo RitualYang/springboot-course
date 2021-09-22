@@ -12,7 +12,7 @@ import java.util.List;
  * @date 2020/9/14 16:20
  */
 @Data
-public class User implements UserDetails {
+public class UserModel implements UserDetails {
 
     private String userName;
     private String password;
