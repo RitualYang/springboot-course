@@ -17,7 +17,7 @@
     </parent>
 
     <modules>
-<!--        <module>springboot-helloWorld</module>-->
+        <module>springboot-helloWorld</module>
 <!--        <module>springboot-MVC</module>-->
 <!--        <module>springboot-properties</module>-->
 <!--        <module>springboot-package</module>-->
@@ -49,7 +49,7 @@
 <!--        <module>springboot-log</module>-->
 <!--        <module>springboot-server</module>-->
 <!--        <module>springboot-mongodb</module>-->
-        <module>springboot-search</module>
+<!--        <module>springboot-search</module>-->
 <!--        <module>springboot-test</module>-->
 <!--        <module>springboot-api</module>-->
     </modules>
