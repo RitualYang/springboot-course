@@ -10,7 +10,9 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
 import java.lang.reflect.Method;
 import java.util.concurrent.Executor;
+import java.util.concurrent.LinkedTransferQueue;
 import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 
 /**
  * 自定义异步线程池的配置
@@ -21,6 +23,18 @@ import java.util.concurrent.ThreadPoolExecutor;
 @Slf4j
 @Configuration
 public class AsyncPoolConfig implements AsyncConfigurer {
+
+    /**
+     * 自定义线程池
+     * @return
+     */
+    @Bean("poolExecutor")
+    public Executor getPoolExecutor() {
+        // 最基本的线程池
+        return new ThreadPoolExecutor(10, 10, 1L, TimeUnit.SECONDS, new LinkedTransferQueue<Runnable>());
+    }
+
+
     /**
      * 返回自定义线程池
      *

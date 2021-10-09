@@ -22,7 +22,7 @@
         <!--        <module>springboot-properties</module>-->
         <!--        <module>springboot-package</module>-->
         <!--        <module>springboot-aop</module>-->
-        <!--        <module>springboot-async</module>-->
+<!--                <module>springboot-async</module>-->
         <!--        <module>springboot-security</module>-->
         <!--        <module>springboot-i18n</module>-->
         <!--        <module>springboot-mail</module>-->
@@ -46,7 +46,7 @@
         <!--        <module>springboot-autoConfiguration</module>-->
         <!--        <module>springboot-https</module>-->
         <!--        <module>springboot-admin</module>-->
-        <!--        <module>springboot-log</module>-->
+<!--                <module>springboot-log</module>-->
         <!--        <module>springboot-server</module>-->
         <!--        <module>springboot-mongodb</module>-->
         <!--        <module>springboot-search</module>-->

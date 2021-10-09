@@ -9,3 +9,9 @@ spring:
     username: guest
     password: guest
     virtualHost: /
+    #开启消息发布确认（消息成功发送到broker）
+    publisher-confirms: true
+    #开启消息回调监听器，消息由exchange路由到queue成功,不触发回调函数；消息有exchange路由到queue失败，触发回调函数
+    publisher-returns: true
+    template:
+    mandatory: true
