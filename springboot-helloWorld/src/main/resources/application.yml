@@ -9,7 +9,7 @@ spring:
   application:
     name: springboot-helloWorld
   profiles:
-    active: prod
+    active: dev
   # 静态资源路径配置
   resources:
     static-locations: classpath:/static
