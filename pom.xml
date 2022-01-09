@@ -34,7 +34,8 @@
         <!--<module>springboot-zookeeper</module>-->
         <!--<module>springboot-netty</module>-->
         <!--<module>springboot-fastDfs</module>-->
-        <module>springboot-redis</module>
+<!--        <module>springboot-redis</module>-->
+<!--        <module>springboot-ehcache</module>-->
         <!--<module>springboot-mybatis</module>-->
         <!--<module>springboot-data-jpa</module>-->
         <!--<module>springboot-mq</module>-->
