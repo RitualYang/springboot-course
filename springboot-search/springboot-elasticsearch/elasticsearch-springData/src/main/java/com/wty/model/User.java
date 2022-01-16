@@ -18,7 +18,7 @@ import java.io.Serializable;
  * @date 2019/12/24 12:00
  */
 @Data
-@Document(indexName = "test_user", shards = 3)
+@Document(indexName = "test_user", shards = 1, replicas = 0)
 public class User implements Serializable {
 
     private static final long serialVersionUID = 9108709748606360501L;

@@ -27,7 +27,7 @@ public class ElasticsearchConfig {
     @Bean
     public RestHighLevelClient client() {
         RestClientBuilder builder = RestClient.builder(
-                        new HttpHost("127.0.0.1", 9200, "http")
+                        new HttpHost("xxx.xxx.xxx.xxx", 9200, "http")
                         //, new HttpHost("127.0.0.1", 9200, "http")
                 )
                 .setRequestConfigCallback(requestConfigBuilder -> {

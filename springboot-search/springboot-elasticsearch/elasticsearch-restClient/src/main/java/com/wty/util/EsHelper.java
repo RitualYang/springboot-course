@@ -5,6 +5,7 @@ import org.elasticsearch.client.RequestOptions;
 import org.elasticsearch.client.RestHighLevelClient;
 import org.elasticsearch.client.indices.CreateIndexRequest;
 import org.elasticsearch.client.indices.GetIndexRequest;
+import org.elasticsearch.common.settings.Settings;
 import org.elasticsearch.common.xcontent.XContentType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -24,6 +25,10 @@ public class EsHelper {
     public void createIndex(String indexName) {
         try{
             CreateIndexRequest request = new CreateIndexRequest(indexName);
+            request.settings(Settings.builder()
+                    .put("index.number_of_shards", 1)
+                    .put("index.number_of_replicas", 0)
+            );
             client.indices().create(request, RequestOptions.DEFAULT);
             log.info("索引创建成功");
         }catch (Exception e){
