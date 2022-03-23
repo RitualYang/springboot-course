@@ -1,5 +1,6 @@
 package com.wty;
 
+
 import com.wty.kafka.KafkaProducerApplication;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +22,8 @@ public class KafkaProviderTest {
     public void contextLoad(){}
 
     @Test
-    public void send(String message) {
+    public void send() {
+        String message = "123";
         kafkaTemplate.send("testTopic", message);
     }
 }

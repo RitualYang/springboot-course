@@ -1,11 +1,18 @@
 package com.wty.config;
 
 import com.wty.shiro.CustomRealm;
+import com.wty.shiro.ShiroSessionListener;
+import java.util.Collections;
 import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
 import org.apache.shiro.mgt.SecurityManager;
+import org.apache.shiro.session.mgt.SessionManager;
+import org.apache.shiro.session.mgt.eis.SessionDAO;
 import org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor;
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
 import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
+import org.apache.shiro.web.session.mgt.DefaultWebSessionManager;
+import org.crazycake.shiro.RedisManager;
+import org.crazycake.shiro.RedisSessionDAO;
 import org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
@@ -48,10 +55,40 @@ public class ShiroConfig {
      * @return
      */
     @Bean
-    public SecurityManager securityManager() {
+    public SecurityManager securityManager(SessionManager sessionManager) {
         DefaultWebSecurityManager securityManager = new DefaultWebSecurityManager();
         securityManager.setRealm(myShiroRealm());
+        securityManager.setSessionManager(sessionManager);
         return securityManager;
+    }
+
+    @Bean
+    public SessionManager sessionManager(SessionDAO sessionDAO) {
+        DefaultWebSessionManager skySessionManager = new DefaultWebSessionManager();
+        // session 失效删除session
+        skySessionManager.setSessionDAO(sessionDAO);
+        skySessionManager.setDeleteInvalidSessions(true);
+        // 定期检查 失效的 session
+        skySessionManager.setSessionValidationInterval(5000);
+        skySessionManager.setGlobalSessionTimeout(20000);
+        // 开启 schedule
+        skySessionManager.setSessionValidationSchedulerEnabled(true);
+        skySessionManager.setSessionListeners(Collections.singletonList(new ShiroSessionListener()));
+        return skySessionManager;
+    }
+
+    @Bean
+    public SessionDAO sessionDAO() {
+        RedisSessionDAO redisSessionDAO = new RedisSessionDAO();
+        redisSessionDAO.setRedisManager(redisManager());
+        redisSessionDAO.setExpire(36);
+        return redisSessionDAO;
+    }
+
+    public RedisManager redisManager() {
+        RedisManager redisManager = new RedisManager();
+        redisManager.setTimeout(0);
+        return redisManager;
     }
 
     /**
