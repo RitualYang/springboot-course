@@ -1,8 +1,10 @@
 package com.wty.entity;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import javax.persistence.Column;
 import javax.persistence.Id;
 import java.util.Date;
+import org.springframework.boot.jackson.JsonComponent;
 
 public class Class {
     /**
@@ -86,6 +88,13 @@ public class Class {
      */
     @Column(name = "UPDATED_TIME")
     private Date updatedTime;
+
+    @JsonProperty("OrderId")
+    private String ddd;
+
+    public void setDDD(Long dd) {
+        this.ddd = "reg353u" + dd;
+    }
 
     /**
      * 获取班级ID

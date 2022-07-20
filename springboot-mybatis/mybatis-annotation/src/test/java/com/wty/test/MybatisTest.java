@@ -1,7 +1,9 @@
 package com.wty.test;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.wty.entity.Class;
 import com.wty.mapper.ClassMapper;
+import java.util.Map;
 import lombok.extern.slf4j.Slf4j;
 
 import org.junit.jupiter.api.Test;
@@ -18,15 +20,22 @@ import java.util.List;
 @Slf4j
 public class MybatisTest {
 
+    private final ObjectMapper OBJECT_MAPPER = new ObjectMapper();
     @Autowired
     private ClassMapper classMapper;
 
     @Test
     public void select() {
-        List<Class> classes = classMapper.selectAll();
-        for (Class aClass : classes) {
-            System.out.println(aClass.toString());
-        }
+        Long aLong = classMapper.selectLong();
+        System.out.println(aLong);
+        Class aClass = new Class();
+        aClass.setDDD(aLong);
+        Map map = OBJECT_MAPPER.convertValue(aClass, Map.class);
+        System.out.println(map.toString());
+//        List<Class> classes = classMapper.selectAll();
+//        for (Class aClass : classes) {
+//            System.out.println(aClass.toString());
+//        }
     }
 
 }
