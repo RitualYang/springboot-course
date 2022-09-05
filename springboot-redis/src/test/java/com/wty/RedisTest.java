@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.StringRedisTemplate;
 
 /**
  * redis测试
@@ -16,6 +17,9 @@ import org.springframework.data.redis.core.RedisTemplate;
 public class RedisTest {
     @Autowired
     private RedisTemplate redisTemplate;
+
+    @Autowired
+    private StringRedisTemplate stringRedisTemplate;
     @Test
     public void loading(){
         try {
@@ -23,5 +27,16 @@ public class RedisTest {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    @Test
+    public void test() {
+        System.out.println(stringRedisTemplate.opsForValue().increment("test"));
+        System.out.println(stringRedisTemplate.opsForValue().increment("test"));
+        System.out.println(stringRedisTemplate.opsForValue().increment("test"));
+        System.out.println(stringRedisTemplate.opsForValue().increment("test"));
+        System.out.println(stringRedisTemplate.opsForValue().increment("test1", 30L));
+        System.out.println(stringRedisTemplate.opsForValue().increment("test1",30L));
+        System.out.println(stringRedisTemplate.opsForValue().increment("test", 100L));
     }
 }

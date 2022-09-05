@@ -1,6 +1,7 @@
 package com.wty.controller;
 
 import com.wty.annotion.LoginLog;
+import com.wty.aop.TestApi;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -11,6 +12,18 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping(value = "/aop")
 public class LogController {
+
+
+    @RequestMapping("/hello")
+    public String hello() {
+        return "Hello World!!!!";
+    }
+
+    @TestApi
+    @RequestMapping("/hello1")
+    public String hello1() {
+        return "Hello World!!!!";
+    }
 
     @LoginLog(value = "登录")
     @RequestMapping(value = "/login")
