@@ -18,7 +18,7 @@ import org.springframework.stereotype.Component;
  * @date 2022/8/18 11:17
  */
 @Component
-public class BonusRunner implements ApplicationRunner {
+public class MeterRunner implements ApplicationRunner {
 
     @Autowired
     private MeterRegistry meterRegistry;
@@ -26,19 +26,19 @@ public class BonusRunner implements ApplicationRunner {
     /**
      * mock redis 缓存
      */
-    private Map<String,AtomicLong> atomicLong = Maps.newHashMap();
-    private Map<String,AtomicLong> atomicNumLong = Maps.newHashMap();
+    private final Map<String,AtomicLong> atomicLong = Maps.newHashMap();
+    private final Map<String,AtomicLong> atomicNumLong = Maps.newHashMap();
 
-    private String BONUS_KEY = "bonusCurrency";
-    private String BONUS_TYPE_KEY = "bonusType";
+    private static final String METER_KEY = "meterKey";
+    private static final String METER_TYPE_KEY = "meterTypeKey";
 
     @Override
-    public void run(ApplicationArguments args) throws Exception {
+    public void run(ApplicationArguments args) {
         Thread thread = new Thread(() -> {
             while (true) {
-                String bonusCurrency = "USD" + new Random().nextInt(3);
-                String bonusType = "TYPE" + new Random().nextInt(3);
-                String key = bonusCurrency + "_" + bonusType;
+                String meterBefore = "DATA" + new Random().nextInt(3);
+                String meterAfter = "DATA" + new Random().nextInt(3);
+                String key = meterBefore + "_" + meterAfter;
                 AtomicLong atomicLong = this.atomicLong.get(key);
                 if (Objects.isNull(atomicLong)) {
                     atomicLong = new AtomicLong(0);
@@ -53,8 +53,8 @@ public class BonusRunner implements ApplicationRunner {
                 atomicLong1.incrementAndGet();
                 if (atomicLong1.get() <= 1L) {
                     System.out.println("发送注册消息");
-                    meterRegistry.gauge("contract.project.bonus.ev",Tags.of(Tag.of(BONUS_KEY, bonusCurrency),Tag.of(BONUS_TYPE_KEY, bonusType)), atomicLong);
-                    meterRegistry.gauge("contract.project.bonus.num", Tags.of(Tag.of(BONUS_KEY, bonusCurrency),Tag.of(BONUS_TYPE_KEY, bonusType)), atomicLong1);
+                    meterRegistry.gauge("meter.key",Tags.of(Tag.of(METER_KEY, meterBefore),Tag.of(METER_TYPE_KEY, meterAfter)), atomicLong);
+                    meterRegistry.gauge("meter.type.key", Tags.of(Tag.of(METER_KEY, meterBefore),Tag.of(METER_TYPE_KEY, meterAfter)), atomicLong1);
                 } else {
                     System.out.println("更新缓存");
                 }

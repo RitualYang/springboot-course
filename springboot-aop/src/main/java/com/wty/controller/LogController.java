@@ -13,18 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "/aop")
 public class LogController {
 
-
-    @RequestMapping("/hello")
-    public String hello() {
-        return "Hello World!!!!";
-    }
-
-    @TestApi
-    @RequestMapping("/hello1")
-    public String hello1() {
-        return "Hello World!!!!";
-    }
-
     @LoginLog(value = "登录")
     @RequestMapping(value = "/login")
     public String login() {
