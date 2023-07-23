@@ -13,7 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
 
     @RequestMapping("/hello")
-    public String hello() {
+    public String hello() throws InterruptedException {
+        Thread.sleep(60000);
         return "Hello World!!!!";
     }
 

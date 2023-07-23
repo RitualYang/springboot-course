@@ -11,3 +11,10 @@ demo:
   girlfriend:
     name: 美女
     age: 20
+
+list:
+  girlfriendList:
+   - name: 好人
+     age: 24
+   - name: 坏人
+     age: 23

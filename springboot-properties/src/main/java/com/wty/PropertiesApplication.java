@@ -2,6 +2,7 @@ package com.wty;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.PropertySource;
 
 /**
  * application配置文件在Spring Boot中可以写在四个不同的位置,分别是如下位置(属性加载优先级顺序由高到低)：
@@ -17,6 +18,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @date 2020/02/08 20:44
  */
 @SpringBootApplication
+@PropertySource(value = {"application-local.properties"},ignoreResourceNotFound = true)
 public class PropertiesApplication {
     public static void main(String[] args) {
         SpringApplication.run(PropertiesApplication.class, args);
