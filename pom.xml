@@ -35,7 +35,6 @@
 <!--        <module>springboot-netty</module>-->
 <!--        <module>springboot-fastDfs</module>-->
 <!--        <module>springboot-redis</module>-->
-<!--        <module>springboot-ehcache</module>-->
 <!--        <module>springboot-mybatis</module>-->
 <!--        <module>springboot-data-jpa</module>-->
 <!--        <module>springboot-mq</module>-->
@@ -53,6 +52,7 @@
 <!--        <module>springboot-search</module>-->
 <!--        <module>springboot-test</module>-->
 <!--        <module>springboot-api</module>-->
+<!--        <module>springboot-docker</module>-->
     </modules>
 
     <properties>
@@ -60,6 +60,7 @@
         <maven.compiler.target>8</maven.compiler.target>
         <java.version>8</java.version>
         <spring-boot.version>2.3.7.RELEASE</spring-boot.version>
+        <lombok.version>1.18.26</lombok.version>
         <swagger2.version>2.9.2</swagger2.version>
         <swagger-bootstrap.version>1.9.6</swagger-bootstrap.version>
         <fastjson.version>1.2.83</fastjson.version>
@@ -88,6 +89,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
         </dependency>
         <!--  springboot热部署依赖(须配置自动编译)  -->
         <dependency>
@@ -247,4 +249,12 @@
         </dependencies>
 
     </dependencyManagement>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 </project>

@@ -1,0 +1,9 @@
+server:
+  jetty:
+    accesslog:
+      append: true
+    threads:
+      max: 200
+      min: 8
+      max-queue-capacity: 100
+      idle-timeout: 600000ms
